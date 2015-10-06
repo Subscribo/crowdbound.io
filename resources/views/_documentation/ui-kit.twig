@@ -1,0 +1,891 @@
+{% haml %}
+
+- extends '_layouts/docs'
+- set page_title = 'Crowdbound - Internal UI Kit'
+- set body_class = 'ui-kit'
+
+- block page_content
+  %section#tamashi-jumbotron.tamashi-jumbotron
+    .container
+      .row
+        .col-lg-12
+          .tamashi-branding
+            %img.tamashi-logo{:alt => "crowdbound Logo", :src => "#{asset('assets/images/crowdbound-logo-white.png')}"}
+
+          %h1.title.text-center
+            Le Theme, Motherfuckers
+            %br
+              %small.subtitle crowdbound UI KIT
+          .text-center
+            %a.btn.ghost-btn.-transparent{:href => "", :target => "_blank"} View Components
+
+  -# Begin the docs
+  %section.crowdbound-docs
+    .container
+
+      -#  Buttons
+
+      .row
+        .col-lg-12
+          %section.crowdbound-docs-section.crowdbound-docs-buttons
+            %h2.title Buttons
+
+            -# Primary buttons
+            .primary-buttons
+              %h3.subtitle Primary Buttons
+              %button.btn.primary-btn.-blue Blue
+              %button.btn.primary-btn.-purple Purple
+              %button.btn.primary-btn.-red Red
+              %button.btn.primary-btn.-gray Gray
+              %button.btn.primary-btn.-white White
+
+            -# Flat buttons
+            .flat-buttons
+              %h3.subtitle Flat Buttons
+              %button.btn.flat-btn.-blue Blue
+              %button.btn.flat-btn.-purple Purple
+              %button.btn.flat-btn.-red Red
+              %button.btn.flat-btn.-gray Gray
+              %button.btn.flat-btn.-white White
+
+            -# Ghost buttons
+            .ghost-buttons
+              %h3.subtitle Ghost Buttons
+              %button.btn.ghost-btn.-blue Blue
+              %button.btn.ghost-btn.-purple Purple
+              %button.btn.ghost-btn.-red Red
+              %button.btn.ghost-btn.-gray Gray
+              %button.btn.ghost-btn.-white White
+
+            -# Button sizes
+            .button-sizes
+              %h3.subtitle Button sizes
+              %button.btn.primary-btn.-blue.-xs Mini
+              %button.btn.primary-btn.-blue.-sm Small
+              %button.btn.primary-btn.-blue Medium
+              %button.btn.primary-btn.-blue.-lg Large
+              %button.btn.primary-btn.-blue.-xlg X-Large
+            .button-dropdowns
+              %h3.subtitle Button Dropdowns
+
+              -# Single button
+              .btn-group
+                %button.btn.primary-btn.-blue.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :type => "button"}
+                  Action
+                  %span.caret
+                %ul.dropdown-menu.dropdown-primary.-blue{:role => "menu"}
+                  %li
+                    %a{:href => "#/"} Action
+                  %li
+                    %a{:href => "#/"} Another action
+                  %li
+                    %a{:href => "#/"} Something else here
+                  %li.divider
+                  %li
+                    %a{:href => "#/"} Separated link
+
+              -# Split button
+              .btn-group
+                %button.btn.primary-btn.-blue{:type => "button"} Action
+                %button.btn.primary-btn.-blue.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :type => "button"}
+                  %span.caret
+                  %span.sr-only Toggle Dropdown
+                %ul.dropdown-menu.dropdown-primary.-purple{:role => "menu"}
+                  %li
+                    %a{:href => "#/"} Action
+                  %li
+                    %a{:href => "#/"} Another action
+                  %li
+                    %a{:href => "#/"} Something else here
+                  %li.divider
+                  %li
+                    %a{:href => "#/"} Separated link
+
+              -# Single button
+              .btn-group
+                %button.btn.flat-btn.-blue.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :type => "button"}
+                  Action
+                  %span.caret
+                %ul.dropdown-menu.dropdown-flat.-blue{:role => "menu"}
+                  %li
+                    %a{:href => "#/"} Action
+                  %li
+                    %a{:href => "#/"} Another action
+                  %li
+                    %a{:href => "#/"} Something else here
+                  %li.divider
+                  %li
+                    %a{:href => "#/"} Separated link
+
+              -# Split button
+              .btn-group
+                %button.btn.flat-btn.-blue{:type => "button"} Action
+                %button.btn.flat-btn.-blue.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :type => "button"}
+                  %span.caret
+                  %span.sr-only Toggle Dropdown
+                %ul.dropdown-menu.dropdown-flat.-blue{:role => "menu"}
+                  %li
+                    %a{:href => "#/"} Action
+                  %li
+                    %a{:href => "#/"} Another action
+                  %li
+                    %a{:href => "#/"} Something else here
+                  %li.divider
+                  %li
+                    %a{:href => "#/"} Separated link
+
+              -# Single button
+              .btn-group
+                %button.btn.ghost-btn.-blue.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :type => "button"}
+                  Action
+                  %span.caret
+                %ul.dropdown-menu.dropdown-ghost.-blue{:role => "menu"}
+                  %li
+                    %a{:href => "#/"} Action
+                  %li
+                    %a{:href => "#/"} Another action
+                  %li
+                    %a{:href => "#/"} Something else here
+                  %li.divider
+                  %li
+                    %a{:href => "#/"} Separated link
+
+              -# Split button
+              .btn-group
+                %button.btn.ghost-btn.-blue{:type => "button"} Action
+                %button.btn.ghost-btn.-blue.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :type => "button"}
+                  %span.caret
+                  %span.sr-only Toggle Dropdown
+                %ul.dropdown-menu.dropdown-ghost.-blue{:role => "menu"}
+                  %li
+                    %a{:href => "#/"} Action
+                  %li
+                    %a{:href => "#/"} Another action
+                  %li
+                    %a{:href => "#/"} Something else here
+                  %li.divider
+                  %li
+                    %a{:href => "#/"} Separated link
+
+      -# Typography
+
+      .row
+        .col-lg-12
+          %section.crowdbound-docs-section.crowdbound-docs-typography
+            %h2.title Typography
+            .row
+
+              -# Font weights
+              .col-lg-6
+                %p.extra-light
+                  %span
+                    Extra Light
+                    %br/
+                  Kanyu, zebra bullhead shark flying gurnard Steve fish orbicular batfish. Boafish kuhli loach glass knifefish pike eel, surfperch, scat tench golden trout Asiatic glassfish Pacific hake common tunny stingray slender snipe eel.
+                %p.regular
+                  %span
+                    Regular
+                    %br/
+                  Tunny stingray slender snipe eel. Wahoo piranha tilefish pipefish combfish, wobbegong, convict blenny basking shark yellowtail horse mackerel, amago Ratfish.
+                %p.semi-bold
+                  %span
+                    Semi Bold
+                    %br/
+                  Stingray slender snipe eel. Wahoo piranha tilefish pipefish combfish, wobbegong, convict blenny basking shark yellowtail horse mackerel, amago Ratfish.
+                %p.bold
+                  %span
+                    Bold
+                    %br/
+                  Kanyu, zebra bullhead shark flying gurnard Steve fish orbicular batfish. Boafish kuhli loach glass knifefish pike eel, surfperch, scat tench golden trout combfish, wobbegong, convict blenny basking shark yellowtail horse mackerel, amago Ratfish.
+
+              -# Headings
+              .col-lg-6
+                %h1
+                  h1. Bootstrap heading
+                  %small Secondary
+                %h2
+                  h2. Bootstrap heading
+                  %small Secondary
+                %h3
+                  h3. Bootstrap heading
+                  %small Secondary
+                %h4
+                  h4. Bootstrap heading
+                  %small Secondary
+                %h5
+                  h5. Bootstrap heading
+                  %small Secondary
+                %h6
+                  h6. Bootstrap heading
+                  %small Secondary
+
+
+      -# Checkboxes
+
+      .row
+        .col-lg-7
+          %section.crowdbound-docs-section.crowdbound-docs-checkboxes-radiobuttons
+            %h2.title Checkboxes &amp; Radio Buttons
+
+            -# Primary checkboxes and radio buttons
+            .primary-checkboxes-radiobuttons
+              %h3.subtitle PRIMARY CHECKBOXES &AMP; RADIO BUTTONS
+              .row
+                .col-lg-6
+
+                  -# Checked
+                  %label.control.checkbox.checkbox-primary.-purple
+                    %input{:checked => "", :type => "checkbox"}
+                      %span.control-indicator
+                      Check this custom checkbox
+
+                  -# Unchecked
+                  %label.control.checkbox.checkbox-primary.-purple
+                    %input{:type => "checkbox"}
+                      %span.control-indicator
+                      Check this custom checkbox
+
+                  -# Checked disabled
+                  %label.control.checkbox.checkbox-primary.-purple.-disabled
+                    %input{:checked => "", :disabled => "", :type => "checkbox"}
+                      %span.control-indicator
+                      Check this custom checkbox
+
+                  -# Unchecked Disabled
+                  %label.control.checkbox.checkbox-primary.-purple
+                    %input{:disabled => "", :type => "checkbox"}
+                      %span.control-indicator
+                      Check this custom checkbox
+
+                .col-lg-6
+                  -# Checked
+                  %label.control.radio.-purple
+                    %input#radio1{:checked => "", :name => "radio", :type => "radio"}
+                      %span.control-indicator
+                      Toggle this custom radio
+
+                  -# Unchecked
+                  %label.control.radio.-purple
+                    %input#radio2{:name => "radio", :type => "radio"}
+                      %span.control-indicator
+                      Toggle this custom radio
+
+                  -# Checked Disabled
+                  %label.control.-purple.-disabled.radio
+                    %input#radio3{:checked => "", :disabled => "", :name => "radio2", :type => "radio"}
+                      %span.control-indicator
+                      Toggle this custom radio
+
+                  -# Unchecked Disabled
+                  %label.control.radio.-purple
+                    %input#radio4{:disabled => "", :name => "radio2", :type => "radio"}
+                      %span.control-indicator
+                      Toggle this custom radio
+
+
+        -# Swiches
+
+        .col-lg-5
+          %section.crowdbound-docs-section.crowdbound-docs-switches
+            %h2.title Switches
+            -# Primary switches
+            .primary-switches
+              %h3.subtitle PRIMARY SWITCHES
+              .primary-switch
+                %input.js-switch-small{:checked => "", :type => "checkbox"}/
+              .primary-switch
+                %input.js-switch-small{:type => "checkbox"}/
+            -# Flat switches
+            .flat-switches
+              %h3.subtitle FLAT SWITCHES
+              .flat-switch
+                %input.js-switch-small{:checked => "", :type => "checkbox"}/
+              .flat-switch
+                %input.js-switch-small{:type => "checkbox"}/
+
+
+      -# Input Fields
+
+      .row
+        .col-lg-12
+          %section.crowdbound-docs-section.crowdbound-docs-input-fields
+            %h2.title Input fields
+            .row
+
+              -# Textfield styles
+              .col-lg-5
+                .textfield-styles
+                  %h3.subtitle TEXTFIELD STYLES
+
+                  -# Default input
+                  %form.form-horizontal
+                    .form-group
+                      %label.col-sm-3.control-label{:for => "inputEmail3"} Placeholder
+                      .col-sm-8
+                        %input#inputText.form-control{:placeholder => "Placeholder", :type => "Text"}
+
+                    -# Input w/ icon
+                    .form-group
+                      %label.col-sm-3.control-label{:for => "inputText"} Icon
+                      .col-sm-8
+                        .input-group.-transparent
+                          .input-group-addon
+                            %i.fa.fa-download
+                          %input#inputText.form-control{:placeholder => "Icon", :type => "Text"}
+
+                    -# Input w/ icon variation
+                    .form-group
+                      %label.col-sm-3.control-label{:for => "inputText"} Icon
+                      .col-sm-8
+                        .input-group
+                          .input-group-addon
+                            %i.fa.fa-download
+                          %input#inputText.form-control{:placeholder => "Icon", :type => "Text"}
+
+                    -# Required input
+                    .form-group.is-required
+                      %label.col-sm-3.control-label{:for => "inputText"} Required
+                      .col-sm-8
+                        %input#inputText.form-control{:placeholder => "Required", :required => "", :type => "Text"}
+                          %span.asterisks{"aria-hidden" => "true"} *
+
+                    -# Disabled input
+                    .form-group
+                      %label.col-sm-3.control-label{:for => "inputText"} Disabled
+                      .col-sm-8
+                        %input#inputText.form-control{:disabled => "", :placeholder => "Disabled", :type => "Text"}
+
+              -# Textfield notifications
+              .col-lg-5.col-lg-offset-1
+                .textfield-notifications
+                  %h3.subtitle TEXTFIELD NOTIFICATIONS
+                  %form.form-horizontal
+                    .form-group.has-warning
+                      %label.col-sm-3.control-label{:for => "inputEmail3"} Warning
+                      .col-sm-8
+                        %input#inputText.form-control{:placeholder => "I'm default!", :type => "Text"}
+                    .form-group.has-error
+                      %label.col-sm-3.control-label{:for => "inputEmail3"} Error
+                      .col-sm-8
+                        %input#inputText.form-control{:placeholder => "I'm default!", :type => "Text"}
+                    .form-group.has-success
+                      %label.col-sm-3.control-label{:for => "inputEmail3"} Success
+                      .col-sm-8
+                        %input#inputText.form-control{:placeholder => "I'm default!", :type => "Text"}
+
+              -# Textfield sizes
+              .col-lg-5.col-lg-offset-1
+                .textfield-sizes
+                  %h3.subtitle TEXTFIELD SIZES
+
+                  -# Small
+                  %form.form-horizontal
+                    .form-group
+                      %label.col-sm-3.control-label{:for => "inputEmail3"} Small
+                      .col-sm-8
+                        %input#inputText.form-control.input-sm{:placeholder => "I'm small!", :type => "Text"}
+
+                    -# Default
+                    .form-group
+                      %label.col-sm-3.control-label{:for => "inputEmail3"} Default
+                      .col-sm-8
+                        %input#inputText.form-control{:placeholder => "I'm default!", :type => "Text"}
+
+                    -# Large
+                    .form-group
+                      %label.col-sm-3.control-label{:for => "inputEmail3"} Large
+                      .col-sm-8
+                        %input#inputText.form-control.input-lg{:placeholder => "I'm large!", :type => "Text"}
+
+
+      -# Pagination
+
+      .row
+        .col-lg-12
+          %section.crowdbound-docs-section.crowdbound-docs-pagination
+            %h2.title Pagination
+            .row
+
+              -# Primary pagination
+              .col-lg-6
+                .primary-pagination
+                  %h3.subtitle Primary pagination
+                  %nav
+                    %ul.pagination.primary-pagination
+                      %li
+                        %a{"aria-label" => "Previous", :href => "#/"}
+                          %span{"aria-hidden" => "true"} &laquo;
+                      %li
+                        %a{:href => "#/"} 1
+                      %li.active
+                        %a{:href => "#/"} 2
+                      %li
+                        %a{:href => "#/"} 3
+                      %li
+                        %a{:href => "#/"} 4
+                      %li
+                        %a{:href => "#/"} 5
+                      %li
+                        %a{"aria-label" => "Next", :href => "#/"}
+                          %span{"aria-hidden" => "true"} &raquo;
+
+                -# Secondary pagination
+                .flat-pagination
+                  %h3.subtitle Flat pagination
+                  %nav
+                    %ul.pagination.flat-pagination
+                      %li
+                        %a{"aria-label" => "Previous", :href => "#/"}
+                          %span{"aria-hidden" => "true"} &laquo;
+                      %li
+                        %a{:href => "#/"} 1
+                      %li.active
+                        %a{:href => "#/"} 2
+                      %li
+                        %a{:href => "#/"} 3
+                      %li
+                        %a{:href => "#/"} 4
+                      %li
+                        %a{:href => "#/"} 5
+                      %li
+                        %a{"aria-label" => "Next", :href => "#/"}
+                          %span{"aria-hidden" => "true"} &raquo;
+
+                -# Primary pager
+                .primary-pagers
+                  %h3.subtitle Primary pagers
+                  %nav
+                    %ul.pager.primary-pager
+                      %li
+                        %a{:href => "#/"}
+                          %span{"aria-hidden" => "true"} &larr;
+                          Previous
+                      %li
+                        %a{:href => "#/"}
+                          Next
+                          %span{"aria-hidden" => "true"} &rarr;
+                      %li.active
+                        %a{:href => "#/"} Hover
+                      %li.disabled
+                        %a{:href => "#/"} Disabled
+
+                -# Flat pager
+                .flat-pagers
+                  %h3.subtitle Primary pagers
+                  %nav
+                    %ul.pager.flat-pager
+                      %li
+                        %a{:href => "#/"}
+                          %span{"aria-hidden" => "true"} &larr;
+                          Previous
+                      %li
+                        %a{:href => "#/"}
+                          Next
+                          %span{"aria-hidden" => "true"} &rarr;
+                      %li.active
+                        %a{:href => "#/"} Hover
+                      %li.disabled
+                        %a{:href => "#/"} Disabled
+
+              -# Pagination sizes
+              .col-lg-6
+                .pager-sizes
+                  %h3.subtitle Sizing
+
+                  -# Small
+                  %nav
+                    %ul.pagination.primary-pagination.-small
+                      %li
+                        %a{"aria-label" => "Previous", :href => "#/"}
+                          %span{"aria-hidden" => "true"} &laquo;
+                      %li
+                        %a{:href => "#/"} 1
+                      %li.active
+                        %a{:href => "#/"} 2
+                      %li
+                        %a{:href => "#/"} 3
+                      %li
+                        %a{:href => "#/"} 4
+                      %li
+                        %a{:href => "#/"} 5
+                      %li
+                        %a{"aria-label" => "Next", :href => "#/"}
+                          %span{"aria-hidden" => "true"} &raquo;
+
+                  -# Default
+                  %nav
+                    %ul.pagination.primary-pagination
+                      %li
+                        %a{"aria-label" => "Previous", :href => "#/"}
+                          %span{"aria-hidden" => "true"} &laquo;
+                      %li
+                        %a{:href => "#/"} 1
+                      %li.active
+                        %a{:href => "#/"} 2
+                      %li
+                        %a{:href => "#/"} 3
+                      %li
+                        %a{:href => "#/"} 4
+                      %li
+                        %a{:href => "#/"} 5
+                      %li
+                        %a{"aria-label" => "Next", :href => "#/"}
+                          %span{"aria-hidden" => "true"} &raquo;
+
+                  -# Large
+                  %nav
+                    %ul.pagination.primary-pagination.-large
+                      %li
+                        %a{"aria-label" => "Previous", :href => "#/"}
+                          %span{"aria-hidden" => "true"} &laquo;
+                      %li
+                        %a{:href => "#/"} 1
+                      %li.active
+                        %a{:href => "#/"} 2
+                      %li
+                        %a{:href => "#/"} 3
+                      %li
+                        %a{:href => "#/"} 4
+                      %li
+                        %a{:href => "#/"} 5
+                      %li
+                        %a{"aria-label" => "Next", :href => "#/"}
+                          %span{"aria-hidden" => "true"} &raquo;
+
+
+      -# Navs
+
+      .row
+        .col-lg-12
+          %section.crowdbound-docs-section.crowdbound-docs-navs
+            %h2.title Navs
+            .row
+              .col-lg-6
+
+                -# Tabs
+                .tabs
+                  %h3.subtitle Tabs
+                  %ul.nav.nav-tabs
+                    %li.active{:role => "presentation"}
+                      %a{:href => "#/"} Home
+                    %li{:role => "presentation"}
+                      %a{:href => "#/"} Profile
+                    %li.dropdown{:role => "presentation"}
+                      %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#/", :role => "button"}
+                        Dropdown
+                        %span.caret
+                      %ul.dropdown-menu.dropdown-primary.-purple{:role => "menu"}
+                        %li
+                          %a{:href => "#/"} Dropdown Item
+                        %li
+                          %a{:href => "#/"} Dropdown Item
+                        %li
+                          %a{:href => "#/"} Dropdown Item
+                        %li
+                          %a{:href => "#/"} Dropdown Item
+                        %li
+                          %a{:href => "#/"} Dropdown Item
+
+                -# Justified Tabs
+                .justified-tabs
+                  %h3.subtitle Justified Tabs
+                  %ul.nav.nav-tabs.nav-justified
+                    %li.active{:role => "presentation"}
+                      %a{:href => "#/"} Home
+                    %li{:role => "presentation"}
+                      %a{:href => "#/"} Profile
+                    %li.dropdown{:role => "presentation"}
+                      %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#/", :role => "button"}
+                        Dropdown
+                        %span.caret
+                      %ul.dropdown-menu.dropdown-primary.-purple{:role => "menu"}
+                        %li
+                          %a{:href => "#/"} Dropdown Item
+                        %li
+                          %a{:href => "#/"} Dropdown Item
+                        %li
+                          %a{:href => "#/"} Dropdown Item
+                        %li
+                          %a{:href => "#/"} Dropdown Item
+                        %li
+                          %a{:href => "#/"} Dropdown Item
+
+              -# Pills
+              .col-lg-6
+                .pills
+                  %h3.subtitle Pills
+                  %ul.nav.nav-pills.primary-pills.-purple
+                    %li.active{:role => "presentation"}
+                      %a{:href => "#/"} Home
+                    %li{:role => "presentation"}
+                      %a{:href => "#/"} Profile
+                    %li.dropdown{:role => "presentation"}
+                      %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#/", :role => "button"}
+                        Dropdown
+                        %span.caret
+                      %ul.dropdown-menu.dropdown-primary.-purple{:role => "menu"}
+                        %li
+                          %a{:href => "#/"} Dropdown Item
+                        %li
+                          %a{:href => "#/"} Dropdown Item
+                        %li
+                          %a{:href => "#/"} Dropdown Item
+                        %li
+                          %a{:href => "#/"} Dropdown Item
+                        %li
+                          %a{:href => "#/"} Dropdown Item
+
+                -# Justified  Pills
+                .pills
+                  %h3.subtitle Justified Pills
+                  %ul.nav.nav-pills.nav-justified.primary-pills.-purple
+                    %li.active{:role => "presentation"}
+                      %a{:href => "#/"}
+                        Home
+                        %span.badge 4
+                    %li{:role => "presentation"}
+                      %a{:href => "#/"} Profile
+                    %li.dropdown{:role => "presentation"}
+                      %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#/", :role => "button"}
+                        Dropdown
+                        %span.caret
+                      %ul.dropdown-menu.dropdown-primary.-purple{:role => "menu"}
+                        %li
+                          %a{:href => "#/"} Dropdown Item
+                        %li
+                          %a{:href => "#/"} Dropdown Item
+                        %li
+                          %a{:href => "#/"} Dropdown Item
+                        %li
+                          %a{:href => "#/"} Dropdown Item
+                        %li
+                          %a{:href => "#/"} Dropdown Item
+
+
+      -# Breadcrumbs
+
+      .row
+        .col-lg-6
+          %section.crowdbound-docs-section.crowdbound-docs-breadcrumbs
+            %h2.title Breadcrumbs
+
+            -# Primary breadcrumbs
+            .breadcrumbs
+              .row
+                .col-lg-10
+                  %ol.breadcrumb
+                    %li
+                      %a{:href => "#/"} Home
+                    %li
+                      %a{:href => "#/"} Library
+                    %li.active Data
+
+
+          -# Badges
+          %section.crowdbound-docs-section.crowdbound-docs-badges
+            %h2.title Badges
+
+            -# Badges
+            .badges
+              %a{:href => "#/"}
+                Inbox
+                %span.badge 42
+              %br
+                %button.btn.primary-btn.-purple{:type => "button"}
+                  Messages
+                  %span.badge 4
+
+
+        -# Labels
+
+        .col-lg-6
+          %section.crowdbound-docs-section.crowdbound-docs-labels
+            %h2.title Labels
+
+            -# Default labels
+            .labels
+              %h3.subtitle Default
+              %h1
+                Example heading
+                %span.label.primary-label.-purple New
+              %h2
+                Example heading
+                %span.label.primary-label.-purple New
+              %h3
+                Example heading
+                %span.label.primary-label.-purple New
+              %h4
+                Example heading
+                %span.label.primary-label.-purple New
+
+            -# Primary variation
+            .primary-variations
+              %h3.subtitle Primary Variations
+              %span.label.primary-label.-purple Blue
+              %span.label.primary-label.-red Red
+              %span.label.primary-label.-purple Purple
+              %span.label.primary-label.-gray Gray
+              %span.label.primary-label.-white White
+              %span.label.primary-label.-success Success
+              %span.label.primary-label.-info Info
+              %span.label.primary-label.-warning Warning
+              %span.label.primary-label.-danger Danger
+
+            -# Flat variation
+            .flat-variations
+              %h3.subtitle Primary Variations
+              %span.label.flat-label.-purple Blue
+              %span.label.flat-label.-red Red
+              %span.label.flat-label.-purple Purple
+              %span.label.flat-label.-gray Gray
+              %span.label.flat-label.-white White
+              %span.label.flat-label.-success Success
+              %span.label.flat-label.-info Info
+              %span.label.flat-label.-warning Warning
+              %span.label.flat-label.-danger Danger
+
+
+      -# Alerts
+
+      .row
+        .col-lg-6
+          %section.crowdbound-docs-section.crowdbound-docs-alerts
+            %h2.title Alerts
+            .row
+              .col-lg-12
+
+                -# Alerts
+                .alerts
+                  %h3.subtitle Primary alerts
+                  .alert.alert-info.alert-dismissible{:role => "alert"}
+                    %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+                      %span{"aria-hidden" => "true"} &times;
+                    %strong Heads up!
+                    This <a class="alert-link" href = "#">alert</a> alert needs your attention
+                    but it's not super important.
+                  .alert.alert-warning.alert-dismissible{:role => "alert"}
+                    %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+                      %span{"aria-hidden" => "true"} &times;
+                    %strong Warning!
+                    Better check yourself, you're not looking too good.
+                  .alert.alert-success.alert-dismissible{:role => "alert"}
+                    %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+                      %span{"aria-hidden" => "true"} &times;
+                    %strong Well done!
+                    You successfully read <a class="alert-link" href="#"> this important</a> alert message
+                  .alert.alert-danger.alert-dismissible{:role => "alert"}
+                    %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+                      %span{"aria-hidden" => "true"} &times;
+                    %strong Oh snap!
+                    %a.alert-link{:href => "#/"} Change a few things up
+                    and try submitting again.
+
+
+        -# Progress bars
+
+        .col-lg-5.col-lg-offset-1
+          %section.crowdbound-docs-section.crowdbound-docs-progress
+            %h2.title Progress bars
+            .row
+              .col-lg-12
+
+                -# Alerts
+                .default-bars
+                  %h3.subtitle Default bars
+                  .progress
+                    .progress-bar.-purple{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "60", :role => "progressbar", :style => "width: 60%;"}
+                      60%
+                  .progress
+                    .progress-bar.-red{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "30", :role => "progressbar", :style => "width: 30%;"}
+                      30%
+                  .progress
+                    .progress-bar.-purple{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "55", :role => "progressbar", :style => "width: 55%;"}
+                      55%
+                  .progress
+                    .progress-bar.-gray{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "80", :role => "progressbar", :style => "width: 80%;"}
+                      80%
+
+      -# Panels
+
+      .row
+        .col-lg-12
+          %section.crowdbound-docs-section.crowdbound-docs-panels
+            %h2.title Panels
+            .row
+              .col-lg-3
+
+                -# Default panels
+                .default-panels
+                  %h3.subtitle Default panels
+
+                  -# Basic panel
+                  .panel.primary-panel
+                    .panel-body
+                      Basic panel example
+
+                  -# Panels with heading
+                  .panel.primary-panel
+                    .panel-heading Panel heading without title
+                    .panel-body
+                      Panel content
+                  .panel.primary-panel
+                    .panel-heading
+                      %h3.panel-title Panel title
+                    .panel-body
+                      Panel content
+
+                  -# Panel with footer
+                  .panel.primary-panel
+                    .panel-body
+                      Panel content
+                    .panel-footer Panel footer
+
+              -# Panel variations
+              .col-lg-3.col-lg-offset-1
+                .panel-variations
+                  %h3.subtitle Panel variations
+                  .panel.primary-panel.-purple
+                    .panel-heading
+                      %h3.panel-title Panel title
+                    .panel-body
+                      Panel content
+                  .panel.primary-panel.-red
+                    .panel-heading
+                      %h3.panel-title Panel title
+                    .panel-body
+                      Panel content
+                  .panel.primary-panel.-purple
+                    .panel-heading
+                      %h3.panel-title Panel title
+                    .panel-body
+                      Panel content
+                  .panel.primary-panel.-gray
+                    .panel-heading
+                      %h3.panel-title Panel title
+                    .panel-body
+                      Panel content
+
+              -# Panel variations
+              .col-lg-3.col-lg-offset-1
+                .panel-variations
+                  %h3.subtitle &nbsp;
+                  .panel.primary-panel.-success
+                    .panel-heading
+                      %h3.panel-title Panel title
+                    .panel-body
+                      Panel content
+                  .panel.primary-panel.-info
+                    .panel-heading
+                      %h3.panel-title Panel title
+                    .panel-body
+                      Panel content
+                  .panel.primary-panel.-warning
+                    .panel-heading
+                      %h3.panel-title Panel title
+                    .panel-body
+                      Panel content
+                  .panel.primary-panel.-danger
+                    .panel-heading
+                      %h3.panel-title Panel title
+                    .panel-body
+                      Panel content

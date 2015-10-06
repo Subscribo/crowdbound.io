@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/docs/ui-kit', function () {
+    return view('_documentation/ui-kit');
+});
