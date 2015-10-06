@@ -16,10 +16,28 @@
                   %span{:style => "font-weight: 300"} &mdash; so einfach wie noch nie
                   %br
                     %small Perks, Boni und Kommunikation die dein Team begeistern
-                %a.page-scroll.btn.flat-btn.-blue.-lg{:href => "#about"}
-                  %span{:style => "color: white;"} <i class="fa fa-phone mr-3"></i> Kampagne erstellen
+
+                .btn-group
+                  %button.btn.flat-btn.-blue.-lg.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :type => "button"}
+                    %span{:style => "color: white;"} <i class="fa fa-phone mr-5"></i>Kampagne starten
+                    %span.caret{:style => "color: white;"}
+                  %ul.dropdown-menu.dropdown-primary.-grey{:role => "menu"}
+                    %li
+                      %a{:href => "#/"} Ohne Vorlage starten
+                    %li.divider
+                    %li
+                      %a{:href => "#/"} Lead Qualifizierung
+                    %li
+                      %a{:href => "#/"} Net Promoter Score
+                    %li
+                      %a{:href => "#/"} Reaktivierung - Rabatt
+                    %li
+                      %a{:href => "#/"} Upsell Wiederkehrend
+                    %li
+                      %a{:href => "#/"} Upsell Einmalig
+
                 %a.page-scroll.btn.flat-btn.-transparent-white.-lg{:href => "#content-start"}
-                  %span{:style => "color: white;"} </i>So funktioniert's
+                  %span{:style => "color: white;"} So funktioniert's
 
 
   %section#content-start.portfolio.portfolio-4

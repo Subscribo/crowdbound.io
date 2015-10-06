@@ -254,7 +254,8 @@ section .sub-heading {
   margin-left: 5px;
 }
 .navbar-brand {
-  max-width: 165px;
+  max-width: 225px;
+  padding-top: 24px !important;
 }
 @media (min-width: 768px) {
   .navbar > .container .navbar-brand,
@@ -408,7 +409,7 @@ section .sub-heading {
 @media (max-width: 992px) {
   .secondary-navbar.-blue.-large .navbar-brand {
     float: left;
-    padding: 28px 15px;
+    padding: 24px 15px;
     font-size: 18px;
     line-height: 20px;
     height: 90px;
@@ -454,7 +455,7 @@ section .sub-heading {
   content: none;
 }
 .secondary-navbar.-blue.-large .navbar-brand {
-  max-width: 180px;
+  max-width: 225px;
 }
 .secondary-navbar.-blue.-large .navbar-addon {
   width: 100%;
@@ -538,7 +539,7 @@ section .sub-heading {
 @media (max-width: 992px) {
   .secondary-navbar.-purple.-large .navbar-brand {
     float: left;
-    padding: 28px 15px;
+    padding: 24px 15px;
     font-size: 18px;
     line-height: 20px;
     height: 90px;
@@ -584,7 +585,7 @@ section .sub-heading {
   content: none;
 }
 .secondary-navbar.-purple.-large .navbar-brand {
-  max-width: 180px;
+  max-width: 225px;
 }
 .secondary-navbar.-purple.-large .navbar-addon {
   width: 100%;
@@ -668,7 +669,7 @@ section .sub-heading {
 @media (max-width: 992px) {
   .secondary-navbar.-red.-large .navbar-brand {
     float: left;
-    padding: 28px 15px;
+    padding: 24px 15px;
     font-size: 18px;
     line-height: 20px;
     height: 90px;
@@ -714,7 +715,7 @@ section .sub-heading {
   content: none;
 }
 .secondary-navbar.-red.-large .navbar-brand {
-  max-width: 180px;
+  max-width: 225px;
 }
 .secondary-navbar.-red.-large .navbar-addon {
   width: 100%;
@@ -798,7 +799,7 @@ section .sub-heading {
 @media (max-width: 992px) {
   .secondary-navbar.-gray.-large .navbar-brand {
     float: left;
-    padding: 28px 15px;
+    padding: 24px 15px;
     font-size: 18px;
     line-height: 20px;
     height: 90px;
@@ -844,7 +845,7 @@ section .sub-heading {
   content: none;
 }
 .secondary-navbar.-gray.-large .navbar-brand {
-  max-width: 180px;
+  max-width: 225px;
 }
 .secondary-navbar.-gray.-large .navbar-addon {
   width: 100%;
@@ -999,7 +1000,7 @@ section .sub-heading {
   position: relative;
 }
 .crowdbound-navbar .crowdbound-navbar-brand img {
-  max-width: 160px;
+  max-width: 225px;
   margin: 0 auto;
 }
 .crowdbound-navbar > .container-fluid,
