@@ -5,3 +5,5 @@ Homestead.json
 .env
 npm-debug.log
 /public/build
+*.css.map
+*.js.map
