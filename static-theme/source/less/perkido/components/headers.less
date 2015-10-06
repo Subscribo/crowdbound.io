@@ -321,34 +321,34 @@
 .secondary-navbar {
   // Color variations
   &.-blue {
-    .secondary-navbar(white, @perkido-blue, white);
+    .secondary-navbar(white, @crowdbound-blue, white);
   }
   &.-purple {
-    .secondary-navbar(white, @perkido-purple, white);
+    .secondary-navbar(white, @crowdbound-purple, white);
   }
   &.-red {
-    .secondary-navbar(white, @perkido-red, white);
+    .secondary-navbar(white, @crowdbound-red, white);
   }
   &.-gray {
-    .secondary-navbar(white, darken(@perkido-gray, 7%), @perkido-purple);
+    .secondary-navbar(white, darken(@crowdbound-gray, 7%), @crowdbound-purple);
   }
 }
 
 // 3. Innova Navbar
 // ------------------------------------------
 
-.perkido-navbar {
-  // Give the perkido-navbar the same style as the primary navbar
+.crowdbound-navbar {
+  // Give the crowdbound-navbar the same style as the primary navbar
   .primary-navbar;
-  height: @perkido-navbar-height;
+  height: @crowdbound-navbar-height;
   padding: 0 20px;
   position: relative;
 
   &.-lg {
-    height: @perkido-navbar-height-lg;
+    height: @crowdbound-navbar-height-lg;
   }
 
-  .perkido-navbar-nav {
+  .crowdbound-navbar-nav {
     .center-vertical;
     position: relative;
 
@@ -378,8 +378,8 @@
   }
 }
 
-// Style and center the brand with the perkido-navbar
-.perkido-navbar .perkido-navbar-brand {
+// Style and center the brand with the crowdbound-navbar
+.crowdbound-navbar .crowdbound-navbar-brand {
   .center-both;
   display: inline-block;
   position: relative;
@@ -392,17 +392,17 @@
 
 // Make sure all children have a height of 100%
 // This is useful when we want to easily center elements
-.perkido-navbar > .container-fluid,
-.perkido-navbar > .container-fluid .row,
-.perkido-navbar > .container-fluid .row > div,
-.perkido-navbar > .container,
-.perkido-navbar > .container .row,
-.perkido-navbar > .container .row > div {
+.crowdbound-navbar > .container-fluid,
+.crowdbound-navbar > .container-fluid .row,
+.crowdbound-navbar > .container-fluid .row > div,
+.crowdbound-navbar > .container,
+.crowdbound-navbar > .container .row,
+.crowdbound-navbar > .container .row > div {
   height: 100%;
 }
 
-// Center the buttons within the perkido-navbar
-.perkido-navbar .btn {
+// Center the buttons within the crowdbound-navbar
+.crowdbound-navbar .btn {
   .center-vertical;
 
   &:active,

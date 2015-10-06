@@ -70,7 +70,7 @@
 /* ==========================================================================
 0. Global styling
 ========================================================================== */
-.components .perkido-docs section section {
+.components .crowdbound-docs section section {
   background-color: #fff;
   border-radius: 8px;
   border: 1px solid rgba(158, 164, 169, 0.7);
@@ -875,7 +875,7 @@ section .sub-heading {
 .secondary-navbar.-gray.-large .navbar-addon > li > a:hover {
   color: #b5c4cc;
 }
-.perkido-navbar {
+.crowdbound-navbar {
   background-color: #fff;
   border: 1px solid rgba(158, 164, 169, 0.7);
   box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.05);
@@ -884,51 +884,51 @@ section .sub-heading {
   padding: 0 20px;
   position: relative;
 }
-.perkido-navbar .navbar-nav > li > a {
+.crowdbound-navbar .navbar-nav > li > a {
   color: #6d878f;
 }
 @media (min-width: 992px) {
-  .perkido-navbar .navbar-nav > li > a {
+  .crowdbound-navbar .navbar-nav > li > a {
     border-top: 3px solid transparent;
     border-bottom: 3px solid transparent;
   }
 }
-.perkido-navbar .navbar-nav > li > a:hover,
-.perkido-navbar .navbar-nav > li > a:focus {
+.crowdbound-navbar .navbar-nav > li > a:hover,
+.crowdbound-navbar .navbar-nav > li > a:focus {
   color: #673ab7;
   background-color: transparent;
 }
-.perkido-navbar .navbar-nav > .active > a,
-.perkido-navbar .navbar-nav > .active > a:hover,
-.perkido-navbar .navbar-nav > .active > a:focus {
+.crowdbound-navbar .navbar-nav > .active > a,
+.crowdbound-navbar .navbar-nav > .active > a:hover,
+.crowdbound-navbar .navbar-nav > .active > a:focus {
   color: #673ab7;
   border-bottom-color: #673ab7;
 }
-.perkido-navbar .navbar-nav > .open > a,
-.perkido-navbar .navbar-nav > .open > a:hover,
-.perkido-navbar .navbar-nav > .open > a:focus {
+.crowdbound-navbar .navbar-nav > .open > a,
+.crowdbound-navbar .navbar-nav > .open > a:hover,
+.crowdbound-navbar .navbar-nav > .open > a:focus {
   background-color: transparent;
   border-color: transparent;
 }
-.perkido-navbar .glyphicon {
+.crowdbound-navbar .glyphicon {
   color: #673ab7;
 }
-.perkido-navbar .navbar-toggle {
+.crowdbound-navbar .navbar-toggle {
   background-image: -moz-linear-gradient(90deg, #fcfeff 0%, #fcfeff 3%, rgba(252, 253, 254, 0.99) 7%, rgba(252, 252, 252, 0.98) 20%, rgba(252, 254, 255, 0.87843) 100%);
   background-image: -webkit-linear-gradient(90deg, #fcfeff 0%, #fcfeff 3%, rgba(252, 253, 254, 0.99) 7%, rgba(252, 252, 252, 0.98) 20%, rgba(252, 254, 255, 0.87843) 100%);
   background-image: -ms-linear-gradient(90deg, #fcfeff 0%, #fcfeff 3%, rgba(252, 253, 254, 0.99) 7%, rgba(252, 252, 252, 0.98) 20%, rgba(252, 254, 255, 0.87843) 100%);
   border: 1px solid rgba(158, 164, 169, 0.7);
   box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.05);
 }
-.perkido-navbar .navbar-toggle:hover,
-.perkido-navbar .navbar-toggle:focus {
+.crowdbound-navbar .navbar-toggle:hover,
+.crowdbound-navbar .navbar-toggle:focus {
   background-color: #ddd;
   background-image: none;
 }
-.perkido-navbar .navbar-toggle .icon-bar {
+.crowdbound-navbar .navbar-toggle .icon-bar {
   background-color: #673ab7;
 }
-.perkido-navbar.-transparent-nav {
+.crowdbound-navbar.-transparent-nav {
   background-color: transparent;
   background-image: none;
   box-shadow: none;
@@ -936,61 +936,61 @@ section .sub-heading {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.perkido-navbar.-transparent-nav .navbar-nav > li > a {
+.crowdbound-navbar.-transparent-nav .navbar-nav > li > a {
   color: rgba(255, 255, 255, 0.7);
   font-weight: 700;
 }
 @media (min-width: 992px) {
-  .perkido-navbar.-transparent-nav .navbar-nav > li > a {
+  .crowdbound-navbar.-transparent-nav .navbar-nav > li > a {
     border-top: 3px solid transparent;
     border-bottom: 3px solid transparent;
   }
 }
-.perkido-navbar.-transparent-nav .navbar-nav > li > a:hover,
-.perkido-navbar.-transparent-nav .navbar-nav > li > a:focus {
+.crowdbound-navbar.-transparent-nav .navbar-nav > li > a:hover,
+.crowdbound-navbar.-transparent-nav .navbar-nav > li > a:focus {
   color: #fff;
   background-color: transparent;
 }
-.perkido-navbar.-transparent-nav .navbar-nav > .active > a,
-.perkido-navbar.-transparent-nav .navbar-nav > .active > a:hover,
-.perkido-navbar.-transparent-nav .navbar-nav > .active > a:focus {
+.crowdbound-navbar.-transparent-nav .navbar-nav > .active > a,
+.crowdbound-navbar.-transparent-nav .navbar-nav > .active > a:hover,
+.crowdbound-navbar.-transparent-nav .navbar-nav > .active > a:focus {
   color: #fff;
   border-bottom-color: #fff;
 }
-.perkido-navbar.-transparent-nav .navbar-nav > .open > a,
-.perkido-navbar.-transparent-nav .navbar-nav > .open > a:hover,
-.perkido-navbar.-transparent-nav .navbar-nav > .open > a:focus {
+.crowdbound-navbar.-transparent-nav .navbar-nav > .open > a,
+.crowdbound-navbar.-transparent-nav .navbar-nav > .open > a:hover,
+.crowdbound-navbar.-transparent-nav .navbar-nav > .open > a:focus {
   border-color: transparent;
 }
-.perkido-navbar.-lg {
+.crowdbound-navbar.-lg {
   height: 150px;
 }
-.perkido-navbar .perkido-navbar-nav {
+.crowdbound-navbar .crowdbound-navbar-nav {
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   position: relative;
 }
-.perkido-navbar .perkido-navbar-nav > li {
+.crowdbound-navbar .crowdbound-navbar-nav > li {
   display: inline-block;
 }
-.perkido-navbar .perkido-navbar-nav > li > a {
+.crowdbound-navbar .crowdbound-navbar-nav > li > a {
   color: #6d878f;
   text-transform: uppercase;
   font-weight: bold;
   padding: 10px 10px;
 }
-.perkido-navbar .perkido-navbar-nav > li > a:hover,
-.perkido-navbar .perkido-navbar-nav > li > a:focus {
+.crowdbound-navbar .crowdbound-navbar-nav > li > a:hover,
+.crowdbound-navbar .crowdbound-navbar-nav > li > a:focus {
   color: #673ab7;
   background-color: transparent;
 }
-.perkido-navbar .perkido-navbar-nav > .active > a,
-.perkido-navbar .perkido-navbar-nav > .active > a:hover,
-.perkido-navbar .perkido-navbar-nav > .active > a:focus {
+.crowdbound-navbar .crowdbound-navbar-nav > .active > a,
+.crowdbound-navbar .crowdbound-navbar-nav > .active > a:hover,
+.crowdbound-navbar .crowdbound-navbar-nav > .active > a:focus {
   color: #673ab7;
 }
-.perkido-navbar .perkido-navbar-brand {
+.crowdbound-navbar .crowdbound-navbar-brand {
   top: 50%;
   left: 50%;
   -webkit-transform: translateY(-50%) translateX(-50%);
@@ -998,25 +998,25 @@ section .sub-heading {
   display: inline-block;
   position: relative;
 }
-.perkido-navbar .perkido-navbar-brand img {
+.crowdbound-navbar .crowdbound-navbar-brand img {
   max-width: 160px;
   margin: 0 auto;
 }
-.perkido-navbar > .container-fluid,
-.perkido-navbar > .container-fluid .row,
-.perkido-navbar > .container-fluid .row > div,
-.perkido-navbar > .container,
-.perkido-navbar > .container .row,
-.perkido-navbar > .container .row > div {
+.crowdbound-navbar > .container-fluid,
+.crowdbound-navbar > .container-fluid .row,
+.crowdbound-navbar > .container-fluid .row > div,
+.crowdbound-navbar > .container,
+.crowdbound-navbar > .container .row,
+.crowdbound-navbar > .container .row > div {
   height: 100%;
 }
-.perkido-navbar .btn {
+.crowdbound-navbar .btn {
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-.perkido-navbar .btn:active,
-.perkido-navbar .btn.active {
+.crowdbound-navbar .btn:active,
+.crowdbound-navbar .btn.active {
   -webkit-transform: translateY(-50%) scale(0.95);
   transform: translateY(-50%) scale(0.95);
 }
@@ -4014,33 +4014,33 @@ body {
 .laptops a:hover img {
   opacity: 0.7;
 }
-.perkido-docs > .container > .row {
+.crowdbound-docs > .container > .row {
   border-bottom: 1px solid #e6e6e6;
 }
-.perkido-docs > .container > .row:last-child {
+.crowdbound-docs > .container > .row:last-child {
   margin-bottom: 300px;
 }
-.perkido-docs > .container .container {
+.crowdbound-docs > .container .container {
   padding: 0;
   width: auto;
 }
-.perkido-docs .perkido-docs-section {
+.crowdbound-docs .crowdbound-docs-section {
   padding: 65px 0;
 }
-.perkido-docs .title {
+.crowdbound-docs .title {
   color: #4c5e64;
   font-weight: 500;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 22px;
 }
-.perkido-docs .title:before {
+.crowdbound-docs .title:before {
   content: '.';
   display: inline-block;
   padding-right: 6px;
   color: #9abfca;
 }
-.perkido-docs .subtitle {
+.crowdbound-docs .subtitle {
   color: #6d878f;
   text-transform: uppercase;
   font-weight: 400;
@@ -4048,18 +4048,18 @@ body {
   margin-bottom: 30px;
   margin-top: 65px;
 }
-.perkido-docs .perkido-docs-buttons .btn {
+.crowdbound-docs .crowdbound-docs-buttons .btn {
   margin-right: 15px;
   width: 140px;
 }
-.perkido-docs .perkido-docs-buttons .btn-group {
+.crowdbound-docs .crowdbound-docs-buttons .btn-group {
   margin-right: 15px;
 }
-.perkido-docs .perkido-docs-buttons .btn-group > .btn {
+.crowdbound-docs .crowdbound-docs-buttons .btn-group > .btn {
   width: auto;
   margin-right: 0;
 }
-.perkido-docs .button-sizes .btn {
+.crowdbound-docs .button-sizes .btn {
   margin-right: 15px;
   width: auto;
   position: relative;
@@ -4067,87 +4067,87 @@ body {
   display: inline-block;
   vertical-align: top;
 }
-.perkido-docs .perkido-docs-typography p {
+.crowdbound-docs .crowdbound-docs-typography p {
   font-size: 18px;
   margin-bottom: 20px;
 }
-.perkido-docs .perkido-docs-typography p span {
+.crowdbound-docs .crowdbound-docs-typography p span {
   color: #673ab7;
 }
-.perkido-docs .perkido-docs-typography p:first-child {
+.crowdbound-docs .crowdbound-docs-typography p:first-child {
   margin-top: 30px;
 }
-.perkido-docs .perkido-docs-typography p:last-child {
+.crowdbound-docs .crowdbound-docs-typography p:last-child {
   margin-bottom: 10px;
 }
-.perkido-docs .perkido-docs-typography h1,
-.perkido-docs .perkido-docs-typography h2,
-.perkido-docs .perkido-docs-typography h3,
-.perkido-docs .perkido-docs-typography h4,
-.perkido-docs .perkido-docs-typography h5,
-.perkido-docs .perkido-docs-typography h6 {
+.crowdbound-docs .crowdbound-docs-typography h1,
+.crowdbound-docs .crowdbound-docs-typography h2,
+.crowdbound-docs .crowdbound-docs-typography h3,
+.crowdbound-docs .crowdbound-docs-typography h4,
+.crowdbound-docs .crowdbound-docs-typography h5,
+.crowdbound-docs .crowdbound-docs-typography h6 {
   margin: 20px 0;
 }
-.perkido-docs .perkido-docs-typography h1 {
+.crowdbound-docs .crowdbound-docs-typography h1 {
   margin-top: 56px;
 }
-.perkido-docs .perkido-docs-typography .extra-light {
+.crowdbound-docs .crowdbound-docs-typography .extra-light {
   font-weight: 300;
 }
-.perkido-docs .perkido-docs-typography .regular {
+.crowdbound-docs .crowdbound-docs-typography .regular {
   font-weight: 400;
 }
-.perkido-docs .perkido-docs-typography .semi-bold {
+.crowdbound-docs .crowdbound-docs-typography .semi-bold {
   font-weight: 600;
 }
-.perkido-docs .perkido-docs-typography .bold {
+.crowdbound-docs .crowdbound-docs-typography .bold {
   font-weight: 700;
 }
-.perkido-docs .perkido-docs-switches .switchery-small {
+.crowdbound-docs .crowdbound-docs-switches .switchery-small {
   width: 50px;
   margin-right: 5px;
 }
-.perkido-docs .perkido-docs-pagination ul.pagination {
+.crowdbound-docs .crowdbound-docs-pagination ul.pagination {
   margin-top: 0;
   margin-bottom: 0;
 }
-.perkido-docs .perkido-docs-pagination .pager-sizes ul.pagination {
+.crowdbound-docs .crowdbound-docs-pagination .pager-sizes ul.pagination {
   margin-bottom: 20px;
 }
-.perkido-docs .perkido-docs-pagination .pager {
+.crowdbound-docs .crowdbound-docs-pagination .pager {
   text-align: left;
 }
-.perkido-docs .perkido-docs-pagination .pager li a,
-.perkido-docs .perkido-docs-pagination .pager li span {
+.crowdbound-docs .crowdbound-docs-pagination .pager li a,
+.crowdbound-docs .crowdbound-docs-pagination .pager li span {
   width: 115px;
   text-align: center;
 }
-.perkido-docs .perkido-docs-breadcrumbs ol.breadcrumb {
+.crowdbound-docs .crowdbound-docs-breadcrumbs ol.breadcrumb {
   margin-top: 70px;
   margin-bottom: 0;
 }
-.perkido-docs .perkido-docs-badges a {
+.crowdbound-docs .crowdbound-docs-badges a {
   margin: 40px 0 0 0;
   display: block;
 }
-.perkido-docs .perkido-docs-labels .labels * {
+.crowdbound-docs .crowdbound-docs-labels .labels * {
   margin: 30px 0;
 }
-.perkido-docs .perkido-docs-labels .labels h3:first-child {
+.crowdbound-docs .crowdbound-docs-labels .labels h3:first-child {
   margin-top: 70px;
 }
-.perkido-docs .perkido-docs-labels .primary-variations,
-.perkido-docs .perkido-docs-labels .flat-variations {
+.crowdbound-docs .crowdbound-docs-labels .primary-variations,
+.crowdbound-docs .crowdbound-docs-labels .flat-variations {
   font-size: 20px;
 }
-.perkido-docs .perkido-docs-labels .primary-variations span,
-.perkido-docs .perkido-docs-labels .flat-variations span {
+.crowdbound-docs .crowdbound-docs-labels .primary-variations span,
+.crowdbound-docs .crowdbound-docs-labels .flat-variations span {
   margin: 0 3px 0 0;
 }
-.perkido-docs .perkido-docs-headers .header {
+.crowdbound-docs .crowdbound-docs-headers .header {
   margin: 30px 0;
 }
-.perkido-docs .perkido-docs-headers .navbar {
+.crowdbound-docs .crowdbound-docs-headers .navbar {
   margin: 0;
 }
 .sticky-wrapper {
@@ -4220,7 +4220,7 @@ button {
   padding: 26px 15px;
 }
 .navbar-brand svg,
-.perkido-navbar-brand svg {
+.crowdbound-navbar-brand svg {
   width: 100%;
 }
 .georgia {
