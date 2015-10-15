@@ -7,7 +7,7 @@
   .container
 
     -# Brand and toggle get grouped for better mobile display
-    .navbar-header
+    .navbar-header.hidden-xs.hidden-sm.hidden-md
       %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
         %span.sr-only Toggle navigation
         %span.icon-bar
@@ -39,6 +39,15 @@
               %a{:href => "#"} Kampagnen Vorlagen
         %li
           %a{:href => "#"} Berichte
+        %li.dropdown
+          %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+            API
+            %span.caret </  span>
+          %ul.dropdown-menu.dropdown-flat.-blue{:role => "menu"}
+            %li
+              %a{:href => "#"} API-Dokumentation
+            %li
+              %a{:href => "#"} API-Einstellungen
 
       -# User-Menu
       %ul.hidden-xs.hidden-sm.nav.navbar-nav.navbar-right

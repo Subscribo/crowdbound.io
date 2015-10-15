@@ -369,10 +369,13 @@ section .sub-heading {
   /* W3C */
   transition: all 0.4s ease-in-out;
 }
+.primary-navbar-admin .navbar-brand {
+  max-width: 190px;
+}
 .primary-navbar-admin .navbar-nav > li > a {
   color: #fff;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   padding-bottom: 10px;
   padding-top: 27px;
