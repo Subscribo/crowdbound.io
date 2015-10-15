@@ -10,23 +10,6 @@
     %meta{ name: "keywords", content: "call center, agent, call center agents, on-demand, crowdsourced, outbound calling, lead qualification, leads, telesales" }
     %meta{ name: "author", content: "Michael G. Ströck" }
 
-    -# Open Graph
-    %meta{ property: "og:title", content: "Crowdbound - On-Demand Outbound calling" }
-    %meta{ property: "og:type", content: "website" }
-    %meta{ property: "og:url", content: "ROOT_URL" }
-    %meta{ property: "og:image", content: "" }
-    %meta{ property: "og:description", content: "" }
-    %meta{ property: "fb:admins", content: "712740432" }
-
-    -# Twitter Cards
-    %meta{ name: "twitter:card", content: "summary" }
-    %meta{ name: "twitter:site", content: "@crowdbound" }
-    %meta{ name: "twitter:creator", content: "@crowdbound" }
-    %meta{ name: "twitter:url", content: "ROOT_URL" }
-    %meta{ name: "twitter:title", content: "Crowdbound - persönliches on-demand Call Center " }
-    %meta{ name: "twitter:description", content: "Crowdbound ist dein persönliches on-demand Call Center" }
-    %meta{ name: "twitter:image", content: "" }
-
     %title Crowdbound &mdash; On-Demand Outbound Call Center
 
     -# Import Theme & Components
@@ -43,9 +26,6 @@
     -# Flickity
     %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.2/flickity.min.css", :rel => "stylesheet"}
 
-    -# Sitemap
-    %link{ rel: "sitemap", type: "application/xml", title: "Sitemap", href: "/sitemap.xml" }
-
     -# HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
     -# WARNING: Respond.js does not work if you view the page via file://
     /[if lt IE 9]
@@ -61,11 +41,11 @@
     -# Placeholder element for Facebook JS
     #fb-root
 
-    -include "_shared/navbar"
+    -include "_shared/app/navbar"
 
     -block page_content ""
 
-    -include "_shared/footer"
+    -include "_shared/app/footer"
 
 
     -# jQuery (necessary for Bootstrap's JavaScript plugins)
@@ -79,16 +59,3 @@
 
     -# Flickity
     %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.2/flickity.pkgd.min.js"}
-
-    -# Change transparent header on scroll
-    :javascript
-      //jQuery to collapse the navbar on scroll
-      $(window).scroll(function() {
-          if ($(".navbar-fixed-top-transparent").offset().top > 50) {
-              $(".navbar-fixed-top").removeClass("-transparent-nav");
-              $("#logo").attr('src','/assets/images/crowdbound-logo-blue.png');
-          } else {
-              $(".navbar-fixed-top").addClass("-transparent-nav");
-              $("#logo").attr('src','/assets/images/crowdbound-logo-white.png');
-          }
-      });

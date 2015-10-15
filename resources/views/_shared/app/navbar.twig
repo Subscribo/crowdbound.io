@@ -3,7 +3,7 @@
 %img.hidden{:src => "#{asset('assets/images/crowdbound-logo-white.png')}"}/
 %img.hidden{:src => "#{asset('assets/images/crowdbound-logo-blue.png')}"}/
 
-%nav.navbar.navbar-fixed-top.navbar-fixed-top-transparent.primary-navbar.-transparent-nav
+%nav.navbar.navbar-fixed-top.navbar-fixed-top-transparent.primary-navbar-admin
   .container
 
     -# Brand and toggle get grouped for better mobile display
@@ -13,7 +13,7 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.navbar-brand{:href => "#"}
+      %a.navbar-brand{:href => "http://crowdbound.io"}
         %img#logo.img-responsive{:src => "#{asset('assets/images/crowdbound-logo-white.png')}"}/
 
     -# Collect the nav links, forms, and other content for toggling
@@ -43,7 +43,10 @@
       -# User-Menu
       %ul.hidden-xs.hidden-sm.nav.navbar-nav.navbar-right
         %li
-          %a{:href => "#"} Dokumentation
+          .hidden-xs.hidden-sm.navbar-form.navbar-right
+            %button.btn.flat-btn.-transparent-white.-sm.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :type => "button"}
+              %span.mr-20{:style => "color: grey; font-weight: 400;"} GUTHABEN:
+              %span{:style => "color: grey;"} € 150
 
         -# User /Account settings dropdown
         %li
@@ -52,7 +55,7 @@
               %button.btn.flat-btn.-blue.-sm.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :type => "button"}
                 %span{:style => "color: white;"} <i class="fa fa-user mr-5"></i>Your Username
                 %span.caret{:style => "color: white;"}
-              %ul.dropdown-menu.dropdown-primary.-grey{:role => "menu"}
+              %ul.dropdown-menu.dropdown-flat.-blue{:role => "menu"}
                 %li
                   %a{:href => "#/"} <i class="fa fa-home mr-20"> Mein Account</i>
                 %li

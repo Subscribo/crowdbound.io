@@ -13,7 +13,7 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.navbar-brand{:href => "#"}
+      %a.navbar-brand{:href => "http://crowdbound.io"}
         %img#logo.img-responsive{:src => "#{asset('assets/images/crowdbound-logo-white.png')}"}/
 
     -# Collect the nav links, forms, and other content for toggling
@@ -25,7 +25,9 @@
             %span.caret </  span>
           %ul.dropdown-menu.dropdown-flat.-blue{:role => "menu"}
             %li
-              %a{:href => "#"} Mobile App &mdash; Agents
+              %a{:href => "#"} Mobile App für Agents
+            %li
+              %a{:href => "#"} Desktop App für Kampagnen-Manager
             %li
               %a{:href => "#"} CRM-Schnittstellen
             %li.active
@@ -46,4 +48,5 @@
 
         -# Register / Register CTA
         .hidden-xs.hidden-sm.navbar-form.navbar-right
-          %button.btn.ghost-btn.-rounded.-white.-sm.mt-3 <i class="fa fa-sign-in mr-5"></i>  Login
+          %a{:href => "app"}
+            %button.btn.ghost-btn.-rounded.-white.-sm.mt-3 <i class="fa fa-sign-in mr-5"></i>  Login

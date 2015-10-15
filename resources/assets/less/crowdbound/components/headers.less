@@ -316,6 +316,120 @@
   }
 }
 
+// 3. Primary Admin Navbar
+// -------------------------
+
+.primary-navbar-admin {
+  background: -webkit-linear-gradient(10deg, #287dff 20%,#8ab0e0 95%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(10deg, #287dff 20%,#8ab0e0 95%); /* FF3.6+ */
+  background:     -ms-linear-gradient(10deg, #287dff 20%,#8ab0e0 95%); /* IE10 */
+  background:      -o-linear-gradient(10deg, #287dff 20%,#8ab0e0 95%); /* Opera 11.10+ */
+  background:         linear-gradient(10deg, #287dff 20%,#8ab0e0 95%); /* W3C */
+
+  transition: all .4s ease-in-out;
+
+  .navbar-nav {
+    > li > a {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 400;
+      padding-bottom: 10px;
+      padding-top: 27px;
+
+      @media (min-width: @screen-md-min) {
+        border-top: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+      }
+
+      &:hover,
+      &:focus {
+        color: @crowdbound-gray;
+        border-color: transparent;
+        background-color: transparent;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        border-color: transparent;
+        background-color: transparent;
+      }
+    }
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        border-color: transparent;
+      }
+    }
+  }
+
+  .glyphicon {
+    color: @primary-navbar-link-hover-color;
+  }
+
+  .navbar-toggle {
+    background-image: -moz-linear-gradient( 90deg, rgb(252,254,255) 0%, rgb(252,254,255) 3%, rgba(252,253,254,0.99) 7%, rgba(252,252,252,0.98) 20%, rgba(252,254,255,0.87843) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(252,254,255) 0%, rgb(252,254,255) 3%, rgba(252,253,254,0.99) 7%, rgba(252,252,252,0.98) 20%, rgba(252,254,255,0.87843) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(252,254,255) 0%, rgb(252,254,255) 3%, rgba(252,253,254,0.99) 7%, rgba(252,252,252,0.98) 20%, rgba(252,254,255,0.87843) 100%);
+    border: 1px solid rgba(158, 164, 169,0.7);
+    box-shadow: 1px 2px 1px rgba(0,0,0,.05);
+
+    &:hover,
+    &:focus {
+      background-color: @primary-navbar-toggle-hover-bg;
+      background-image: none;
+    }
+    .icon-bar {
+      background-color: @primary-navbar-toggle-icon-bar-bg;
+    }
+  }
+
+  &.-transparent-nav {
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .navbar-nav {
+      > li > a {
+        color: fade(#fff, 70%);
+        font-weight: 700;
+
+        @media (min-width: @screen-md-min) {
+          border-top: 3px solid transparent;
+          border-bottom: 3px solid transparent;
+        }
+
+        &:hover,
+        &:focus {
+          color: #fff;
+          background-color: @primary-navbar-link-hover-bg;
+        }
+      }
+      > .active > a {
+        &,
+        &:hover,
+        &:focus {
+          color: #fff;
+          border-bottom-color: #fff;
+        }
+      }
+      > .open > a {
+        &,
+        &:hover,
+        &:focus {
+          border-color: transparent;
+        }
+      }
+    }
+  }
+}
 // Styles
 // -------------------------
 

@@ -2,7 +2,8 @@
   "private": true,
   "devDependencies": {
     "gulp": "^3.8.8",
-    "laravel-elixir-imagemin": "^0.2.1"
+    "laravel-elixir-imagemin": "^0.2.1",
+    "laravel-elixir-livereload": "^1.0"
   },
   "dependencies": {
     "laravel-elixir": "^3.0.0",
