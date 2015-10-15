@@ -18,3 +18,11 @@ Route::get('/', function () {
 Route::get('/docs/ui-kit', function () {
     return view('_documentation/ui-kit');
 });
+
+Route::get('/docs/components', function () {
+    return view('_documentation/components');
+});
+
+Route::get('/app', function () {
+    return view('app/index');
+});

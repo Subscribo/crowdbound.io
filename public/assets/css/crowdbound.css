@@ -107,19 +107,19 @@ section .sub-heading {
   /* Chrome 19+, Safari 6+, Safari 6+ iOS */
   border-bottom: 0;
 }
-.fa.-purple {
-  color: #673ab7;
+.fa.blue {
+  color: #3897ff;
 }
 .-inverse {
-  background: -webkit-linear-gradient(10deg, #9688C8 20%, #38267D 95%);
+  background: -webkit-linear-gradient(10deg, #8ab0e0 20%, #287dff 95%);
   /* Chrome 10+, Saf5.1+ */
-  background: -moz-linear-gradient(10deg, #9688C8 20%, #38267D 95%);
+  background: -moz-linear-gradient(10deg, #8ab0e0 20%, #287dff 95%);
   /* FF3.6+ */
-  background: -ms-linear-gradient(10deg, #9688C8 20%, #38267D 95%);
+  background: -ms-linear-gradient(10deg, #8ab0e0 20%, #287dff 95%);
   /* IE10 */
-  background: -o-linear-gradient(10deg, #9688C8 20%, #38267D 95%);
+  background: -o-linear-gradient(10deg, #8ab0e0 20%, #287dff 95%);
   /* Opera 11.10+ */
-  background: linear-gradient(10deg, #9688C8 20%, #38267D 95%);
+  background: linear-gradient(10deg, #8ab0e0 20%, #287dff 95%);
   /* W3C */
   color: rgba(255, 255, 255, 0.6);
 }
@@ -158,7 +158,7 @@ section .sub-heading {
   color: rgba(255, 255, 255, 0.8);
 }
 .-inverse a:hover {
-  color: #673ab7;
+  color: #3897ff;
 }
 .-inverse hr {
   border-top-color: rgba(255, 255, 255, 0.2);
@@ -239,7 +239,7 @@ section .sub-heading {
 .flickity-page-dots .dot,
 .flickity-page-dots .dot.is-selected {
   color: #6d878f;
-  background: #673ab7;
+  background: #3897ff;
 }
 /* ==========================================================================
 1. Headers/Navigation
@@ -1091,7 +1091,7 @@ section .sub-heading {
 }
 .feature .outline-icon {
   font-size: 26px;
-  color: #673ab7;
+  color: #3897ff;
   vertical-align: middle;
   padding-right: 10px;
 }
@@ -1112,7 +1112,7 @@ section .sub-heading {
   font-size: 36px;
   margin-bottom: 5px;
   display: block;
-  color: #673ab7;
+  color: #3897ff;
   padding-top: 40px;
   padding-right: 0;
 }
@@ -1134,7 +1134,7 @@ section .sub-heading {
   height: 2px;
   width: 45px;
   margin: 25px auto 15px auto;
-  background-color: #673ab7;
+  background-color: #3897ff;
   display: block;
 }
 .feature-2 .heading {
@@ -1149,7 +1149,7 @@ section .sub-heading {
   font-size: 36px;
   margin-bottom: 5px;
   display: block;
-  color: #673ab7;
+  color: #3897ff;
   padding-top: 40px;
   padding-right: 0;
 }
@@ -1171,7 +1171,7 @@ section .sub-heading {
   height: 2px;
   width: 45px;
   margin: 25px auto 15px auto;
-  background-color: #673ab7;
+  background-color: #3897ff;
   display: block;
 }
 .feature-2 .nav-tabs {
@@ -2611,7 +2611,7 @@ section .sub-heading {
 }
 .content-3 .outline-icon {
   font-size: 44px;
-  color: #673ab7;
+  color: #3897ff;
   vertical-align: middle;
   padding-right: 20px;
 }
@@ -2761,7 +2761,7 @@ section .sub-heading {
   font-weight: 700;
   font-size: 46px;
   display: block;
-  color: #673ab7;
+  color: #3897ff;
 }
 .content-6 .statistic {
   font-family: 500;
@@ -5580,13 +5580,13 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #673ab7;
+  color: #3897ff;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #46287d;
-  text-decoration: none;
+  color: #002752;
+  text-decoration: underline;
 }
 a:focus {
   outline: thin dotted;
@@ -7933,7 +7933,7 @@ fieldset[disabled] .btn-danger.active {
   background-color: #fff;
 }
 .btn-link {
-  color: #673ab7;
+  color: #3897ff;
   font-weight: normal;
   border-radius: 0;
 }
@@ -7954,8 +7954,8 @@ fieldset[disabled] .btn-link {
 }
 .btn-link:hover,
 .btn-link:focus {
-  color: #46287d;
-  text-decoration: none;
+  color: #002752;
+  text-decoration: underline;
   background-color: transparent;
 }
 .btn-link[disabled]:hover,
@@ -8529,7 +8529,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #673ab7;
+  border-color: #3897ff;
 }
 .nav .nav-divider {
   height: 1px;
@@ -9246,7 +9246,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   padding: 6px 12px;
   line-height: 1.42857143;
   text-decoration: none;
-  color: #673ab7;
+  color: #3897ff;
   background-color: #fff;
   border: 1px solid #ddd;
   margin-left: -1px;
@@ -9267,7 +9267,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > li > a:focus,
 .pagination > li > span:focus {
   z-index: 3;
-  color: #46287d;
+  color: #002752;
   background-color: #eeeeee;
   border-color: #ddd;
 }
@@ -9465,7 +9465,7 @@ a.badge:focus {
 }
 .list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
-  color: #673ab7;
+  color: #3897ff;
   background-color: #fff;
 }
 .list-group-item > .badge {
@@ -9538,7 +9538,7 @@ a.badge:focus {
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #673ab7;
+  border-color: #3897ff;
 }
 .thumbnail .caption {
   padding: 9px;
@@ -13503,7 +13503,7 @@ h6 small {
 .pagination > li > span:hover,
 .pagination > li > a:focus,
 .pagination > li > span:focus {
-  color: #46287d;
+  color: #002752;
   background-color: #eeeeee;
   border-color: #ddd;
 }

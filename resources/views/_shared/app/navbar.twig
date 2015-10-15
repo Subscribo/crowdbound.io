@@ -1,0 +1,66 @@
+{% haml %}
+-# Pre-load logo
+%img.hidden{:src => "#{asset('assets/images/crowdbound-logo-white.png')}"}/
+%img.hidden{:src => "#{asset('assets/images/crowdbound-logo-blue.png')}"}/
+
+%nav.navbar.navbar-fixed-top.navbar-fixed-top-transparent.primary-navbar.-transparent-nav
+  .container
+
+    -# Brand and toggle get grouped for better mobile display
+    .navbar-header
+      %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{:href => "#"}
+        %img#logo.img-responsive{:src => "#{asset('assets/images/crowdbound-logo-white.png')}"}/
+
+    -# Collect the nav links, forms, and other content for toggling
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        %li.dropdown
+          %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+            Kampagnen
+            %span.caret </  span>
+          %ul.dropdown-menu.dropdown-flat.-blue{:role => "menu"}
+            %li
+              %a{:href => "#"} Neue Kampagne
+            %li
+              %a{:href => "#"} Kampagnen-Übersicht
+        %li.dropdown
+          %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+            Vorlagen
+            %span.caret </  span>
+          %ul.dropdown-menu.dropdown-flat.-blue{:role => "menu"}
+            %li
+              %a{:href => "#"} E-Mail Vorlagen
+            %li
+              %a{:href => "#"} Kampagnen Vorlagen
+        %li
+          %a{:href => "#"} Berichte
+
+      -# User-Menu
+      %ul.hidden-xs.hidden-sm.nav.navbar-nav.navbar-right
+        %li
+          %a{:href => "#"} Dokumentation
+
+        -# User /Account settings dropdown
+        %li
+          .hidden-xs.hidden-sm.navbar-form.navbar-right
+            .btn-group
+              %button.btn.flat-btn.-blue.-sm.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :type => "button"}
+                %span{:style => "color: white;"} <i class="fa fa-user mr-5"></i>Your Username
+                %span.caret{:style => "color: white;"}
+              %ul.dropdown-menu.dropdown-primary.-grey{:role => "menu"}
+                %li
+                  %a{:href => "#/"} <i class="fa fa-home mr-20"> Mein Account</i>
+                %li
+                  %a{:href => "#/"} <i class="fa fa-gear mr-5"> Mein Profil</i>
+                %li
+                  %a{:href => "#/"} <i class="fa fa-cloud mr-5"> API-Integration</i>
+                %li
+                  %a{:href => "#/"} <i class="fa fa-credit-card mr-5"> Abrechnung</i>
+                %li.divider
+                %li
+                  %a{:href => "#/"} <i class="fa fa-sign-out mr-5"> Abmelden</i>
