@@ -48,7 +48,7 @@
 		<hr>
 
 		<div class="spark-plan-subscribe-button-container">
-			<button class="btn btn-primary spark-plan-subscribe-button"  v-on="click: selectPlan(plan)">
+			<button class="btn flat-btn -blue -sm spark-plan-subscribe-button"  v-on="click: selectPlan(plan)">
 				<span v-if=" ! plan.trialDays && plan.price == 0">
 					Register
 				</span>

@@ -254,7 +254,7 @@
             <div class="row">
                 <div class="col-md-10 col-md-offset-1 text-center">
                     <a href="/register">
-                        <button class="btn btn-primary splash-get-started-btn">
+                        <button class="btn flat-btn -blue -sm splash-get-started-btn">
                             Get Started!
                         </button>
                     </a>

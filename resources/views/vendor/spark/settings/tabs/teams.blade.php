@@ -17,7 +17,7 @@
 
 				<div class="form-group">
 					<div class="col-md-6 col-md-offset-3">
-						<button type="submit" class="btn btn-primary" v-on="click: createTeam" v-attr="disabled: createTeamForm.creating">
+						<button type="submit" class="btn flat-btn -blue -sm" v-on="click: createTeam" v-attr="disabled: createTeamForm.creating">
 							<span v-if="createTeamForm.creating">
 								<i class="fa fa-btn fa-spinner fa-spin"></i> Creating
 							</span>

@@ -30,7 +30,7 @@
 
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-3">
-								<button type="submit" class="btn btn-primary" v-on="click: enableTwoFactorAuth" v-attr="disabled: twoFactorForm.updating">
+								<button type="submit" class="btn flat-btn -blue -sm" v-on="click: enableTwoFactorAuth" v-attr="disabled: twoFactorForm.updating">
 									<span v-if="twoFactorForm.enabling">
 										<i class="fa fa-btn fa-spinner fa-spin"></i> Enabling
 									</span>

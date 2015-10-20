@@ -16,7 +16,7 @@
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
 
-				<button type="button" class="btn btn-primary" v-on="click: changePlan" v-attr="disabled: changePlanForm.changing">
+				<button type="button" class="btn flat-btn -blue -sm" v-on="click: changePlan" v-attr="disabled: changePlanForm.changing">
 					<span v-if=" ! changePlanForm.changing">
 						<i class="fa fa-btn fa-random"></i>Change Plan
 					</span>

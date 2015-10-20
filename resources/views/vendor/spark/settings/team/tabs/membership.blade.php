@@ -23,7 +23,7 @@
 
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-3">
-								<button type="submit" class="btn btn-primary" v-on="click: sendInvite" v-attr="disabled: sendInviteForm.sending">
+								<button type="submit" class="btn flat-btn -blue -sm" v-on="click: sendInvite" v-attr="disabled: sendInviteForm.sending">
 									<span v-if="sendInviteForm.sending">
 										<i class="fa fa-btn fa-spinner fa-spin"></i> Sending
 									</span>
@@ -92,7 +92,7 @@
 								</td>
 
 								<td>
-									<button class="btn btn-primary" v-if="userOwns(team)" v-on="click: editTeamMember(teamMember)">
+									<button class="btn flat-btn -blue -sm" v-if="userOwns(team)" v-on="click: editTeamMember(teamMember)">
 										<i class="fa fa-btn fa-edit"></i>Edit
 									</button>
 								</td>
