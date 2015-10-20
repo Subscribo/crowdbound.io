@@ -2,6 +2,7 @@ process.env.DISABLE_NOTIFIER = true;
 
 var elixir = require('laravel-elixir');
 var imagemin = require('laravel-elixir-imagemin');
+var browserify = require('laravel-elixir-browserify');
 
 /*
  |--------------------------------------------------------------------------
