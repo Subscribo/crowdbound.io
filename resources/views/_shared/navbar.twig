@@ -44,7 +44,8 @@
 
         -# Register / Login CTA
         .hidden-xs.hidden-sm.navbar-form.navbar-right
-          %button.btn.primary-btn.-rounded.-blue.-sm.mt-3 Registrieren
+          %a{:href => "#{url('register')}"}
+            %button.btn.primary-btn.-rounded.-blue.-sm.mt-3 Registrieren
 
         -# Register / Register CTA
         .hidden-xs.hidden-sm.navbar-form.navbar-right
