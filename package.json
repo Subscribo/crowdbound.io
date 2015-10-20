@@ -6,7 +6,10 @@
     "laravel-elixir-livereload": "^1.0"
   },
   "dependencies": {
+    "bootstrap-sass": "^3.0.0",
     "laravel-elixir": "^3.0.0",
-    "bootstrap-sass": "^3.0.0"
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "winterfell": "^1.0.5"
   }
 }
