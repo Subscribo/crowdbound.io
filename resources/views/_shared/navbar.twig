@@ -42,12 +42,23 @@
       -# City-menu
       %ul.hidden-xs.hidden-sm.nav.navbar-nav.navbar-right
 
-        -# Register / Login CTA
-        .hidden-xs.hidden-sm.navbar-form.navbar-right
-          %a{:href => "#{url('register')}"}
-            %button.btn.primary-btn.-rounded.-blue.-sm.mt-3 Registrieren
+        -# New and logged-out users
+        - if auth_check() == false
+          -# Register / Login CTA
+          .hidden-xs.hidden-sm.navbar-form.navbar-right
+            %a{:href => "#{url('register')}"}
+              %button.btn.primary-btn.-rounded.-blue.-sm.mt-3 Registrieren
+          .hidden-xs.hidden-sm.navbar-form.navbar-right
+            %a{:href => "#{url('login')}"}
+              %button.btn.ghost-btn.-rounded.-white.-sm.mt-3
+                %i.fa.fa-sign-in.mr-5
+                Login
 
-        -# Register / Register CTA
-        .hidden-xs.hidden-sm.navbar-form.navbar-right
-          %a{:href => "#{url('login')}"}
-            %button.btn.ghost-btn.-rounded.-white.-sm.mt-3 <i class="fa fa-sign-in mr-5"></i>  Login
+        -# Lgged-in users
+        - if auth_check()
+          -# Direkt link to account Dashboard
+          .hidden-xs.hidden-sm.navbar-form.navbar-right
+            %a{:href => "#{url('login')}"}
+              %button.btn.ghost-btn.-rounded.-white.-sm.mt-3.dropdown-toggle
+                %i.fa.fa-user.mr-5
+                #{auth_user().name}
