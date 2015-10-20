@@ -40,7 +40,7 @@
           %a{:href => "#"} API
 
       -# City-menu
-      %ul.hidden-xs.hidden-sm.nav.navbar-nav.navbar-right{:role => "search"}
+      %ul.hidden-xs.hidden-sm.nav.navbar-nav.navbar-right
 
         -# Register / Login CTA
         .hidden-xs.hidden-sm.navbar-form.navbar-right
@@ -48,5 +48,5 @@
 
         -# Register / Register CTA
         .hidden-xs.hidden-sm.navbar-form.navbar-right
-          %a{:href => "app"}
+          %a{:href => "#{url('login')}"}
             %button.btn.ghost-btn.-rounded.-white.-sm.mt-3 <i class="fa fa-sign-in mr-5"></i>  Login

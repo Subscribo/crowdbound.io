@@ -1,10 +1,6 @@
 <!-- Authenticated Right Dropdown -->
-<li class="dropdown">
-	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-		{{ Auth::user()->name }} <span class="caret"></span>
-	</a>
+<!-- This Dropdown Is For User Constructed App Screens - Blade Based -->
 
-	<ul class="dropdown-menu" role="menu">
 		<!-- Settings -->
 		<li class="dropdown-header">Settings</li>
 
@@ -59,5 +55,3 @@
 				<i class="fa fa-btn fa-fw fa-sign-out"></i>Logout
 			</a>
 		</li>
-	</ul>
-</li>
