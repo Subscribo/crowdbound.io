@@ -12,17 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+	return view('spark::welcome');
 });
 
-Route::get('/docs/ui-kit', function () {
-    return view('_documentation/ui-kit');
-});
-
-Route::get('/docs/components', function () {
-    return view('_documentation/components');
-});
-
-Route::get('/app', function () {
-    return view('app/index');
-});
+Route::get('home', ['middleware' => 'auth', function () {
+	return view('home');
+}]);

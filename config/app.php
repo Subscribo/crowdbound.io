@@ -141,16 +141,15 @@ return [
          * Application Service Providers...
          */
         App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Laravel\Cashier\CashierServiceProvider::class,
 
-        /*
-         * Third Party Service Providers
+        /**
+         * Spark Service Providers...
          */
-        Irazasyed\LaravelGAMP\LaravelGAMPServiceProvider::class,
-        'TwigBridge\ServiceProvider',
-
+        Laravel\Spark\Providers\SparkServiceProvider::class,
+        App\Providers\SparkServiceProvider::class,
     ],
 
     /*
@@ -179,7 +178,6 @@ return [
         'Eloquent'  => Illuminate\Database\Eloquent\Model::class,
         'Event'     => Illuminate\Support\Facades\Event::class,
         'File'      => Illuminate\Support\Facades\File::class,
-        'Gate'      => Illuminate\Support\Facades\Gate::class,
         'Hash'      => Illuminate\Support\Facades\Hash::class,
         'Input'     => Illuminate\Support\Facades\Input::class,
         'Inspiring' => Illuminate\Foundation\Inspiring::class,
@@ -199,12 +197,6 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
-
-        /*
-         * Third Party aliases
-         */
-        'GAMP'  => Irazasyed\LaravelGAMP\Facades\GAMP::class,
-        'Twig' => 'TwigBridge\Facade\Twig',
 
     ],
 
