@@ -29292,6 +29292,8 @@ if ($('#spark-app').length > 0) {
 
 'use strict';
 
+Vue.config.debug = true;
+
 require('laravel-spark/settings/dashboard/profile');
 require('laravel-spark/settings/dashboard/security/password');
 require('laravel-spark/settings/dashboard/security/two-factor');

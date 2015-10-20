@@ -150,6 +150,7 @@ return [
          */
         Irazasyed\LaravelGAMP\LaravelGAMPServiceProvider::class,
         'TwigBridge\ServiceProvider',
+        Barryvdh\Debugbar\ServiceProvider::class,
 
         /**
          * Spark Service Providers...
@@ -209,7 +210,7 @@ return [
          */
         'GAMP'  => Irazasyed\LaravelGAMP\Facades\GAMP::class,
         'Twig' => 'TwigBridge\Facade\Twig',
-
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
     ],
 
 ];

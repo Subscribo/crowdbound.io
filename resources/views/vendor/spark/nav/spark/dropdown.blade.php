@@ -34,18 +34,6 @@
             </a>
         </li>
 
-        <!-- Team Listing -->
-        <li v-repeat="team : teams">
-            <a href="/settings/teams/switch/@{{ team.id }}">
-                <span v-if="team.id == user.current_team_id">
-                    <i class="fa fa-btn fa-fw fa-check text-success"></i>@{{ team.name }}
-                </span>
-
-                <span v-if="team.id !== user.current_team_id">
-                    <i class="fa fa-btn fa-fw"></i>@{{ team.name }}
-                </span>
-            </a>
-        </li>
     @endif
 
     <!-- Logout -->
