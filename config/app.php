@@ -145,6 +145,12 @@ return [
         App\Providers\RouteServiceProvider::class,
         Laravel\Cashier\CashierServiceProvider::class,
 
+        /*
+         * Third Party Service Providers
+         */
+        Irazasyed\LaravelGAMP\LaravelGAMPServiceProvider::class,
+        'TwigBridge\ServiceProvider',
+
         /**
          * Spark Service Providers...
          */
@@ -197,6 +203,12 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
+
+        /*
+         * Third Party aliases
+         */
+        'GAMP'  => Irazasyed\LaravelGAMP\Facades\GAMP::class,
+        'Twig' => 'TwigBridge\Facade\Twig',
 
     ],
 

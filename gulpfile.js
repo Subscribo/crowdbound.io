@@ -1,4 +1,7 @@
+process.env.DISABLE_NOTIFIER = true;
+
 var elixir = require('laravel-elixir');
+var imagemin = require('laravel-elixir-imagemin');
 
 /*
  |--------------------------------------------------------------------------
@@ -14,4 +17,20 @@ var elixir = require('laravel-elixir');
 elixir(function(mix) {
     mix.sass('app.scss')
        .browserify('app.js');
+});
+
+elixir(function(mix) {
+    mix.less([
+        'components.less',
+        'theme.less'
+    ], 'public/assets/css/crowdbound.css');
+});
+
+elixir(function(mix) {
+    mix.scripts(['libs/*.js'], 'public/assets/js/vendor.js')
+       .scripts(['flickity-settings.js', 'global.js', 'portfolio-shuffle.js'], 'public/assets/js/crowdbound.js');
+});
+
+elixir(function(mix) {
+    mix.version(['public/assets/js/crowdbound.js', 'public/assets/js/vendor.js', 'public/assets/css/crowdbound.css']);
 });

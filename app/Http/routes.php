@@ -11,10 +11,26 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('spark', function () {
 	return view('spark::welcome');
 });
 
 Route::get('home', ['middleware' => 'auth', function () {
 	return view('home');
 }]);
+
+Route::get('/', function () {
+    return view('index');
+});
+
+Route::get('/docs/ui-kit', function () {
+    return view('_documentation/ui-kit');
+});
+
+Route::get('/docs/components', function () {
+    return view('_documentation/components');
+});
+
+Route::get('/app', function () {
+    return view('app/index');
+});

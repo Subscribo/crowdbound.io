@@ -1,11 +1,17 @@
 {
   "private": true,
   "devDependencies": {
-    "gulp": "^3.8.8"
+    "gulp": "^3.8.8",
+    "laravel-elixir-browserify": "^0.8.1",
+    "laravel-elixir-imagemin": "^0.2.1",
+    "laravel-elixir-livereload": "^1.0"
   },
   "dependencies": {
     "bootstrap-sass": "^3.0.0",
     "laravel-elixir": "^3.0.0",
-    "laravel-spark": "^1.0.0"
+    "laravel-spark": "^1.0.0",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "winterfell": "^1.0.5"
   }
 }
