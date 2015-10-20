@@ -3,7 +3,7 @@
 <head>
     @include('spark::layouts.common.head')
 </head>
-<body>
+<body class="homepage-backend-app">
     <!-- Vue App For Spark Screens -->
     <div id="spark-app" v-cloak>
         <!-- Navigation -->
