@@ -16,11 +16,11 @@ class SparkServiceProvider extends ServiceProvider
      * @var array
      */
     protected $invoiceWith = [
-        'vendor' => 'Your Company',
-        'product' => 'Your Product',
-        'street' => 'PO Box 111',
-        'location' => 'Your Town, 12345',
-        'phone' => '555-555-5555',
+        'vendor' => 'Crowdbound.io',
+        'product' => 'Call Center Automation',
+        'street' => 'Julius-Payer-Gasse 5a/1',
+        'location' => '1220 Wien',
+        'phone' => '+436769383522',
     ];
 
     /**
@@ -137,19 +137,21 @@ class SparkServiceProvider extends ServiceProvider
      */
     protected function customizeSubscriptionPlans()
     {
-        // Spark::free()
-        //         ->features([
-        //             'Feature 1',
-        //             'Feature 2',
-        //             'Feature 3',
-        //         ]);
+        Spark::free('crowdbound FREE')
+                ->features([
+                    'Feature 1',
+                    'Feature 2',
+                    'Feature 3',
+                ]);
 
-        // Spark::plan('Basic', 'stripe-id')->price(10)
-        //         ->trialDays(7)
-        //         ->features([
-        //             'Feature 1',
-        //             'Feature 2',
-        //             'Feature 3',
-        //         ]);
+        Spark::plan('crowdbound STARTER', 'crowdboundstarter')
+                ->price(19)
+                ->currencySymbol('€')
+                ->trialDays(7)
+                ->features([
+                    'Feature 1',
+                    'Feature 2',
+                    'Feature 3',
+                ]);
     }
 }
