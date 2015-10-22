@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'de',
 
     /*
     |--------------------------------------------------------------------------
@@ -65,7 +65,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'de',
 
     /*
     |--------------------------------------------------------------------------
@@ -151,6 +151,7 @@ return [
         Irazasyed\LaravelGAMP\LaravelGAMPServiceProvider::class,
         'TwigBridge\ServiceProvider',
         Barryvdh\Debugbar\ServiceProvider::class,
+        Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
 
         /**
          * Spark Service Providers...
@@ -211,6 +212,7 @@ return [
         'GAMP'  => Irazasyed\LaravelGAMP\Facades\GAMP::class,
         'Twig' => 'TwigBridge\Facade\Twig',
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'LaravelLocalization'   => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class
     ],
 
 ];

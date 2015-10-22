@@ -2,60 +2,68 @@
 
 /*
 |--------------------------------------------------------------------------
-| Frotend/Marketing Site Routes
+| Localized Frontend/Marketing Site Routes
 |--------------------------------------------------------------------------
 |
-| Routes for the customer-facinng marketing website.
+| Routes for the customer-facinng marketing website. This are localized
+| via the laravel-localization package.
 |
 */
-Route::get('/', function () {
-    return view('index');
-});
+Route::group(
+[
+    'prefix' => LaravelLocalization::setLocale(),
+    'middleware' => [ 'localeSessionRedirect', 'localizationRedirect' ]
+],
+function()
+{
+    Route::get('/', function () {
+        return view('index');
+    });
 
-Route::get('agents', function () {
-    return view('agents');
-});
+    Route::get('agents', function () {
+        return view('agents');
+    });
 
-Route::get('api', function () {
-    return view('api');
-});
+    Route::get('api', function () {
+        return view('api');
+    });
 
-Route::get('success-stories', function () {
-    return view('success-stories');
-});
+    Route::get('success-stories', function () {
+        return view('success-stories');
+    });
 
-Route::get('agent-app', function () {
-    return view('agent-app');
-});
+    Route::get('agent-app', function () {
+        return view('agent-app');
+    });
 
-Route::get('campaign-planner-app', function () {
-    return view('campain-planner-app');
-});
+    Route::get('campaign-planner-app', function () {
+        return view('campain-planner-app');
+    });
 
-Route::get('campaign-templates', function () {
-    return view('campaign-templates');
-});
+    Route::get('campaign-templates', function () {
+        return view('campaign-templates');
+    });
 
-Route::get('reporting', function () {
-    return view('reporting');
-});
+    Route::get('reporting', function () {
+        return view('reporting');
+    });
 
-Route::get('integrations', function () {
-    return view('integrations');
-});
+    Route::get('integrations', function () {
+        return view('integrations');
+    });
 
-Route::get('about-us', function () {
-    return view('about-us');
-});
+    Route::get('about-us', function () {
+        return view('about-us');
+    });
 
-Route::get('imprint', function () {
-    return view('imprint');
-});
+    Route::get('imprint', function () {
+        return view('imprint');
+    });
 
-Route::get('press', function () {
-    return view('press');
+    Route::get('press', function () {
+        return view('press');
+    });
 });
-
 
 /*
 |--------------------------------------------------------------------------
