@@ -153,5 +153,15 @@ class SparkServiceProvider extends ServiceProvider
                     'Feature 2',
                     'Feature 3',
                 ]);
+
+        Spark::plan('crowdbound MEGA', 'crowdboundistarter')
+                ->price(199)
+                ->currencySymbol('€')
+                ->trialDays(7)
+                ->features([
+                    'Feature 1',
+                    'Feature 2',
+                    'Feature 3',
+                ]);
     }
 }
