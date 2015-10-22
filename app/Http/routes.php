@@ -2,12 +2,80 @@
 
 /*
 |--------------------------------------------------------------------------
-| Application Routes
+| Frotend/Marketing Site Routes
 |--------------------------------------------------------------------------
 |
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
+| Routes for the customer-facinng marketing website.
+|
+*/
+Route::get('/', function () {
+    return view('index');
+});
+
+Route::get('agents', function () {
+    return view('agents');
+});
+
+Route::get('api', function () {
+    return view('api');
+});
+
+Route::get('success-stories', function () {
+    return view('success-stories');
+});
+
+Route::get('agent-app', function () {
+    return view('agent-app');
+});
+
+Route::get('campaign-planner-app', function () {
+    return view('campain-planner-app');
+});
+
+Route::get('campaign-templates', function () {
+    return view('campaign-templates');
+});
+
+Route::get('reporting', function () {
+    return view('reporting');
+});
+
+Route::get('integrations', function () {
+    return view('integrations');
+});
+
+Route::get('about-us', function () {
+    return view('about-us');
+});
+
+Route::get('imprint', function () {
+    return view('imprint');
+});
+
+Route::get('press', function () {
+    return view('press');
+});
+
+
+/*
+|--------------------------------------------------------------------------
+| Blog Related Routes
+|--------------------------------------------------------------------------
+|
+| @TODO: Standard and custom routes for our Blog.
+|
+*/
+Route::get('blog', function () {
+    return view('index');
+});
+
+
+/*
+|--------------------------------------------------------------------------
+| Laravel Spark Related Routes
+|--------------------------------------------------------------------------
+|
+| Standard and custom routes for Spark.
 |
 */
 
@@ -19,9 +87,6 @@ Route::get('home', ['middleware' => 'auth', function () {
 	return view('home');
 }]);
 
-Route::get('/', function () {
-    return view('index');
-});
 
 /*
 |--------------------------------------------------------------------------
