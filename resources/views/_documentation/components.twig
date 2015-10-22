@@ -1,891 +1,2248 @@
 {% haml %}
 
 - extends '_layouts/docs'
-- set page_title = 'Crowdbound - Internal UI Kit'
-- set body_class = 'ui-kit'
+- set page_title = 'Crowdbound - UI Components'
+- set body_class = 'components'
 
 - block page_content
-  %section#tamashi-jumbotron.tamashi-jumbotron
+
+  -# Crowdbound branding + theme name
+  %section#crowdbound-jumbotron.crowdbound-jumbotron
     .container
       .row
         .col-lg-12
-          .tamashi-branding
-            %img.tamashi-logo{:alt => "crowdbound Logo", :src => "#{asset('assets/images/crowdbound-logo-white.png')}"}
-
+          .crowdbound-branding
+            %img.crowdbound-logo-white{:alt => "crowdbound logo-white", :src => "/assets/images/crowdbound-logo-white.png"}
           %h1.title.text-center
-            Le Theme, Motherfuckers
+            CROWDBOUND THEME
             %br
-              %small.subtitle crowdbound UI KIT
+              %small.subtitle CUSTOM COMPONENTS
           .text-center
-            %a.btn.ghost-btn.-transparent{:href => "", :target => "_blank"} View Components
+            %a.btn.ghost-btn.-transparent{:href => "ui-kit.html", :target => "_blank"} View UI Kit
+            %a.btn.ghost-btn.-transparent{:href => "index.html", :target => "_blank"} Back to overview
+            %a.btn.ghost-btn.-transparent{:href => "https://wrapbootstrap.com/theme/crowdbound-multipurpose-theme-WB0R725D0", :target => "_blank"} Purchase now
 
   -# Begin the docs
   %section.crowdbound-docs
+    .side-menu
+      %ul.nav.list-group
+        %li
+          %a.page-scroll.list-group-item{:href => "#crowdbound-docs-headers"} Navbars
+        %li
+          %a.page-scroll.list-group-item{:href => "#crowdbound-docs-features"} Features
+        %li
+          %a.page-scroll.list-group-item{:href => "#crowdbound-docs-sliders"} Sliders
+        %li
+          %a.page-scroll.list-group-item{:href => "#crowdbound-docs-mastheads"} Mastheads
+        %li
+          %a.page-scroll.list-group-item{:href => "#crowdbound-docs-ctas"} CTA's
+        %li
+          %a.page-scroll.list-group-item{:href => "#crowdbound-docs-content"} Content blocks
+        %li
+          %a.page-scroll.list-group-item{:href => "#crowdbound-docs-testimonials"} Testimonials
+        %li
+          %a.page-scroll.list-group-item{:href => "#crowdbound-docs-forms"} Forms
+        %li
+          %a.page-scroll.list-group-item{:href => "#crowdbound-docs-pricing"} Pricing tables
+        %li
+          %a.page-scroll.list-group-item{:href => "#crowdbound-docs-team"} Team
+        %li
+          %a.page-scroll.list-group-item{:href => "#crowdbound-docs-portfolio"} Portfolio
+        %li
+          %a.page-scroll.list-group-item{:href => "#crowdbound-docs-footers"} Footers
     .container
+      .row
+        .col-lg-12
+          %section#crowdbound-docs-headers.crowdbound-docs-section.crowdbound-docs-headers
+            %h2.title Navbars
 
-      -#  Buttons
+            -#  Primary Navbar
+            .header.header-1
+              %h3.subtitle Primary navbar
+              %nav.navbar.primary-navbar
+                .container-fluid
+
+                  -# Brand and toggle get grouped for better mobile display
+                  .navbar-header
+                    %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+                      %span.sr-only Toggle navigation
+                      %span.icon-bar
+                      %span.icon-bar
+                      %span.icon-bar
+                    %a.navbar-brand{:href => "#/"}
+                      %img.img-responsive{:alt => "", :src => "/assets/images/crowdbound-logo-white.png"}/
+
+                  -# Collect the nav links, forms, and other content for toggling
+                  #bs-example-navbar-collapse-1.collapse.navbar-collapse
+                    %ul.nav.navbar-nav
+                      %li.active
+                        %a{:href => "#/"}
+                          Link
+                          %span.sr-only (current)
+                      %li
+                        %a{:href => "#/"} Link
+                      %li.dropdown
+                        %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#/", :role => "button"}
+                          Dropdown
+                          %span.caret
+                        %ul.dropdown-menu{:role => "menu"}
+                          %li
+                            %a{:href => "#/"} Action
+                          %li
+                            %a{:href => "#/"} Another action
+                          %li
+                            %a{:href => "#/"} Something else here
+                          %li.divider
+                          %li
+                            %a{:href => "#/"} Separated link
+                          %li.divider
+                          %li
+                            %a{:href => "#/"} One more separated link
+                    .hidden-xs.hidden-sm.navbar-form.navbar-right{:role => "search"}
+                      .form-group
+                        %input.form-control.-rounded{:placeholder => "Search", :type => "text"}
+                      %button.btn.primary-btn.-rounded.-blue.-sm Search
+
+            -# Secondary Navbar
+            .header.header-2
+              %h3.subtitle Secondary navbar
+              %nav.navbar.secondary-navbar.-gray
+                .container-fluid
+
+                  -# Brand and toggle get grouped for better mobile display
+                  .navbar-header
+                    %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-2", "data-toggle" => "collapse", :type => "button"}
+                      %span.sr-only Toggle navigation
+                      %span.icon-bar
+                      %span.icon-bar
+                      %span.icon-bar
+                    %a.navbar-brand{:href => "#/"}
+                      %img.img-responsive{:alt => "", :src => "/assets/images/crowdbound-logo-white.png"}/
+
+                  -# Collect the nav links, forms, and other content for toggling
+                  #bs-example-navbar-collapse-2.collapse.navbar-collapse
+                    %ul.nav.navbar-nav
+                      %li.active
+                        %a{:href => "#/"}
+                          Link
+                          %span.sr-only (current)
+                      %li
+                        %a{:href => "#/"} Link
+                      %li.dropdown
+                        %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#/", :role => "button"}
+                          Dropdown
+                          %span.caret
+                        %ul.dropdown-menu{:role => "menu"}
+                          %li
+                            %a{:href => "#/"} Action
+                          %li
+                            %a{:href => "#/"} Another action
+                          %li
+                            %a{:href => "#/"} Something else here
+                          %li.divider
+                          %li
+                            %a{:href => "#/"} Separated link
+                          %li.divider
+                          %li
+                            %a{:href => "#/"} One more separated link
+                    %ul.nav.navbar-nav.navbar-right
+                      %li.icon
+                        %a{:href => "#/"}
+                          %span.glyphicon.glyphicon-user{"aria-hidden" => "true"}
+                      %li.icon
+                        %a{:href => "#/"}
+                          %span.glyphicon.glyphicon-cog{"aria-hidden" => "true"}
+
+            -#  Large navigation
+            .header.header-4
+              %h3.subtitle Large Crowdbound Navbar
+              %nav.navbar.secondary-navbar.-gray.-large
+                .container-fluid
+
+                  -# Brand and toggle get grouped for better mobile display
+                  .navbar-header
+                    %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-4", "data-toggle" => "collapse", :type => "button"}
+                      %span.sr-only Toggle navigation
+                      %span.icon-bar
+                      %span.icon-bar
+                      %span.icon-bar
+                    %a.navbar-brand{:href => "#/"}
+                      %img.img-responsive{:alt => "", :src => "/assets/images/crowdbound-logo-white.png"}/
+
+                  -# Collect the nav links, forms, and other content for toggling
+                  #bs-example-navbar-collapse-4.collapse.navbar-collapse
+                    %ul.nav.navbar-nav.navbar-right
+                      %li.active
+                        %a{:href => "#/"}
+                          Products
+                          %span.sr-only (current)
+                      %li
+                        %a{:href => "#/"} How to use
+                      %li
+                        %a{:href => "#/"} Clients
+                      %li
+                        %a{:href => "#/"} Pricing
+                    %ul.nav.navbar-nav.navbar-addon
+                      %li
+                        %a{:href => "#/"} About
+                      %li
+                        %a{:href => "#/"} Blog
+                      %li
+                        %a{:href => "#/"} News
+                      %li
+                        %a{:href => "#/"} Contact us
+                      %ul.nav.navbar-nav.navbar-right
+                        %li.icon
+                          %a{:href => "#/"}
+                            %span.glyphicon.glyphicon-user{"aria-hidden" => "true"}
+                        %li.icon
+                          %a{:href => "#/"}
+                            %span.glyphicon.glyphicon-cog{"aria-hidden" => "true"}
+                        %li.icon
+                          %a{:href => "#/"}
+                            %span.glyphicon.glyphicon-dashboard{"aria-hidden" => "true"}
 
       .row
         .col-lg-12
-          %section.crowdbound-docs-section.crowdbound-docs-buttons
-            %h2.title Buttons
+          %section#crowdbound-docs-features.crowdbound-docs-section.crowdbound-docs-features
+            %h2.title Features
 
-            -# Primary buttons
-            .primary-buttons
-              %h3.subtitle Primary Buttons
-              %button.btn.primary-btn.-blue Blue
-              %button.btn.primary-btn.-purple Purple
-              %button.btn.primary-btn.-red Red
-              %button.btn.primary-btn.-gray Gray
-              %button.btn.primary-btn.-white White
+            -#Feature 1
+            %section.feature.feature-1.text-center
+              .container
+                .row
+                  .col-lg-12
+                    %h2.heading.text-center
+                      Crowdbound Bootstrap
+                      %br
+                        %small The kit consists of beautiful components
 
-            -# Flat buttons
-            .flat-buttons
-              %h3.subtitle Flat Buttons
-              %button.btn.flat-btn.-blue Blue
-              %button.btn.flat-btn.-purple Purple
-              %button.btn.flat-btn.-red Red
-              %button.btn.flat-btn.-gray Gray
-              %button.btn.flat-btn.-white White
+                  .col-md-4.col-lg-4
+                    %i.outline-icon.icon-sunny
+                    %h3.sub-heading Great documentation
+                    %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
 
-            -# Ghost buttons
-            .ghost-buttons
-              %h3.subtitle Ghost Buttons
-              %button.btn.ghost-btn.-blue Blue
-              %button.btn.ghost-btn.-purple Purple
-              %button.btn.ghost-btn.-red Red
-              %button.btn.ghost-btn.-gray Gray
-              %button.btn.ghost-btn.-white White
+                  .col-md-4.col-lg-4
+                    %i.outline-icon.icon-smartphone
+                    %h3.sub-heading Nice variation
+                    %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
 
-            -# Button sizes
-            .button-sizes
-              %h3.subtitle Button sizes
-              %button.btn.primary-btn.-blue.-xs Mini
-              %button.btn.primary-btn.-blue.-sm Small
-              %button.btn.primary-btn.-blue Medium
-              %button.btn.primary-btn.-blue.-lg Large
-              %button.btn.primary-btn.-blue.-xlg X-Large
-            .button-dropdowns
-              %h3.subtitle Button Dropdowns
+                  .col-md-4.col-lg-4
+                    %i.outline-icon.icon-graph-rising
+                    %h3.sub-heading Clean and modern
+                    %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
 
-              -# Single button
-              .btn-group
-                %button.btn.primary-btn.-blue.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :type => "button"}
-                  Action
-                  %span.caret
-                %ul.dropdown-menu.dropdown-primary.-blue{:role => "menu"}
-                  %li
-                    %a{:href => "#/"} Action
-                  %li
-                    %a{:href => "#/"} Another action
-                  %li
-                    %a{:href => "#/"} Something else here
-                  %li.divider
-                  %li
-                    %a{:href => "#/"} Separated link
-
-              -# Split button
-              .btn-group
-                %button.btn.primary-btn.-blue{:type => "button"} Action
-                %button.btn.primary-btn.-blue.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :type => "button"}
-                  %span.caret
-                  %span.sr-only Toggle Dropdown
-                %ul.dropdown-menu.dropdown-primary.-purple{:role => "menu"}
-                  %li
-                    %a{:href => "#/"} Action
-                  %li
-                    %a{:href => "#/"} Another action
-                  %li
-                    %a{:href => "#/"} Something else here
-                  %li.divider
-                  %li
-                    %a{:href => "#/"} Separated link
-
-              -# Single button
-              .btn-group
-                %button.btn.flat-btn.-blue.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :type => "button"}
-                  Action
-                  %span.caret
-                %ul.dropdown-menu.dropdown-flat.-blue{:role => "menu"}
-                  %li
-                    %a{:href => "#/"} Action
-                  %li
-                    %a{:href => "#/"} Another action
-                  %li
-                    %a{:href => "#/"} Something else here
-                  %li.divider
-                  %li
-                    %a{:href => "#/"} Separated link
-
-              -# Split button
-              .btn-group
-                %button.btn.flat-btn.-blue{:type => "button"} Action
-                %button.btn.flat-btn.-blue.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :type => "button"}
-                  %span.caret
-                  %span.sr-only Toggle Dropdown
-                %ul.dropdown-menu.dropdown-flat.-blue{:role => "menu"}
-                  %li
-                    %a{:href => "#/"} Action
-                  %li
-                    %a{:href => "#/"} Another action
-                  %li
-                    %a{:href => "#/"} Something else here
-                  %li.divider
-                  %li
-                    %a{:href => "#/"} Separated link
-
-              -# Single button
-              .btn-group
-                %button.btn.ghost-btn.-blue.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :type => "button"}
-                  Action
-                  %span.caret
-                %ul.dropdown-menu.dropdown-ghost.-blue{:role => "menu"}
-                  %li
-                    %a{:href => "#/"} Action
-                  %li
-                    %a{:href => "#/"} Another action
-                  %li
-                    %a{:href => "#/"} Something else here
-                  %li.divider
-                  %li
-                    %a{:href => "#/"} Separated link
-
-              -# Split button
-              .btn-group
-                %button.btn.ghost-btn.-blue{:type => "button"} Action
-                %button.btn.ghost-btn.-blue.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :type => "button"}
-                  %span.caret
-                  %span.sr-only Toggle Dropdown
-                %ul.dropdown-menu.dropdown-ghost.-blue{:role => "menu"}
-                  %li
-                    %a{:href => "#/"} Action
-                  %li
-                    %a{:href => "#/"} Another action
-                  %li
-                    %a{:href => "#/"} Something else here
-                  %li.divider
-                  %li
-                    %a{:href => "#/"} Separated link
-
-      -# Typography
-
-      .row
-        .col-lg-12
-          %section.crowdbound-docs-section.crowdbound-docs-typography
-            %h2.title Typography
-            .row
-
-              -# Font weights
-              .col-lg-6
-                %p.extra-light
-                  %span
-                    Extra Light
-                    %br/
-                  Kanyu, zebra bullhead shark flying gurnard Steve fish orbicular batfish. Boafish kuhli loach glass knifefish pike eel, surfperch, scat tench golden trout Asiatic glassfish Pacific hake common tunny stingray slender snipe eel.
-                %p.regular
-                  %span
-                    Regular
-                    %br/
-                  Tunny stingray slender snipe eel. Wahoo piranha tilefish pipefish combfish, wobbegong, convict blenny basking shark yellowtail horse mackerel, amago Ratfish.
-                %p.semi-bold
-                  %span
-                    Semi Bold
-                    %br/
-                  Stingray slender snipe eel. Wahoo piranha tilefish pipefish combfish, wobbegong, convict blenny basking shark yellowtail horse mackerel, amago Ratfish.
-                %p.bold
-                  %span
-                    Bold
-                    %br/
-                  Kanyu, zebra bullhead shark flying gurnard Steve fish orbicular batfish. Boafish kuhli loach glass knifefish pike eel, surfperch, scat tench golden trout combfish, wobbegong, convict blenny basking shark yellowtail horse mackerel, amago Ratfish.
-
-              -# Headings
-              .col-lg-6
-                %h1
-                  h1. Bootstrap heading
-                  %small Secondary
-                %h2
-                  h2. Bootstrap heading
-                  %small Secondary
-                %h3
-                  h3. Bootstrap heading
-                  %small Secondary
-                %h4
-                  h4. Bootstrap heading
-                  %small Secondary
-                %h5
-                  h5. Bootstrap heading
-                  %small Secondary
-                %h6
-                  h6. Bootstrap heading
-                  %small Secondary
-
-
-      -# Checkboxes
-
-      .row
-        .col-lg-7
-          %section.crowdbound-docs-section.crowdbound-docs-checkboxes-radiobuttons
-            %h2.title Checkboxes &amp; Radio Buttons
-
-            -# Primary checkboxes and radio buttons
-            .primary-checkboxes-radiobuttons
-              %h3.subtitle PRIMARY CHECKBOXES &AMP; RADIO BUTTONS
+            -# Feature 2
+            %section.feature.feature-2.text-center
               .row
-                .col-lg-6
+                .container
+                  .col-lg-12
+                    %h2.heading.text-center
+                      Crowdbound Bootstrap
+                      %br
+                        %small The kit consists of beautiful components
+                  .col-lg-12
+                    %ul.nav.nav-tabs.nav-justified
+                      %li.active{:role => "presentation"}
+                        %a{"aria-controls" => "features", "data-toggle" => "tab", :href => "#features", :role => "tab"} Features
+                      %li{:role => "presentation"}
+                        %a{"aria-controls" => "benefits", "data-toggle" => "tab", :href => "#benefits", :role => "tab"} Benefits
+                      %li{:role => "presentation"}
+                        %a{"aria-controls" => "pricing", "data-toggle" => "tab", :href => "#pricing", :role => "tab"} Pricing
+                  -# Tab panes
+                  .tab-content
+                    #features.tab-pane.fade.in.active{:role => "tabpanel"}
+                      .col-md-4.col-lg-4
+                        %i.outline-icon.icon-sunny
+                        %h3.sub-heading Great documentation
+                        %p.body Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
 
-                  -# Checked
-                  %label.control.checkbox.checkbox-primary.-purple
-                    %input{:checked => "", :type => "checkbox"}
-                      %span.control-indicator
-                      Check this custom checkbox
+                      .col-md-4.col-lg-4
+                        %i.outline-icon.icon-smartphone
+                        %h3.sub-heading Nice variation
+                        %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
 
-                  -# Unchecked
-                  %label.control.checkbox.checkbox-primary.-purple
-                    %input{:type => "checkbox"}
-                      %span.control-indicator
-                      Check this custom checkbox
+                      .col-md-4.col-lg-4
+                        %i.outline-icon.icon-graph-rising
+                        %h3.sub-heading Clean and modern
+                        %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
 
-                  -# Checked disabled
-                  %label.control.checkbox.checkbox-primary.-purple.-disabled
-                    %input{:checked => "", :disabled => "", :type => "checkbox"}
-                      %span.control-indicator
-                      Check this custom checkbox
+                    -# .tab-pane
+                    #benefits.tab-pane{:role => "tabpanel"}
+                      .col-md-4.col-lg-4
+                        %i.outline-icon.icon-sunny
+                        %h3.sub-heading Great documentation
+                        %p.body Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
 
-                  -# Unchecked Disabled
-                  %label.control.checkbox.checkbox-primary.-purple
-                    %input{:disabled => "", :type => "checkbox"}
-                      %span.control-indicator
-                      Check this custom checkbox
+                      .col-md-4.col-lg-4
+                        %i.outline-icon.icon-smartphone
+                        %h3.sub-heading Nice variation
+                        %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
 
-                .col-lg-6
-                  -# Checked
-                  %label.control.radio.-purple
-                    %input#radio1{:checked => "", :name => "radio", :type => "radio"}
-                      %span.control-indicator
-                      Toggle this custom radio
+                      .col-md-4.col-lg-4
+                        %i.outline-icon.icon-graph-rising
+                        %h3.sub-heading Clean and modern
+                        %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
 
-                  -# Unchecked
-                  %label.control.radio.-purple
-                    %input#radio2{:name => "radio", :type => "radio"}
-                      %span.control-indicator
-                      Toggle this custom radio
+                    -# .tab-pane
+                    #pricing.tab-pane{:role => "tabpanel"}
+                      .col-md-4.col-lg-4
+                        %i.outline-icon.icon-sunny
+                        %h3.sub-heading Great documentation
+                        %p.body Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
 
-                  -# Checked Disabled
-                  %label.control.-purple.-disabled.radio
-                    %input#radio3{:checked => "", :disabled => "", :name => "radio2", :type => "radio"}
-                      %span.control-indicator
-                      Toggle this custom radio
+                      .col-md-4.col-lg-4
+                        %i.outline-icon.icon-smartphone
+                        %h3.sub-heading Nice variation
+                        %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
 
-                  -# Unchecked Disabled
-                  %label.control.radio.-purple
-                    %input#radio4{:disabled => "", :name => "radio2", :type => "radio"}
-                      %span.control-indicator
-                      Toggle this custom radio
+                      .col-md-4.col-lg-4
+                        %i.outline-icon.icon-graph-rising
+                        %h3.sub-heading Clean and modern
+                        %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
 
+            -# Feature 3
+            %section.feature.feature-3.text-center
+              .container
+                .row
+                  .col-md-6.col-lg-6
+                    .content
+                      %h2.heading.text-center
+                        Crowdbound Bootstrap
+                        %br
+                          %small Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                      %button.btn.primary-btn.-blue Read more
+                  .col-md-6.col-lg-6
+                    .content.dark
+                      %h2.heading.text-center
+                        Crowdbound Bootstrap
+                        %br
+                          %small Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                      %button.btn.primary-btn.-blue Read more
 
-        -# Swiches
+            -#  Feature 4
+            %section.feature.feature-4
+              .container
+                .row
+                  .col-lg-12
+                    %h2.heading.text-center
+                      Crowdbound Bootstrap
+                      %br
+                        %small The kit consists of beautiful components
 
-        .col-lg-5
-          %section.crowdbound-docs-section.crowdbound-docs-switches
-            %h2.title Switches
-            -# Primary switches
-            .primary-switches
-              %h3.subtitle PRIMARY SWITCHES
-              .primary-switch
-                %input.js-switch-small{:checked => "", :type => "checkbox"}/
-              .primary-switch
-                %input.js-switch-small{:type => "checkbox"}/
-            -# Flat switches
-            .flat-switches
-              %h3.subtitle FLAT SWITCHES
-              .flat-switch
-                %input.js-switch-small{:checked => "", :type => "checkbox"}/
-              .flat-switch
-                %input.js-switch-small{:type => "checkbox"}/
+                  .row
+                    .col-sm-6.col-md-3.col-lg-3.feature-block
+                      %i.outline-icon.icon-expand
+                      %h3.sub-heading
+                        Resizing
+                        %span.label.primary-label.-blue New
+                      %p A small description of this feature
+                    .col-sm-6.col-md-3.col-lg-3.feature-block
+                      %i.outline-icon.icon-multiple-image
+                      %h3.sub-heading Multiple images
+                      %p A small description of this feature
+                    .col-sm-6.col-md-3.col-lg-3.feature-block
+                      %i.outline-icon.icon-geolocalizator
+                      %h3.sub-heading
+                        Geolocation
+                        %span.label.primary-label.-blue New
+                      %p A small description of this feature
+                    .col-sm-6.col-md-3.col-lg-3.feature-block
+                      %i.outline-icon.icon-music-repeat
+                      %h3.sub-heading Repeat it
+                      %p A small description of this feature
 
+                  .row
+                    .col-sm-6.col-md-3.col-lg-3.feature-block
+                      %i.outline-icon.icon-shopping-cart-content
+                      %h3.sub-heading Shopping it
+                      %p A small description of this feature
+                    .col-sm-6.col-md-3.col-lg-3.feature-block
+                      %i.outline-icon.icon-tv-monitor
+                      %h3.sub-heading Large screens
+                      %p A small description of this feature
+                    .col-sm-6.col-md-3.col-lg-3.feature-block
+                      %i.outline-icon.icon-check
+                      %h3.sub-heading Checked
+                      %p A small description of this feature
+                    .col-sm-6.col-md-3.col-lg-3.feature-block
+                      %i.outline-icon.icon-camera-2
+                      %h3.sub-heading Camera
+                      %p A small description of this feature
 
-      -# Input Fields
+            -# Feature 5
+            %section.feature.feature-5
+              .container
+                .row
+                  .col-lg-12
+                    %h2.heading.text-center
+                      Crowdbound Bootstrap
+                      %br
+                        %small The kit consists of beautiful components
 
-      .row
-        .col-lg-12
-          %section.crowdbound-docs-section.crowdbound-docs-input-fields
-            %h2.title Input fields
-            .row
+                  .row
+                    .col-lg-8.col-lg-offset-2
+                      .row
+                        .col-md-6.col-lg-6.feature-block
+                          %i.outline-icon.icon-expand
+                          %h3.sub-heading
+                            Resizing
+                            %span.label.primary-label.-blue New
+                          %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                        .col-md-6.col-lg-6.feature-block
+                          %i.outline-icon.icon-multiple-image
+                          %h3.sub-heading
+                            Multiple images
+                            %span.label.primary-label.-blue New
+                          %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                  .row
+                    .col-lg-8.col-lg-offset-2
+                      .row
+                        .col-md-6.col-lg-6.feature-block
+                          %i.outline-icon.icon-shopping-cart-content
+                          %h3.sub-heading Shopping it
+                          %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                        .col-md-6.col-lg-6.feature-block
+                          %i.outline-icon.icon-tv-monitor
+                          %h3.sub-heading Large screens
+                          %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
 
-              -# Textfield styles
-              .col-lg-5
-                .textfield-styles
-                  %h3.subtitle TEXTFIELD STYLES
+            -#  Feature 6
+            %section.feature.feature-6
+              .container
+                .row
+                  .col-lg-12
+                    %h2.heading.text-center
+                      Crowdbound Bootstrap
+                      %br
+                        %small The kit consists of beautiful components
+                  .col-md-3.col-lg-3
+                    .row
+                      .col-lg-12.feature-block
+                        %i.outline-icon.icon-expand
+                        %h3.sub-heading
+                          Resizing
+                          %span.label.primary-label.-blue New
+                        %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                      .col-lg-12.feature-block
+                        %i.outline-icon.icon-multiple-image
+                        %h3.sub-heading Multiple images
+                        %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                  .device.col-md-6.col-lg-6.hidden-xs
+                    %img.img-responsive{:alt => "", :src => "/assets/images/iphone-front-silver.png"}
+                  .col-md-3.col-lg-3.right-column
+                    .row
+                      .col-lg-12.feature-block
+                        %i.outline-icon.icon-shopping-cart-content
+                        %h3.sub-heading
+                          Shopping
+                          %span.label.primary-label.-blue New
+                        %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                      .col-lg-12.feature-block
+                        %i.outline-icon.icon-tv-monitor
+                        %h3.sub-heading Large screens
+                        %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+            -#  Feature 7
+            %section.feature.feature-7
+              .container
+                .row
+                  .col-lg-12
+                    %h2.heading.text-center
+                      Crowdbound Bootstrap
+                      %br
+                        %small The kit consists of beautiful components
+                  .col-md-5.col-lg-5.col-lg-offset-1
+                    .row
+                      .col-lg-12.feature-block
+                        %i.outline-icon.icon-expand
+                        %h3.sub-heading
+                          Resizing
+                          %span.label.primary-label.-warning New
+                        %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                      .col-lg-12.feature-block
+                        %i.outline-icon.icon-multiple-image
+                        %h3.sub-heading
+                          Multiple images
+                          %span.label.primary-label.-warning New
+                        %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                      .col-lg-12.feature-block
+                        %i.outline-icon.icon-tv-monitor
+                        %h3.sub-heading Large screens
+                        %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
 
-                  -# Default input
-                  %form.form-horizontal
-                    .form-group
-                      %label.col-sm-3.control-label{:for => "inputEmail3"} Placeholder
-                      .col-sm-8
-                        %input#inputText.form-control{:placeholder => "Placeholder", :type => "Text"}
+                  .device.col-md-6.col-lg-5.hidden-xs
+                    %img.img-responsive{:alt => "", :src => "/assets/images/iphone-three-quarter.png"}
 
-                    -# Input w/ icon
-                    .form-group
-                      %label.col-sm-3.control-label{:for => "inputText"} Icon
-                      .col-sm-8
-                        .input-group.-transparent
-                          .input-group-addon
-                            %i.fa.fa-download
-                          %input#inputText.form-control{:placeholder => "Icon", :type => "Text"}
-
-                    -# Input w/ icon variation
-                    .form-group
-                      %label.col-sm-3.control-label{:for => "inputText"} Icon
-                      .col-sm-8
-                        .input-group
-                          .input-group-addon
-                            %i.fa.fa-download
-                          %input#inputText.form-control{:placeholder => "Icon", :type => "Text"}
-
-                    -# Required input
-                    .form-group.is-required
-                      %label.col-sm-3.control-label{:for => "inputText"} Required
-                      .col-sm-8
-                        %input#inputText.form-control{:placeholder => "Required", :required => "", :type => "Text"}
-                          %span.asterisks{"aria-hidden" => "true"} *
-
-                    -# Disabled input
-                    .form-group
-                      %label.col-sm-3.control-label{:for => "inputText"} Disabled
-                      .col-sm-8
-                        %input#inputText.form-control{:disabled => "", :placeholder => "Disabled", :type => "Text"}
-
-              -# Textfield notifications
-              .col-lg-5.col-lg-offset-1
-                .textfield-notifications
-                  %h3.subtitle TEXTFIELD NOTIFICATIONS
-                  %form.form-horizontal
-                    .form-group.has-warning
-                      %label.col-sm-3.control-label{:for => "inputEmail3"} Warning
-                      .col-sm-8
-                        %input#inputText.form-control{:placeholder => "I'm default!", :type => "Text"}
-                    .form-group.has-error
-                      %label.col-sm-3.control-label{:for => "inputEmail3"} Error
-                      .col-sm-8
-                        %input#inputText.form-control{:placeholder => "I'm default!", :type => "Text"}
-                    .form-group.has-success
-                      %label.col-sm-3.control-label{:for => "inputEmail3"} Success
-                      .col-sm-8
-                        %input#inputText.form-control{:placeholder => "I'm default!", :type => "Text"}
-
-              -# Textfield sizes
-              .col-lg-5.col-lg-offset-1
-                .textfield-sizes
-                  %h3.subtitle TEXTFIELD SIZES
-
-                  -# Small
-                  %form.form-horizontal
-                    .form-group
-                      %label.col-sm-3.control-label{:for => "inputEmail3"} Small
-                      .col-sm-8
-                        %input#inputText.form-control.input-sm{:placeholder => "I'm small!", :type => "Text"}
-
-                    -# Default
-                    .form-group
-                      %label.col-sm-3.control-label{:for => "inputEmail3"} Default
-                      .col-sm-8
-                        %input#inputText.form-control{:placeholder => "I'm default!", :type => "Text"}
-
-                    -# Large
-                    .form-group
-                      %label.col-sm-3.control-label{:for => "inputEmail3"} Large
-                      .col-sm-8
-                        %input#inputText.form-control.input-lg{:placeholder => "I'm large!", :type => "Text"}
-
-
-      -# Pagination
-
-      .row
-        .col-lg-12
-          %section.crowdbound-docs-section.crowdbound-docs-pagination
-            %h2.title Pagination
-            .row
-
-              -# Primary pagination
-              .col-lg-6
-                .primary-pagination
-                  %h3.subtitle Primary pagination
-                  %nav
-                    %ul.pagination.primary-pagination
-                      %li
-                        %a{"aria-label" => "Previous", :href => "#/"}
-                          %span{"aria-hidden" => "true"} &laquo;
-                      %li
-                        %a{:href => "#/"} 1
-                      %li.active
-                        %a{:href => "#/"} 2
-                      %li
-                        %a{:href => "#/"} 3
-                      %li
-                        %a{:href => "#/"} 4
-                      %li
-                        %a{:href => "#/"} 5
-                      %li
-                        %a{"aria-label" => "Next", :href => "#/"}
-                          %span{"aria-hidden" => "true"} &raquo;
-
-                -# Secondary pagination
-                .flat-pagination
-                  %h3.subtitle Flat pagination
-                  %nav
-                    %ul.pagination.flat-pagination
-                      %li
-                        %a{"aria-label" => "Previous", :href => "#/"}
-                          %span{"aria-hidden" => "true"} &laquo;
-                      %li
-                        %a{:href => "#/"} 1
-                      %li.active
-                        %a{:href => "#/"} 2
-                      %li
-                        %a{:href => "#/"} 3
-                      %li
-                        %a{:href => "#/"} 4
-                      %li
-                        %a{:href => "#/"} 5
-                      %li
-                        %a{"aria-label" => "Next", :href => "#/"}
-                          %span{"aria-hidden" => "true"} &raquo;
-
-                -# Primary pager
-                .primary-pagers
-                  %h3.subtitle Primary pagers
-                  %nav
-                    %ul.pager.primary-pager
-                      %li
-                        %a{:href => "#/"}
-                          %span{"aria-hidden" => "true"} &larr;
-                          Previous
-                      %li
-                        %a{:href => "#/"}
-                          Next
-                          %span{"aria-hidden" => "true"} &rarr;
-                      %li.active
-                        %a{:href => "#/"} Hover
-                      %li.disabled
-                        %a{:href => "#/"} Disabled
-
-                -# Flat pager
-                .flat-pagers
-                  %h3.subtitle Primary pagers
-                  %nav
-                    %ul.pager.flat-pager
-                      %li
-                        %a{:href => "#/"}
-                          %span{"aria-hidden" => "true"} &larr;
-                          Previous
-                      %li
-                        %a{:href => "#/"}
-                          Next
-                          %span{"aria-hidden" => "true"} &rarr;
-                      %li.active
-                        %a{:href => "#/"} Hover
-                      %li.disabled
-                        %a{:href => "#/"} Disabled
-
-              -# Pagination sizes
-              .col-lg-6
-                .pager-sizes
-                  %h3.subtitle Sizing
-
-                  -# Small
-                  %nav
-                    %ul.pagination.primary-pagination.-small
-                      %li
-                        %a{"aria-label" => "Previous", :href => "#/"}
-                          %span{"aria-hidden" => "true"} &laquo;
-                      %li
-                        %a{:href => "#/"} 1
-                      %li.active
-                        %a{:href => "#/"} 2
-                      %li
-                        %a{:href => "#/"} 3
-                      %li
-                        %a{:href => "#/"} 4
-                      %li
-                        %a{:href => "#/"} 5
-                      %li
-                        %a{"aria-label" => "Next", :href => "#/"}
-                          %span{"aria-hidden" => "true"} &raquo;
-
-                  -# Default
-                  %nav
-                    %ul.pagination.primary-pagination
-                      %li
-                        %a{"aria-label" => "Previous", :href => "#/"}
-                          %span{"aria-hidden" => "true"} &laquo;
-                      %li
-                        %a{:href => "#/"} 1
-                      %li.active
-                        %a{:href => "#/"} 2
-                      %li
-                        %a{:href => "#/"} 3
-                      %li
-                        %a{:href => "#/"} 4
-                      %li
-                        %a{:href => "#/"} 5
-                      %li
-                        %a{"aria-label" => "Next", :href => "#/"}
-                          %span{"aria-hidden" => "true"} &raquo;
-
-                  -# Large
-                  %nav
-                    %ul.pagination.primary-pagination.-large
-                      %li
-                        %a{"aria-label" => "Previous", :href => "#/"}
-                          %span{"aria-hidden" => "true"} &laquo;
-                      %li
-                        %a{:href => "#/"} 1
-                      %li.active
-                        %a{:href => "#/"} 2
-                      %li
-                        %a{:href => "#/"} 3
-                      %li
-                        %a{:href => "#/"} 4
-                      %li
-                        %a{:href => "#/"} 5
-                      %li
-                        %a{"aria-label" => "Next", :href => "#/"}
-                          %span{"aria-hidden" => "true"} &raquo;
-
-
-      -# Navs
+            -# Feature 8
+            %section.feature.feature-8
+              .container
+                .row
+                  .feature-block.col-sm-4.col-md-4.col-lg-4
+                    %i.outline-icon.icon-expand
+                    %h3.sub-heading
+                      Resizing
+                      %span.label.primary-label.-blue New
+                    %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                    %a{:href => "#/"} Read more
+                  .feature-block.col-sm-4.col-md-4.col-lg-4
+                    %i.outline-icon.icon-tv-monitor
+                    %h3.sub-heading Large screens
+                    %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                    %a{:href => "#/"} Read more
+                  .feature-block.col-sm-4.col-md-4.col-lg-4
+                    %i.outline-icon.icon-shopping-cart-content
+                    %h3.sub-heading
+                      Shopping
+                      %span.label.primary-label.-blue New
+                    %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                    %a{:href => "#/"} Read more
 
       .row
         .col-lg-12
-          %section.crowdbound-docs-section.crowdbound-docs-navs
-            %h2.title Navs
-            .row
-              .col-lg-6
+          %section#crowdbound-docs-sliders.crowdbound-docs-section.crowdbound-docs-sliders
+            %h2.title Sliders
 
-                -# Tabs
-                .tabs
-                  %h3.subtitle Tabs
-                  %ul.nav.nav-tabs
-                    %li.active{:role => "presentation"}
-                      %a{:href => "#/"} Home
-                    %li{:role => "presentation"}
-                      %a{:href => "#/"} Profile
-                    %li.dropdown{:role => "presentation"}
-                      %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#/", :role => "button"}
-                        Dropdown
-                        %span.caret
-                      %ul.dropdown-menu.dropdown-primary.-purple{:role => "menu"}
-                        %li
-                          %a{:href => "#/"} Dropdown Item
-                        %li
-                          %a{:href => "#/"} Dropdown Item
-                        %li
-                          %a{:href => "#/"} Dropdown Item
-                        %li
-                          %a{:href => "#/"} Dropdown Item
-                        %li
-                          %a{:href => "#/"} Dropdown Item
+            -#  Slider 1
+            %section.slider.slider-1
+              .container
 
-                -# Justified Tabs
-                .justified-tabs
-                  %h3.subtitle Justified Tabs
-                  %ul.nav.nav-tabs.nav-justified
-                    %li.active{:role => "presentation"}
-                      %a{:href => "#/"} Home
-                    %li{:role => "presentation"}
-                      %a{:href => "#/"} Profile
-                    %li.dropdown{:role => "presentation"}
-                      %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#/", :role => "button"}
-                        Dropdown
-                        %span.caret
-                      %ul.dropdown-menu.dropdown-primary.-purple{:role => "menu"}
-                        %li
-                          %a{:href => "#/"} Dropdown Item
-                        %li
-                          %a{:href => "#/"} Dropdown Item
-                        %li
-                          %a{:href => "#/"} Dropdown Item
-                        %li
-                          %a{:href => "#/"} Dropdown Item
-                        %li
-                          %a{:href => "#/"} Dropdown Item
+                -# Flickity wrapper for main gallery
+                .gallery-main-1
+                  -# Gallery cell
+                  .gallery-cell
+                    .row
+                      .col-lg-12
+                        .row
+                          .col-md-6.col-md-offset-3.col-lg-6.col-lg-offset-3
+                            %h2.heading
+                              Crowdbound Bootstrap
+                              %br
+                                %small Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                            %button.btn.ghost-btn.-blue.-rounded Read more
+                            %button.btn.flat-btn.-blue.-rounded Read more
 
-              -# Pills
-              .col-lg-6
-                .pills
-                  %h3.subtitle Pills
-                  %ul.nav.nav-pills.primary-pills.-purple
-                    %li.active{:role => "presentation"}
-                      %a{:href => "#/"} Home
-                    %li{:role => "presentation"}
-                      %a{:href => "#/"} Profile
-                    %li.dropdown{:role => "presentation"}
-                      %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#/", :role => "button"}
-                        Dropdown
-                        %span.caret
-                      %ul.dropdown-menu.dropdown-primary.-purple{:role => "menu"}
-                        %li
-                          %a{:href => "#/"} Dropdown Item
-                        %li
-                          %a{:href => "#/"} Dropdown Item
-                        %li
-                          %a{:href => "#/"} Dropdown Item
-                        %li
-                          %a{:href => "#/"} Dropdown Item
-                        %li
-                          %a{:href => "#/"} Dropdown Item
+                  -# Gallery cell
+                  .gallery-cell
+                    .row
+                      .col-lg-12
+                        .row
+                          .col-md-6.col-md-offset-3.col-lg-6.col-lg-offset-3
+                            %h2.heading
+                              Crowdbound Bootstrap
+                              %br
+                                %small Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                            %button.btn.ghost-btn.-blue.-rounded Read more
+                            %button.btn.flat-btn.-blue.-rounded Read more
 
-                -# Justified  Pills
-                .pills
-                  %h3.subtitle Justified Pills
-                  %ul.nav.nav-pills.nav-justified.primary-pills.-purple
-                    %li.active{:role => "presentation"}
+            -#  Slider 2
+            %section.slider.slider-2
+              .container
+
+                -# Flickity wrapper for main gallery
+                .gallery-main-2
+                  -# Gallery cell
+                  .gallery-cell
+                    .row
+                      .col-lg-12
+                        .row
+                          .col-md-6.col-md-offset-3.col-lg-6.col-lg-offset-3
+                            %h2.heading
+                              Crowdbound Bootstrap
+                              %br
+                                %small Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                            %button.btn.ghost-btn.-blue.-rounded Read more
+                            %button.btn.flat-btn.-blue.-rounded Read more
+
+                  -# Gallery cell
+                  .gallery-cell
+                    .row
+                      .col-lg-12
+                        .row
+                          .col-md-6.col-md-offset-3.col-lg-6.col-lg-offset-3
+                            %h2.heading
+                              Crowdbound Bootstrap
+                              %br
+                                %small Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                            %button.btn.ghost-btn.-blue.-rounded Read more
+                            %button.btn.flat-btn.-blue.-rounded Read more
+
+                  -# Gallery cell
+                  .gallery-cell
+                    .row
+                      .col-lg-12
+                        .row
+                          .col-md-6.col-md-offset-3.col-lg-6.col-lg-offset-3
+                            %h2.heading
+                              Crowdbound Bootstrap
+                              %br
+                                %small Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                            %button.btn.ghost-btn.-blue.-rounded Read more
+                            %button.btn.flat-btn.-blue.-rounded Read more
+
+                -# Flickity wrapper for navigation
+                .gallery-nav-2
+                  -# Gallery cell
+                  .gallery-cell.feature-block
+                    %i.outline-icon.icon-multiple-image
+                    %h3.sub-heading Multiple images
+                    %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                  -# Gallery cell
+                  .gallery-cell.feature-block
+                    %i.outline-icon.icon-tv-monitor
+                    %h3.sub-heading Large screens
+                    %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                  -# Gallery cell
+                  .gallery-cell.feature-block
+                    %i.outline-icon.icon-expand
+                    %h3.sub-heading Resizing
+                    %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+
+            -#  Slider 3
+            %section.slider.slider-3
+              .container
+
+                -# Flickity wrapper for main gallery
+                .gallery-main-3.col-lg-12
+                  -# Gallery cell
+                  .gallery-cell
+                    .row
+                      .col-md-10.col-md-offset-1.col-lg-10.col-lg-offset-1
+                        .row
+                          .slider-3-content.col-md-6.col-md-offset-1.col-lg-6.col-lg-offset-1
+                            %h2.heading
+                              Crowdbound Bootstrap
+                              %br
+                                %small Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                            %button.btn.ghost-btn.-warning.-rounded.-sm Read more
+                            %button.btn.flat-btn.-warning.-rounded.-sm Read more
+                          .device.pull-right.col-md-5.col-lg-5
+                            %img.img-responsive{:alt => "", :src => "/assets/images/iphone-front-silver.png"}
+
+      .row
+        .col-lg-12
+          %section#crowdbound-docs-mastheads.crowdbound-docs-section.crowdbound-docs-mastheads
+            %h2.title Mastheads
+
+            -#  Masthead 1
+            %section.masthead.masthead-1
+              .container
+                .row
+                  .call-to-action.col-xs-12.col-sm-6.col-md-6.col-lg-6
+                    %h2.heading
+                      Crowdbound Bootstrap
+                      %br
+                        %small Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                    %button.btn.primary-btn.-blue.-rounded Read more
+                  .device.col-xs-12.col-sm-6.col-md-6.col-lg-6.-right
+                    %img.img-responsive{:alt => "", :src => "/assets/images/iphone-front.png"}
+
+            -#  Masthead 2
+            %section.masthead.masthead-2
+              .container
+                .row
+                  .call-to-action.col-xs-12.col-sm-6.col-md-6.col-lg-6
+                    %h2.heading
+                      Crowdbound Bootstrap
+                      %br
+                        %small Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                    %button.btn.primary-btn.-blue.-rounded Read more
+                  .device.col-xs-12.col-sm-6.col-md-6.col-lg-6
+                    %img.img-responsive{:alt => "", :src => "/assets/images/iphone-6-silver-hand.png"}
+
+            -#  Masthead 3
+            %section.masthead.masthead-3
+              .container
+                .row
+                  .call-to-action.col-xs-12.col-sm-6.col-md-6.col-lg-6
+                    %h2.heading
+                      Crowdbound Bootstrap
+                      %br
+                        %small Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                    %button.btn.primary-btn.-blue.-rounded Read more
+                  .device.col-xs-12.col-sm-6.col-md-6.col-lg-6
+                    %img.img-responsive{:alt => "", :src => "/assets/images/ipad-white-hand.png"}
+
+            -#  Masthead 4
+            %section.masthead.masthead-4
+              .container
+                .row
+                  .video-image.col-xs-12.col-sm-6.col-md-6.col-lg-6
+                    %img.img-responsive{:alt => "", :src => "/assets/images/homepage-default-1.png"}
+                  .call-to-action.col-xs-12.col-sm-6.col-md-6.col-lg-6
+                    %h2.heading
+                      Crowdbound Bootstrap
+                      %br
+                        %small Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                    %button.btn.primary-btn.-blue.-rounded Read more
+
+            -#  Masthead 6
+            %section.hidden-lg.hidden-md.hidden-sm.hidden-xs.masthead.masthead-6
+              .container
+                .row
+                  .call-to-action.col-xs-12.text-center
+                    %h2.heading
+                      Crowdbound Bootstrap
+                      %br
+                        %small The kit consists of beautiful components
+                    %button.btn.primary-btn.-blue.-rounded Read more
+                  .device.col-xs-12
+                    %img.img-responsive{:alt => "", :src => "/assets/images/responsive-showcase.png"}
+
+            -#  Masthead 7
+            %section.masthead.masthead-7
+              .container
+                .row
+                  .call-to-action.col-xs-12.col-sm-6.col-md-6.col-lg-6
+                    %h2.heading
+                      Crowdbound Bootstrap
+                      %br
+                        %small Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                    .app-link
+                      %button.btn.ghost-btn.-warning.-rounded
+                        %i.fa.fa-apple
+                        Get it for iOs
+                      %button.btn.flat-btn.-warning.-rounded
+                        %i.fa.fa-windows
+                        Get it for Windows
+                      %p.support-notice Full support for iOS7+ and Honeycomb+
+                  .device.col-xs-12.col-sm-6.col-md-6.col-lg-6
+                    %img.img-responsive{:alt => "", :src => "/assets/images/ipad-white-hand.png"}
+
+            -#  Masthead 8
+            %section.masthead.masthead-8
+              .container
+                .row
+                  .call-to-action.col-xs-12.col-sm-12.col-md-6.col-lg-6.col-md-offset-1.col-lg-offset-1
+                    %h2.heading
+                      Crowdbound Bootstrap
+                      %br
+                        %small Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                    .app-link
+                      %button.btn.flat-btn.-gray.-rounded
+                        %i.fa.fa-apple
+                        Get it for iOs
+                      %a.store-link{:href => "#/"}
+                        %i.fa.fa-windows
+                      %a.store-link{:href => "#/"}
+                        %i.fa.fa-android
+                      %p.support-notice Full support for iOS7+ and Honeycomb+
+                  .device.col-xs-12.col-sm-12.col-md-5.col-lg-5
+                    %img.img-responsive{:alt => "", :src => "/assets/images/iphone-three-quarter.png"}
+
+            -#  Masthead 9
+            %section.masthead.masthead-9.-inverse
+              .container
+                .row
+                  .call-to-action.col-xs-12.text-center
+                    %h2.heading
+                      Crowdbound Bootstrap
+                      %br
+                        %small The kit consists of beautiful components
+                    %button.btn.ghost-btn.-transparent Read more
+                    %button.btn.ghost-btn.-transparent
+                      %i.fa.fa-apple
+                      Get it for OSX
+                  .device.col-xs-12
+                    %img.img-responsive{:alt => "", :src => "/assets/images/macbook-front.png"}
+
+            -#  Masthead 10
+            %section.masthead.masthead-10.-inverse
+              .container
+                .row
+                  .call-to-action.col-xs-12.col-sm-12.col-md-7.col-lg-5
+                    %h2.heading
+                      Crowdbound Bootstrap
+                      %br
+                        %small The kit consists of beautiful components
+                    %button.btn.ghost-btn.-transparent Read more
+                    %button.btn.ghost-btn.-transparent
+                      %i.fa.fa-apple
+                      Get it for OSX
+                  .device.col-xs-12
+                    %img.hidden-xs.hidden-sm.img-responsive{:alt => "", :src => "/assets/images/macbook-side.png"}
+                      %img.visible-xs.visible-sm.img-responsive{:alt => "", :src => "/assets/images/macbook-front.png"}
+
+      .row
+        .col-lg-12
+          %section#crowdbound-docs-ctas.crowdbound-docs-section.crowdbound-docs-ctas
+            %h2.title CTA's
+
+            -#  CTA 1
+            %section.cta.cta-1
+              .container
+                .row
+                  .col-lg-10.col-lg-offset-1
+                    %h2.heading
+                      Simple, fast and affordable theming for everyone.
+                      %br
+                        %small Create a beautiful site.
+                    %button.btn.primary-btn.-blue Start now
+
+            -#  CTA 2
+            %section.cta.cta-2
+              .container
+                .row
+                  .col-lg-10.col-lg-offset-1
+                    %h2.heading
+                      Simple, fast and affordable theming for everyone.
+                      %br
+                        %small Create a beautiful site.
+                    .app-link
+                      %button.btn.flat-btn.-gray.-rounded
+                        %i.fa.fa-apple
+                        Get it for iOs
+                      %a.store-link{:href => "#/"}
+                        %i.fa.fa-windows
+                      %a.store-link{:href => "#/"}
+                        %i.fa.fa-android
+
+            -#  CTA 3
+            %section.cta.cta-3
+              .container
+                .row
+                  .col-lg-12.text-center
+                    %h2.heading
+                      Simple, fast and affordable theming for everyone.
+                      %br
+                        %small Create a beautiful site.
+                    .app-link
+                      %button.btn.flat-btn.-gray.-rounded
+                        %i.fa.fa-apple
+                        Get it for iOs
+                      %a.store-link{:href => "#/"}
+                        %i.fa.fa-windows
+                      %a.store-link{:href => "#/"}
+                        %i.fa.fa-android
+
+            -#  CTA 4
+            %section.cta.cta-4
+              .container
+                .row
+                  .shout.col-md-7.col-lg-7 Got questions? We'd love to talk to you. Contact sales
+                  .call-to-action.col-md-5.col-lg-5
+                    .inner
+                      %a.btn.primary-btn.-blue{:href => "#/"} Join beta
+                      %a.btn.primary-btn.-white{:href => "#/"} More info
+
+      .row
+        .col-lg-12
+          %section#crowdbound-docs-content.crowdbound-docs-section.crowdbound-docs-content
+            %h2.title Content blocks
+
+            -#  Content 1
+            %section.content.content-1
+              .container
+                .row
+                  .device.hidden-xs.hidden-sm.col-md-5.col-lg-5
+                    %img.img-responsive{:alt => "", :src => "/assets/images/iphone-front-silver.png"}
+                  .col-xs-12.col-sm-12.col-md-6.col-lg-6
+                    %h2.heading
+                      About The Theme
+                      %br
+                        %small Dragonfish long-finned pike sind danio grunter spiderfish, duckbill rockling, "Molly Miller." Moorish idol, pearlfish flat loach, ronquil brotula.
+                    %p Manta Ray bonytail chub. Russian sturgeon yellow tang cichlid creek chub--Siamese fighting fish poacher--sablefish bichir? Bonnetmouth gray eel-catfish luminous hake frogfish rohu, eel tope snake eel clown loach northern squawfish Australian prowfish, wrymouth.
+                    %p Ribbon sawtail fish. Leaffish shortnose greeneye barred danio wallago eelpout loach glassfish surfperch, whalefish loach minnow Old World knifefish walking catfish?
+
+            -#  Content 2
+            %section.content.content-2
+              .container
+                .row
+                  .col-xs-12.col-sm-12.col-md-6.col-lg-6
+                    %img.img-responsive{:alt => "", :src => "/assets/images/macbook-front.png"}
+                  .col-xs-12.col-sm-12.col-md-6.col-lg-6
+                    %h3.-no-margin-top Passion is what we stand for
+                    %p Manta Ray bonytail chub. Russian sturgeon yellow tang cichlid creek chub--Siamese fighting fish poacher--sablefish bichir? Bonnetmouth gray eel-catfish luminous hake frogfish rohu, eel tope snake eel clown loach northern squawfish Australian prowfish, wrymouth.
+                    %br
+                      %blockquote
+                        %p Good is the enemy of great
+                        %footer
+                          Crowdbound
+                          %cite{:title => "Source Title"} crowdbound
+                .row
+                  .col-lg-12
+                    %hr
+                .row
+                  .col-xs-12.col-sm-12.col-md-4.col-lg-4.feature-block
+                    %h3.sub-heading Who we are
+                    %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                  .col-xs-12.col-sm-12.col-md-4.col-lg-4.feature-block
+                    %h3.sub-heading What we do
+                    %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                  .col-xs-12.col-sm-12.col-md-4.col-lg-4.feature-block
+                    %h3.sub-heading Why we do it
+                    %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+
+            -#  Content 3
+            %section.content.content-3
+              .container
+                .row
+                  .desc.col-xs-12.col-sm-12.col-md-6.col-lg-6
+                    %i.outline-icon.icon-multiple-image
+                    %h2.sub-heading
+                      This theme boasts a rock-solid code case.
+                      %br Pure crowdbound quality.
+                    %p The UI kit, components and pages are seperated for your convience, but all with superb code quality that's build to last and expand. This version is build on LESS, but a SASS version is sure to follow!
+                  .image.col-xs-12.col-sm-12.col-md-6.col-lg-6
+                    %img.img-responsive{:alt => "", :src => "/assets/images/homepage-default-1.png"}
+                  .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                    %hr
+                  .desc.pull-right.col-xs-12.col-sm-12.col-md-6.col-lg-6
+                    %i.outline-icon.icon-multiple-image
+                    %h2.sub-heading
+                      Beautiful components at your fingertips.
+                      %br Constantly improving.
+                    %p Beautiful components just the way you like then. Use these to achieve your online goals by mesmerizing your visitors. With a library that's constantly improving you can never go wrong.
+                  .image.col-xs-12.col-sm-12.col-md-6.col-lg-6
+                    %img.img-responsive{:alt => "", :src => "/assets/images/homepage-default-2.png"}
+
+            -#  Content 4
+            %section.content.content-4
+              .container
+                .row
+                  .col-xs-12.text-center
+                    %h1.heading
+                      Fast and free prototyping for everyone.
+                      %br
+                        %small Get unlimited projects free. Get started.
+                  .col-xs-12.col-sm-12.col-md-6.col-lg-6
+                    %h2.sub-heading You don't need to have great technical experience to use your product.
+                    %p Whether you want to fill this paragraph with some text like I'm doing right now, this place is perfect to describe some features or anything you want - React has a complete solution for you.
+                  .col-xs-12.col-sm-12.col-md-6.col-lg-6
+                    %h2.sub-heading You don't need to have great technical experience to use your product.
+                    %p Whether you want to fill this paragraph with some text like I'm doing right now, this place is perfect to describe some features or anything you want - React has a complete solution for you.
+                  .device.col-xs-12.col-sm-12.col-md-6.col-lg-6
+                    %img.img-responsive{:alt => "", :src => "/assets/images/iphone-front-silver.png"}
+                  .services.col-xs-12.col-sm-12.col-md-6.col-lg-6
+                    .row
+                      .service-block.col-lg-12
+                        %h3.sub-heading Service 1
+                        %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                      .service-block.col-lg-12
+                        %h3.sub-heading Service 2
+                        %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                      .service-block.col-lg-12
+                        %h3.sub-heading Service 3
+                        %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+                      .service-block.col-lg-12
+                        %h3.sub-heading Service 4
+                        %p Enjoy smooth graphics and timeless design with Crowdbound. Different trends are blended into a special mix.
+            -# Content 5
+            %section.content.content-5
+              .container
+                .row
+                  .content-perk.col-md-6
+                    %img.img-responsive{:alt => "", :src => "/assets/images/portfolio-items/portfolio-item-1-featured.jpg"}
+                      %h3.sub-heading Complete your website
+                      %p The UI kit, components and pages are seperated for your convience, but all with superb code quality that's build to last and expand.
+                      %a.btn.ghost-btn.-warning.-sm{:href => "#/"} Read more
+                  .content-perk.col-md-6
+                    %img.img-responsive{:alt => "", :src => "/assets/images/portfolio-items/portfolio-item-2-featured.jpg"}
+                      %h3.sub-heading Boatload of components
+                      %p The UI kit, components and pages are seperated for your convience, but all with superb code quality that's build to last and expand.
+                      %a.btn.ghost-btn.-warning.-sm{:href => "#/"} Read more
+
+      .row
+        .col-lg-12
+          %section#crowdbound-docs-testimonials.crowdbound-docs-section.crowdbound-docs-testimonials
+            %h2.title Testimonials
+
+            -#  Testimonial 1
+            %section.testimonial.testimonial-1
+              .container
+                .row.js-flickity
+                  .col-xs-12.gallery-cell
+                    %blockquote
+                      %p I absolutely love Crowdbound, the smooth and modern pages enable me to convince my visitors easily. The fact that this theme gets updated so frequently is just an insta-buy for me, it's awesome!
+                      %footer
+                        %img.img-responsive.ui-face{:alt => "", :src => "/assets/images/who-we-are/128.jpg"}
+                          %p
+                            Someone famous
+                            %br
+                              %cite{:title => "Source Title"} Badass company
+                  .col-xs-12.gallery-cell
+                    %blockquote
+                      %p I absolutely love Crowdbound, the smooth and modern pages enable me to convince my visitors easily. The fact that this theme gets updated so frequently is just an insta-buy for me, it's awesome!
+                      %footer
+                        %img.img-responsive.ui-face{:alt => "", :src => "/assets/images/who-we-are/128.jpg"}
+                          %p
+                            Someone famous
+                            %br
+                              %cite{:title => "Source Title"} Badass company
+                  .col-xs-12.gallery-cell
+                    %blockquote
+                      %p I absolutely love Crowdbound, the smooth and modern pages enable me to convince my visitors easily. The fact that this theme gets updated so frequently is just an insta-buy for me, it's awesome!
+                      %footer
+                        %img.img-responsive.ui-face{:alt => "", :src => "/assets/images/who-we-are/128.jpg"}
+                          %p
+                            Someone famous
+                            %br
+                              %cite{:title => "Source Title"} Badass company
+
+            -# Testimonial 2
+            %section.testimonial.testimonial-2
+              .container
+                .row
+                  .quote.col-lg-12
+                    .row
+                      .col-xs-12.col-sm-3.col-md-3.col-lg-3
+                        %img.img-responsive.ui-face{:alt => "", :src => "https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg"}
+                      %blockquote.col-xs-12.col-sm-8.col-md-8.col-lg-8
+                        %p I absolutely love Crowdbound, the smooth and modern pages enable me to convince my visitors easily. The fact that this theme gets updated so frequently is just an insta-buy for me, it's awesome!
+                        %footer
+                          %p
+                            Someone famous
+                            %br
+                              %cite{:title => "Source Title"} Badass company
+                  .quote.col-lg-12
+                    .row
+                      .col-xs-12.col-sm-3.col-md-3.col-lg-3
+                        %img.img-responsive.ui-face{:alt => "", :src => "/assets/images/who-we-are/129.jpg"}
+                      %blockquote.col-xs-12.col-sm-8.col-md-8.col-lg-8
+                        %p I absolutely love Crowdbound, the smooth and modern pages enable me to convince my visitors easily. The fact that this theme gets updated so frequently is just an insta-buy for me, it's awesome!
+                        %footer
+                          %p
+                            Someone famous
+                            %br
+                              %cite{:title => "Source Title"} Badass company
+                  .quote.col-lg-12
+                    .row
+                      .col-xs-12.col-sm-3.col-md-3.col-lg-3
+                        %img.img-responsive.ui-face{:alt => "", :src => "/assets/images/who-we-are/130.jpg"}
+                      %blockquote.col-xs-12.col-sm-8.col-md-8.col-lg-8
+                        %p I absolutely love Crowdbound, the smooth and modern pages enable me to convince my visitors easily. The fact that this theme gets updated so frequently is just an insta-buy for me, it's awesome!
+                        %footer
+                          %p
+                            Someone famous
+                            %br
+                              %cite{:title => "Source Title"} Badass company
+
+            -#  Testimonial 3
+            %section.testimonial.testimonial-3
+              .container
+                .row
+                  .col-xs-12.text-center
+                    %h1.heading
+                      What our clients have to say
+                      %br
+                        %small Crowdbound is trusted by industry giants.
+                  .quote.col-md-4
+                    %img.img-responsive.ui-face{:alt => "", :src => "/assets/images/who-we-are/128.jpg"}
+                      %blockquote
+                        %h3.client
+                          Client one
+                          %br
+                            %small Job title
+                        %p I absolutely love Crowdbound, the smooth and modern pages enable me to convince my visitors easily. The fact that this theme gets updated so frequently is just an insta-buy for me, it's awesome!
+                  .quote.col-md-4
+                    %img.img-responsive.ui-face{:alt => "", :src => "/assets/images/who-we-are/129.jpg"}
+                      %blockquote
+                        %h3.client
+                          Client one
+                          %br
+                            %small Job title
+                        %p I absolutely love Crowdbound, the smooth and modern pages enable me to convince my visitors easily. The fact that this theme gets updated so frequently is just an insta-buy for me, it's awesome!
+                  .quote.col-md-4
+                    %img.img-responsive.ui-face{:alt => "", :src => "/assets/images/who-we-are/130.jpg"}
+                      %blockquote
+                        %h3.client
+                          Client one
+                          %br
+                            %small Job title
+                        %p I absolutely love Crowdbound, the smooth and modern pages enable me to convince my visitors easily. The fact that this theme gets updated so frequently is just an insta-buy for me, it's awesome!
+
+      .row
+        .col-lg-12
+          %section#crowdbound-docs-forms.crowdbound-docs-section.crowdbound-docs-forms
+            %h2.title Forms
+
+            -#  Form 1
+            %section.form.form-1
+              .container
+                .row
+                  .col-xs-12.text-center
+                    %h1.heading
+                      Contact us
+                      %br
+                        %small Crowdbound is trusted by industry giants.
+                  .col-xs-10.col-xs-offset-1
+                    %form#contact-form.contact-form{:role => "form"}
+                      .row
+                        .col-md-6
+                          .form-group
+                            %input#Name.form-control.input-lg{:autocomplete => "off", :name => "Name", :placeholder => "First Name", :type => "text"}
+                        .col-md-6
+                          .form-group
+                            %input#email.form-control.input-lg{:autocomplete => "off", :name => "email", :placeholder => "Last Name", :type => "email"}
+                      .row
+                        .col-md-6
+                          .form-group
+                            %input#Name.form-control.input-lg{:autocomplete => "off", :name => "Name", :placeholder => "Email", :type => "text"}
+                        .col-md-6
+                          .form-group
+                            %input#email.form-control.input-lg{:autocomplete => "off", :name => "email", :placeholder => "Subject", :type => "email"}
+                      .row
+                        .col-md-12
+                          .form-group
+                            %textarea#Message.form-control.input-lg.textarea{:name => "Message", :placeholder => "Message", :rows => "8"}
+                      .row
+                        .col-md-12
+                          %button.btn.primary-btn.-blue{:type => "button"} Send a message
+
+            -#  Form 2
+            %section.form.form-2
+              .container
+                .row
+                  .col-xs-12
+                    %h3.form-title Subscribe
+                    .input-group.input-group-lg
+                      %input.form-control{:placeholder => "Please leave your email...", :type => "text"}
+                        .input-group-btn
+                          %button.btn.primary-btn.-warning{:type => "button"} Subscribe
+
+      .row
+        .col-lg-12
+          %section#crowdbound-docs-pricing.crowdbound-docs-section.crowdbound-docs-pricing
+            %h2.title Pricing tables
+
+            -#  Pricing 1
+            %section.pricing.pricing-1
+              .container
+                .row
+                  .col-xs-12.text-center
+                    %h1.heading
+                      Simple pricing
+                      %br
+                        %small Get a great bang for your buck.
+                  .col-xs-12.pricing-list
+                    %ul.pricing-list-wrapper.row
+                      %li.pricing-table.col-md-4
+                        %header.pricing-header
+                          %h3.package-type Basic
+                        .pricing-content
+                          %ul.package-perks
+                            %li
+                              %span Awesome
+                              feature
+                            %li
+                              %span Awesome
+                              feature
+                            %li
+                              %span Awesome
+                              feature
+                            %li
+                              %span Awesome
+                              feature
+                            %li
+                              %span Awesome
+                              feature
+                        .pricing-cta
+                          %span.currency $
+                          %span.value 45
+                          %span.cycle
+                            Per
+                            %br month
+                          %a.btn.ghost-btn.-gray{:href => "#/"} Choose
+                      %li.pricing-table.-best.col-md-4
+                        %header.pricing-header
+                          %h3.package-type
+                            %small Most populair
+                            %br Advanced
+                        .pricing-content
+                          %ul.package-perks
+                            %li
+                              %span Awesome
+                              feature
+                            %li
+                              %span Awesome
+                              feature
+                            %li
+                              %span Awesome
+                              feature
+                            %li
+                              %span Awesome
+                              feature
+                            %li
+                              %span Awesome
+                              feature
+                        .pricing-cta
+                          %span.currency $
+                          %span.value 102
+                          %span.cycle
+                            Per
+                            %br month
+                          %a.btn.ghost-btn.-blue{:href => "#/"} Choose
+                      %li.pricing-table.col-md-4
+                        %header.pricing-header
+                          %h3.package-type Pro
+                        .pricing-content
+                          %ul.package-perks
+                            %li
+                              %span Awesome
+                              feature
+                            %li
+                              %span Awesome
+                              feature
+                            %li
+                              %span Awesome
+                              feature
+                            %li
+                              %span Awesome
+                              feature
+                            %li
+                              %span Awesome
+                              feature
+                        .pricing-cta
+                          %span.currency $
+                          %span.value 349
+                          %span.cycle
+                            Per
+                            %br month
+                          %a.btn.ghost-btn.-gray{:href => "#/"} Choose
+
+            -#  Pricing 2
+            %section.pricing.pricing-2
+              .container
+                .row
+                  .col-xs-12.text-center
+                    %h1.heading
+                      Simple pricing
+                      %br
+                        %small Get a great bang for your buck.
+                  .col-xs-12.pricing-list
+                    %ul.pricing-list-wrapper.row
+                      %li.pricing-table.col-md-3
+                        %header.pricing-header
+                          %h3.package-type Basic
+                        .pricing-content
+                          %ul.package-perks
+                            %li
+                              %span Awesome
+                              feature
+                            %li
+                              %span Awesome
+                              feature
+                            %li
+                              %span Awesome
+                              feature
+                            %li
+                              %span Awesome
+                              feature
+                            %li
+                              %span Awesome
+                              feature
+                        .pricing-cta
+                          %span.currency $
+                          %span.value 45
+                          %span.cycle
+                            Per
+                            %br month
+                          %a.btn.ghost-btn.-gray{:href => "#/"} Choose
+                      %li.pricing-table.-best.col-md-3
+                        %header.pricing-header
+                          %h3.package-type Advanced
+                        .pricing-content
+                          %ul.package-perks
+                            %li
+                              %span Awesome
+                              feature
+                            %li
+                              %span Awesome
+                              feature
+                            %li
+                              %span Awesome
+                              feature
+                            %li
+                              %span Awesome
+                              feature
+                            %li
+                              %span Awesome
+                              feature
+                        .pricing-cta
+                          %span.currency $
+                          %span.value 85
+                          %span.cycle
+                            Per
+                            %br month
+                          %a.btn.ghost-btn.-blue{:href => "#/"} Choose
+                      %li.pricing-table.col-md-3
+                        %header.pricing-header
+                          %h3.package-type Pro
+                        .pricing-content
+                          %ul.package-perks
+                            %li
+                              %span Awesome
+                              feature
+                            %li
+                              %span Awesome
+                              feature
+                            %li
+                              %span Awesome
+                              feature
+                            %li
+                              %span Awesome
+                              feature
+                            %li
+                              %span Awesome
+                              feature
+                        .pricing-cta
+                          %span.currency $
+                          %span.value 102
+                          %span.cycle
+                            Per
+                            %br month
+                          %a.btn.ghost-btn.-gray{:href => "#/"} Choose
+                      %li.pricing-table.col-md-3
+                        %header.pricing-header
+                          %h3.package-type Pro
+                        .pricing-content
+                          %ul.package-perks
+                            %li
+                              %span Awesome
+                              feature
+                            %li
+                              %span Awesome
+                              feature
+                            %li
+                              %span Awesome
+                              feature
+                            %li
+                              %span Awesome
+                              feature
+                            %li
+                              %span Awesome
+                              feature
+                        .pricing-cta
+                          %span.currency $
+                          %span.value 349
+                          %span.cycle
+                            Per
+                            %br month
+                          %a.btn.ghost-btn.-gray{:href => "#/"} Choose
+
+      .row
+        .col-lg-12
+          %section#crowdbound-docs-team.crowdbound-docs-section.crowdbound-docs-team
+            %h2.title Team
+
+            -#  Team 1
+            %section.team.team-1
+              .container
+                .row
+                  .col-xs-12.text-center
+                    %h1.heading
+                      Our super team
+                      %br
+                        %small Crowdbound is trusted by industry giants.
+                  .member.col-md-4
+                    %img.img-responsive.ui-face{:alt => "", :src => "/assets/images/who-we-are/128.jpg"}
+                      .member-description
+                        %h3.member-name
+                          Client one
+                          %br
+                            %small Job title
+                        %p Dragonfish long-finned pike sind danio grunter spiderfish, duckbill rockling, "Molly Miller." Moorish idol, pearlfish flat loach, ronquil brotula.
+                  .member.col-md-4
+                    %img.img-responsive.ui-face{:alt => "", :src => "/assets/images/who-we-are/129.jpg"}
+                      .member-description
+                        %h3.member-name
+                          Client one
+                          %br
+                            %small Job title
+                        %p Dragonfish long-finned pike sind danio grunter spiderfish, duckbill rockling, "Molly Miller." Moorish idol, pearlfish flat loach, ronquil brotula.
+                  .member.col-md-4
+                    %img.img-responsive.ui-face{:alt => "", :src => "/assets/images/who-we-are/130.jpg"}
+                      .member-description
+                        %h3.member-name
+                          Client one
+                          %br
+                            %small Job title
+                        %p Dragonfish long-finned pike sind danio grunter spiderfish, duckbill rockling, "Molly Miller." Moorish idol, pearlfish flat loach, ronquil brotula.
+
+            -#  Team 2
+            %section.team.team-2
+              .container
+                .row
+                  .col-xs-12.text-center
+                    %h1.heading
+                      Our super team
+                      %br
+                        %small Crowdbound is trusted by industry giants.
+                  .member.col-md-3
+                    %img.img-responsive.ui-face{:alt => "", :src => "/assets/images/who-we-are/130.jpg"}
+                      .member-description
+                        %h3.member-name
+                          Client one
+                          %br
+                            %small Job title
+                        %p Dragonfish long-finned pike sind danio grunter spiderfish, duckbill rockling, "Molly Miller." Moorish idol, pearlfish flat loach, ronquil brotula.
+                  .member.col-md-3
+                    %img.img-responsive.ui-face{:alt => "", :src => "/assets/images/who-we-are/130.jpg"}
+                      .member-description
+                        %h3.member-name
+                          Client one
+                          %br
+                            %small Job title
+                        %p Dragonfish long-finned pike sind danio grunter spiderfish, duckbill rockling, "Molly Miller." Moorish idol, pearlfish flat loach, ronquil brotula.
+                  .member.col-md-3
+                    %img.img-responsive.ui-face{:alt => "", :src => "/assets/images/who-we-are/130.jpg"}
+                      .member-description
+                        %h3.member-name
+                          Client one
+                          %br
+                            %small Job title
+                        %p Dragonfish long-finned pike sind danio grunter spiderfish, duckbill rockling, "Molly Miller." Moorish idol, pearlfish flat loach, ronquil brotula.
+                  .member.col-md-3
+                    %img.img-responsive.ui-face{:alt => "", :src => "/assets/images/who-we-are/130.jpg"}
+                      .member-description
+                        %h3.member-name
+                          Client one
+                          %br
+                            %small Job title
+                        %p Dragonfish long-finned pike sind danio grunter spiderfish, duckbill rockling, "Molly Miller." Moorish idol, pearlfish flat loach, ronquil brotula.
+
+            -# Team 3
+            %section.team.team-3
+              .container
+                .row
+                  .col-xs-12.text-center
+                    %h1.heading
+                      Our super team
+                      %br
+                        %small Crowdbound is trusted by industry giants.
+                .row.member-row
+                  .member.-grayscale.col-xs-12.col-sm-6.col-md-3
+                    %img.img-responsive{:alt => "", :src => "/assets/images/who-we-are/team-1.jpg"}
+                      .overlay-inset
+                        .overlay
+                          .member-description
+                            %h3.member-name
+                              Best employee
+                              %br
+                                %small Superhero Developer
+                            .social-icons
+                              %span.fa-stack.fa-lg
+                                %i.fa.fa-circle.fa-stack-2x
+                                %i.fa.fa-facebook.fa-stack-1x.fa-inverse
+                              %span.fa-stack.fa-lg
+                                %i.fa.fa-circle.fa-stack-2x
+                                %i.fa.fa-twitter.fa-stack-1x.fa-inverse
+                  .member.-grayscale.col-xs-12.col-sm-6.col-md-3
+                    %img.img-responsive{:alt => "", :src => "/assets/images/who-we-are/team-2.jpg"}
+                      .overlay-inset
+                        .overlay
+                          .member-description
+                            %h3.member-name
+                              Best employee
+                              %br
+                                %small Superhero Developer
+                            .social-icons
+                              %span.fa-stack.fa-lg
+                                %i.fa.fa-circle.fa-stack-2x
+                                %i.fa.fa-facebook.fa-stack-1x.fa-inverse
+                              %span.fa-stack.fa-lg
+                                %i.fa.fa-circle.fa-stack-2x
+                                %i.fa.fa-twitter.fa-stack-1x.fa-inverse
+                  .member.-grayscale.col-xs-12.col-sm-6.col-md-3
+                    %img.img-responsive{:alt => "", :src => "/assets/images/who-we-are/team-3.jpg"}
+                      .overlay-inset
+                        .overlay
+                          .member-description
+                            %h3.member-name
+                              Best employee
+                              %br
+                                %small Superhero Developer
+                            .social-icons
+                              %span.fa-stack.fa-lg
+                                %i.fa.fa-circle.fa-stack-2x
+                                %i.fa.fa-facebook.fa-stack-1x.fa-inverse
+                              %span.fa-stack.fa-lg
+                                %i.fa.fa-circle.fa-stack-2x
+                                %i.fa.fa-twitter.fa-stack-1x.fa-inverse
+                  .member.-grayscale.col-xs-12.col-sm-6.col-md-3
+                    %img.img-responsive{:alt => "", :src => "/assets/images/who-we-are/team-4.jpg"}
+                      .overlay-inset
+                        .overlay
+                          .member-description
+                            %h3.member-name
+                              Best employee
+                              %br
+                                %small Superhero Developer
+                            .social-icons
+                              %span.fa-stack.fa-lg
+                                %i.fa.fa-circle.fa-stack-2x
+                                %i.fa.fa-facebook.fa-stack-1x.fa-inverse
+                              %span.fa-stack.fa-lg
+                                %i.fa.fa-circle.fa-stack-2x
+                                %i.fa.fa-twitter.fa-stack-1x.fa-inverse
+                .row.member-row
+                  .member.-grayscale.col-xs-12.col-sm-6.col-md-3
+                    %img.img-responsive{:alt => "", :src => "/assets/images/who-we-are/team-5.jpg"}
+                      .overlay-inset
+                        .overlay
+                          .member-description
+                            %h3.member-name
+                              Best employee
+                              %br
+                                %small Superhero Developer
+                            .social-icons
+                              %span.fa-stack.fa-lg
+                                %i.fa.fa-circle.fa-stack-2x
+                                %i.fa.fa-facebook.fa-stack-1x.fa-inverse
+                              %span.fa-stack.fa-lg
+                                %i.fa.fa-circle.fa-stack-2x
+                                %i.fa.fa-twitter.fa-stack-1x.fa-inverse
+                  .member.-grayscale.col-xs-12.col-sm-6.col-md-3
+                    %img.img-responsive{:alt => "", :src => "/assets/images/who-we-are/team-6.jpg"}
+                      .overlay-inset
+                        .overlay
+                          .member-description
+                            %h3.member-name
+                              Best employee
+                              %br
+                                %small Superhero Developer
+                            .social-icons
+                              %span.fa-stack.fa-lg
+                                %i.fa.fa-circle.fa-stack-2x
+                                %i.fa.fa-facebook.fa-stack-1x.fa-inverse
+                              %span.fa-stack.fa-lg
+                                %i.fa.fa-circle.fa-stack-2x
+                                %i.fa.fa-twitter.fa-stack-1x.fa-inverse
+                  .member.-grayscale.col-xs-12.col-sm-6.col-md-3
+                    %img.img-responsive{:alt => "", :src => "/assets/images/who-we-are/team-7.jpg"}
+                      .overlay-inset
+                        .overlay
+                          .member-description
+                            %h3.member-name
+                              Best employee
+                              %br
+                                %small Superhero Developer
+                            .social-icons
+                              %span.fa-stack.fa-lg
+                                %i.fa.fa-circle.fa-stack-2x
+                                %i.fa.fa-facebook.fa-stack-1x.fa-inverse
+                              %span.fa-stack.fa-lg
+                                %i.fa.fa-circle.fa-stack-2x
+                                %i.fa.fa-twitter.fa-stack-1x.fa-inverse
+                  .member.-grayscale.col-xs-12.col-sm-6.col-md-3
+                    %img.img-responsive{:alt => "", :src => "/assets/images/who-we-are/team-8.jpg"}
+                      .overlay-inset
+                        .overlay
+                          .member-description
+                            %h3.member-name
+                              Best employee
+                              %br
+                                %small Superhero Developer
+                            .social-icons
+                              %span.fa-stack.fa-lg
+                                %i.fa.fa-circle.fa-stack-2x
+                                %i.fa.fa-facebook.fa-stack-1x.fa-inverse
+                              %span.fa-stack.fa-lg
+                                %i.fa.fa-circle.fa-stack-2x
+                                %i.fa.fa-twitter.fa-stack-1x.fa-inverse
+            -#  Team 3
+            %section.team.team-3.team-4
+              .container
+                .row
+                  .col-xs-12.text-center
+                    %h1.heading
+                      Our super team
+                      %br
+                        %small Crowdbound is trusted by industry giants.
+                .col-xs-12.gallery-team-1
+                  .row.member-row.gallery-cell
+                    .member.-grayscale.col-xs-12.col-sm-6.col-md-3
+                      %img.img-responsive{:alt => "", :src => "/assets/images/who-we-are/team-1.jpg"}
+                        .overlay-inset
+                          .overlay
+                            .member-description
+                              %h3.member-name
+                                Best employee
+                                %br
+                                  %small Superhero Developer
+                              .social-icons
+                                %span.fa-stack.fa-lg
+                                  %i.fa.fa-circle.fa-stack-2x
+                                  %i.fa.fa-facebook.fa-stack-1x.fa-inverse
+                                %span.fa-stack.fa-lg
+                                  %i.fa.fa-circle.fa-stack-2x
+                                  %i.fa.fa-twitter.fa-stack-1x.fa-inverse
+                    .member.-grayscale.col-xs-12.col-sm-6.col-md-3
+                      %img.img-responsive{:alt => "", :src => "/assets/images/who-we-are/team-2.jpg"}
+                        .overlay-inset
+                          .overlay
+                            .member-description
+                              %h3.member-name
+                                Best employee
+                                %br
+                                  %small Superhero Developer
+                              .social-icons
+                                %span.fa-stack.fa-lg
+                                  %i.fa.fa-circle.fa-stack-2x
+                                  %i.fa.fa-facebook.fa-stack-1x.fa-inverse
+                                %span.fa-stack.fa-lg
+                                  %i.fa.fa-circle.fa-stack-2x
+                                  %i.fa.fa-twitter.fa-stack-1x.fa-inverse
+                    .member.-grayscale.col-xs-12.col-sm-6.col-md-3
+                      %img.img-responsive{:alt => "", :src => "/assets/images/who-we-are/team-3.jpg"}
+                        .overlay-inset
+                          .overlay
+                            .member-description
+                              %h3.member-name
+                                Best employee
+                                %br
+                                  %small Superhero Developer
+                              .social-icons
+                                %span.fa-stack.fa-lg
+                                  %i.fa.fa-circle.fa-stack-2x
+                                  %i.fa.fa-facebook.fa-stack-1x.fa-inverse
+                                %span.fa-stack.fa-lg
+                                  %i.fa.fa-circle.fa-stack-2x
+                                  %i.fa.fa-twitter.fa-stack-1x.fa-inverse
+                    .member.-grayscale.col-xs-12.col-sm-6.col-md-3
+                      %img.img-responsive{:alt => "", :src => "/assets/images/who-we-are/team-4.jpg"}
+                        .overlay-inset
+                          .overlay
+                            .member-description
+                              %h3.member-name
+                                Best employee
+                                %br
+                                  %small Superhero Developer
+                              .social-icons
+                                %span.fa-stack.fa-lg
+                                  %i.fa.fa-circle.fa-stack-2x
+                                  %i.fa.fa-facebook.fa-stack-1x.fa-inverse
+                                %span.fa-stack.fa-lg
+                                  %i.fa.fa-circle.fa-stack-2x
+                                  %i.fa.fa-twitter.fa-stack-1x.fa-inverse
+                  .row.member-row.gallery-cell
+                    .member.-grayscale.col-xs-12.col-sm-6.col-md-3
+                      %img.img-responsive{:alt => "", :src => "/assets/images/who-we-are/team-5.jpg"}
+                        .overlay-inset
+                          .overlay
+                            .member-description
+                              %h3.member-name
+                                Best employee
+                                %br
+                                  %small Superhero Developer
+                              .social-icons
+                                %span.fa-stack.fa-lg
+                                  %i.fa.fa-circle.fa-stack-2x
+                                  %i.fa.fa-facebook.fa-stack-1x.fa-inverse
+                                %span.fa-stack.fa-lg
+                                  %i.fa.fa-circle.fa-stack-2x
+                                  %i.fa.fa-twitter.fa-stack-1x.fa-inverse
+                    .member.-grayscale.col-xs-12.col-sm-6.col-md-3
+                      %img.img-responsive{:alt => "", :src => "/assets/images/who-we-are/team-6.jpg"}
+                        .overlay-inset
+                          .overlay
+                            .member-description
+                              %h3.member-name
+                                Best employee
+                                %br
+                                  %small Superhero Developer
+                              .social-icons
+                                %span.fa-stack.fa-lg
+                                  %i.fa.fa-circle.fa-stack-2x
+                                  %i.fa.fa-facebook.fa-stack-1x.fa-inverse
+                                %span.fa-stack.fa-lg
+                                  %i.fa.fa-circle.fa-stack-2x
+                                  %i.fa.fa-twitter.fa-stack-1x.fa-inverse
+                    .member.-grayscale.col-xs-12.col-sm-6.col-md-3
+                      %img.img-responsive{:alt => "", :src => "/assets/images/who-we-are/team-7.jpg"}
+                        .overlay-inset
+                          .overlay
+                            .member-description
+                              %h3.member-name
+                                Best employee
+                                %br
+                                  %small Superhero Developer
+                              .social-icons
+                                %span.fa-stack.fa-lg
+                                  %i.fa.fa-circle.fa-stack-2x
+                                  %i.fa.fa-facebook.fa-stack-1x.fa-inverse
+                                %span.fa-stack.fa-lg
+                                  %i.fa.fa-circle.fa-stack-2x
+                                  %i.fa.fa-twitter.fa-stack-1x.fa-inverse
+                    .member.-grayscale.col-xs-12.col-sm-6.col-md-3
+                      %img.img-responsive{:alt => "", :src => "/assets/images/who-we-are/team-8.jpg"}
+                        .overlay-inset
+                          .overlay
+                            .member-description
+                              %h3.member-name
+                                Best employee
+                                %br
+                                  %small Superhero Developer
+                              .social-icons
+                                %span.fa-stack.fa-lg
+                                  %i.fa.fa-circle.fa-stack-2x
+                                  %i.fa.fa-facebook.fa-stack-1x.fa-inverse
+                                %span.fa-stack.fa-lg
+                                  %i.fa.fa-circle.fa-stack-2x
+                                  %i.fa.fa-twitter.fa-stack-1x.fa-inverse
+
+      .row
+        .col-lg-12
+          %section#crowdbound-docs-portfolio.crowdbound-docs-section.crowdbound-docs-portfolio
+            %h2.title Portfolio
+
+            -#  Portfolio 1
+            %section.portfolio.portfolio-1
+              .container
+                .row
+                  .portfolio-item.col-xs-12.col-sm-6.col-md-4
+                    %img.img-responsive{:alt => "", :src => "/assets/images/portfolio-items/portfolio-item-1-featured.jpg"}
+                      .overlay-inset
+                        .overlay
+                          .portfolio-description
+                            %h3.portfolio-title
+                              Portfolio item
+                              %br
+                                %small Digital Art
+                            %a.btn.ghost-btn.-transparent.-sm{:href => "#/"} View project
+                  .portfolio-item.col-xs-12.col-sm-6.col-md-4
+                    %img.img-responsive{:alt => "", :src => "/assets/images/portfolio-items/portfolio-item-2-featured.jpg"}
+                      .overlay-inset
+                        .overlay
+                          .portfolio-description
+                            %h3.portfolio-title
+                              Portfolio item
+                              %br
+                                %small Digital Art
+                            %a.btn.ghost-btn.-transparent.-sm{:href => "#/"} View project
+                  .portfolio-item.col-xs-12.col-sm-6.col-md-4
+                    %img.img-responsive{:alt => "", :src => "/assets/images/portfolio-items/portfolio-item-3-featured.jpg"}
+                      .overlay-inset
+                        .overlay
+                          .portfolio-description
+                            %h3.portfolio-title
+                              Portfolio item
+                              %br
+                                %small Digital Art
+                            %a.btn.ghost-btn.-transparent.-sm{:href => "#/"} View project
+                  .portfolio-item.col-xs-12.col-sm-6.col-md-4
+                    %img.img-responsive{:alt => "", :src => "/assets/images/portfolio-items/portfolio-item-4-featured.jpg"}
+                      .overlay-inset
+                        .overlay
+                          .portfolio-description
+                            %h3.portfolio-title
+                              Portfolio item
+                              %br
+                                %small Digital Art
+                            %a.btn.ghost-btn.-transparent.-sm{:href => "#/"} View project
+                  .portfolio-item.col-xs-12.col-sm-6.col-md-4
+                    %img.img-responsive{:alt => "", :src => "/assets/images/portfolio-items/portfolio-item-5-featured.jpg"}
+                      .overlay-inset
+                        .overlay
+                          .portfolio-description
+                            %h3.portfolio-title
+                              Portfolio item
+                              %br
+                                %small Digital Art
+                            %a.btn.ghost-btn.-transparent.-sm{:href => "#/"} View project
+                  .portfolio-item.col-xs-12.col-sm-6.col-md-4
+                    %img.img-responsive{:alt => "", :src => "/assets/images/portfolio-items/portfolio-item-6-featured.jpg"}
+                      .overlay-inset
+                        .overlay
+                          .portfolio-description
+                            %h3.portfolio-title
+                              Portfolio item
+                              %br
+                                %small Digital Art
+                            %a.btn.ghost-btn.-transparent.-sm{:href => "#/"} View project
+
+            -#  Portfolio 2
+            %section.portfolio.portfolio-1.portfolio-2
+              .container
+                .row
+                  .col-xs-12.text-center
+                    %h1.heading
+                      4 column grid
+                      %br
+                        %small Crowdbound is trusted by industry giants.
+                  .portfolio-item.col-xs-12.col-sm-6.col-md-3
+                    %img.img-responsive{:alt => "", :src => "/assets/images/portfolio-items/portfolio-item-1-featured.jpg"}
+                      .overlay-inset
+                        .overlay
+                          .portfolio-description
+                            %h3.portfolio-title
+                              Portfolio item
+                              %br
+                                %small Digital Art
+                            %a.btn.ghost-btn.-transparent.-sm{:href => "#/"} View project
+                  .portfolio-item.col-xs-12.col-sm-6.col-md-3
+                    %img.img-responsive{:alt => "", :src => "/assets/images/portfolio-items/portfolio-item-2-featured.jpg"}
+                      .overlay-inset
+                        .overlay
+                          .portfolio-description
+                            %h3.portfolio-title
+                              Portfolio item
+                              %br
+                                %small Digital Art
+                            %a.btn.ghost-btn.-transparent.-sm{:href => "#/"} View project
+                  .portfolio-item.col-xs-12.col-sm-6.col-md-3
+                    %img.img-responsive{:alt => "", :src => "/assets/images/portfolio-items/portfolio-item-3-featured.jpg"}
+                      .overlay-inset
+                        .overlay
+                          .portfolio-description
+                            %h3.portfolio-title
+                              Portfolio item
+                              %br
+                                %small Digital Art
+                            %a.btn.ghost-btn.-transparent.-sm{:href => "#/"} View project
+                  .portfolio-item.col-xs-12.col-sm-6.col-md-3
+                    %img.img-responsive{:alt => "", :src => "/assets/images/portfolio-items/portfolio-item-4-featured.jpg"}
+                      .overlay-inset
+                        .overlay
+                          .portfolio-description
+                            %h3.portfolio-title
+                              Portfolio item
+                              %br
+                                %small Digital Art
+                            %a.btn.ghost-btn.-transparent.-sm{:href => "#/"} View project
+                  .portfolio-item.col-xs-12.col-sm-6.col-md-3
+                    %img.img-responsive{:alt => "", :src => "/assets/images/portfolio-items/portfolio-item-5-featured.jpg"}
+                      .overlay-inset
+                        .overlay
+                          .portfolio-description
+                            %h3.portfolio-title
+                              Portfolio item
+                              %br
+                                %small Digital Art
+                            %a.btn.ghost-btn.-transparent.-sm{:href => "#/"} View project
+                  .portfolio-item.col-xs-12.col-sm-6.col-md-3
+                    %img.img-responsive{:alt => "", :src => "/assets/images/portfolio-items/portfolio-item-6-featured.jpg"}
+                      .overlay-inset
+                        .overlay
+                          .portfolio-description
+                            %h3.portfolio-title
+                              Portfolio item
+                              %br
+                                %small Digital Art
+                            %a.btn.ghost-btn.-transparent.-sm{:href => "#/"} View project
+                  .portfolio-item.col-xs-12.col-sm-6.col-md-3
+                    %img.img-responsive{:alt => "", :src => "/assets/images/portfolio-items/portfolio-item-7-featured.jpg"}
+                      .overlay-inset
+                        .overlay
+                          .portfolio-description
+                            %h3.portfolio-title
+                              Portfolio item
+                              %br
+                                %small Digital Art
+                            %a.btn.ghost-btn.-transparent.-sm{:href => "#/"} View project
+                  .portfolio-item.col-xs-12.col-sm-6.col-md-3
+                    %img.img-responsive{:alt => "", :src => "/assets/images/portfolio-items/portfolio-item-8-featured.jpg"}
+                      .overlay-inset
+                        .overlay
+                          .portfolio-description
+                            %h3.portfolio-title
+                              Portfolio item
+                              %br
+                                %small Digital Art
+                            %a.btn.ghost-btn.-transparent.-sm{:href => "#/"} View project
+
+            -#  Portfolio 3
+            %section.portfolio.portfolio-3
+              .container
+                .row
+                  .col-xs-12.text-center
+                    %h2.heading Our most recent work
+                .col-xs-12.portfolio-slider-1
+                  .row.portfolio-row.gallery-cell
+                    .portfolio-item.col-xs-12.col-sm-6.col-md-3
+                      %img.img-responsive.img-thumbnail{:alt => "", :src => "/assets/images/portfolio-items/slider-1.jpg"}
+                        .overlay-inset
+                          .overlay
+                            .portfolio-description
+                              %h3.portfolio-title
+                                Best employee
+                                %br
+                                  %small Superhero Developer
+                              %a.btn.ghost-btn.-transparent.-sm{:href => "#/"} View project
+                    .portfolio-item.col-xs-12.col-sm-6.col-md-3
+                      %img.img-responsive.img-thumbnail{:alt => "", :src => "/assets/images/portfolio-items/slider-2.jpg"}
+                        .overlay-inset
+                          .overlay
+                            .portfolio-description
+                              %h3.portfolio-title
+                                Best employee
+                                %br
+                                  %small Superhero Developer
+                              %a.btn.ghost-btn.-transparent.-sm{:href => "#/"} View project
+                    .portfolio-item.col-xs-12.col-sm-6.col-md-3
+                      %img.img-responsive.img-thumbnail{:alt => "", :src => "/assets/images/portfolio-items/slider-3.jpg"}
+                        .overlay-inset
+                          .overlay
+                            .portfolio-description
+                              %h3.portfolio-title
+                                Best employee
+                                %br
+                                  %small Superhero Developer
+                              %a.btn.ghost-btn.-transparent.-sm{:href => "#/"} View project
+                    .portfolio-item.col-xs-12.col-sm-6.col-md-3
+                      %img.img-responsive.img-thumbnail{:alt => "", :src => "/assets/images/portfolio-items/slider-4.jpg"}
+                        .overlay-inset
+                          .overlay
+                            .portfolio-description
+                              %h3.portfolio-title
+                                Best employee
+                                %br
+                                  %small Superhero Developer
+                              %a.btn.ghost-btn.-transparent.-sm{:href => "#/"} View project
+
+                  .row.portfolio-row.gallery-cell
+                    .portfolio-item.col-xs-12.col-sm-6.col-md-3
+                      %img.img-responsive.img-thumbnail{:alt => "", :src => "/assets/images/portfolio-items/slider-1.jpg"}
+                        .overlay-inset
+                          .overlay
+                            .portfolio-description
+                              %h3.portfolio-title
+                                Best employee
+                                %br
+                                  %small Superhero Developer
+                              %a.btn.ghost-btn.-transparent.-sm{:href => "#/"} View project
+                    .portfolio-item.col-xs-12.col-sm-6.col-md-3
+                      %img.img-responsive.img-thumbnail{:alt => "", :src => "/assets/images/portfolio-items/slider-2.jpg"}
+                        .overlay-inset
+                          .overlay
+                            .portfolio-description
+                              %h3.portfolio-title
+                                Best employee
+                                %br
+                                  %small Superhero Developer
+                              %a.btn.ghost-btn.-transparent.-sm{:href => "#/"} View project
+                    .portfolio-item.col-xs-12.col-sm-6.col-md-3
+                      %img.img-responsive.img-thumbnail{:alt => "", :src => "/assets/images/portfolio-items/slider-3.jpg"}
+                        .overlay-inset
+                          .overlay
+                            .portfolio-description
+                              %h3.portfolio-title
+                                Best employee
+                                %br
+                                  %small Superhero Developer
+                              %a.btn.ghost-btn.-transparent.-sm{:href => "#/"} View project
+                    .portfolio-item.col-xs-12.col-sm-6.col-md-3
+                      %img.img-responsive.img-thumbnail{:alt => "", :src => "/assets/images/portfolio-items/slider-4.jpg"}
+                        .overlay-inset
+                          .overlay
+                            .portfolio-description
+                              %h3.portfolio-title
+                                Best employee
+                                %br
+                                  %small Superhero Developer
+                              %a.btn.ghost-btn.-transparent.-sm{:href => "#/"} View project
+
+            -# Portfolio 4
+            %section.portfolio.portfolio-4
+              .container
+                .row
+                  .project-image.col-md-6
+                    %img.img-responsive{:alt => "", :src => "/assets/images/portfolio-items/portfolio-item-1-featured.jpg"}
+                  .project-info.col-md-6
+                    %h2.project-title Our first project
+                    %p.project-description I absolutely love Crowdbound, the smooth and modern pages enable me to convince my visitors easily. The fact that this theme gets updated so frequently is just an insta-buy for me, it's awesome!
+                    %a.btn.ghost-btn.-blue{:href => "#/"} View the project
+
+            -# Portfolio 6
+            %section.portfolio.portfolio-6
+              .container
+                .row
+                  .col-xs-12.text-center
+                    %h1.heading
+                      Our super team
+                      %br
+                        %small Crowdbound is trusted by industry giants.
+                .row.portfolio-row
+                  .col-xs-12.col-sm-6.col-md-4
+                    .portfolio-item
+                      %img.img-responsive{:alt => "", :src => "/assets/images/portfolio-items/portfolio-item-1-featured.jpg"}
+                        %h3.portfolio-title
+                          Badass project
+                          %br
+                            %small WEBDEVELOPMENT
+                        .overlay-inset
+                          .overlay
+                            .portfolio-description
+                              %a.btn.ghost-btn.-transparent.-lg{:href => "#/"} View project
+                  .col-xs-12.col-sm-6.col-md-4
+                    .portfolio-item
+                      %img.img-responsive{:alt => "", :src => "/assets/images/portfolio-items/portfolio-item-2-featured.jpg"}
+                        %h3.portfolio-title
+                          Badass project
+                          %br
+                            %small WEBDEVELOPMENT
+                        .overlay-inset
+                          .overlay
+                            .portfolio-description
+                              %a.btn.ghost-btn.-transparent.-lg{:href => "#/"} View project
+                  .col-xs-12.col-sm-6.col-md-4
+                    .portfolio-item
+                      %img.img-responsive{:alt => "", :src => "/assets/images/portfolio-items/portfolio-item-3-featured.jpg"}
+                        %h3.portfolio-title
+                          Badass project
+                          %br
+                            %small WEBDEVELOPMENT
+                        .overlay-inset
+                          .overlay
+                            .portfolio-description
+                              %a.btn.ghost-btn.-transparent.-lg{:href => "#/"} View project
+                .row.portfolio-row
+                  .col-xs-12.col-sm-6.col-md-4
+                    .portfolio-item
+                      %img.img-responsive{:alt => "", :src => "/assets/images/portfolio-items/portfolio-item-4-featured.jpg"}
+                        %h3.portfolio-title
+                          Badass project
+                          %br
+                            %small WEBDEVELOPMENT
+                        .overlay-inset
+                          .overlay
+                            .portfolio-description
+                              %a.btn.ghost-btn.-transparent.-lg{:href => "#/"} View project
+                  .col-xs-12.col-sm-6.col-md-4
+                    .portfolio-item
+                      %img.img-responsive{:alt => "", :src => "/assets/images/portfolio-items/portfolio-item-5-featured.jpg"}
+                        %h3.portfolio-title
+                          Badass project
+                          %br
+                            %small WEBDEVELOPMENT
+                        .overlay-inset
+                          .overlay
+                            .portfolio-description
+                              %a.btn.ghost-btn.-transparent.-lg{:href => "#/"} View project
+                  .col-xs-12.col-sm-6.col-md-4
+                    .portfolio-item
+                      %img.img-responsive{:alt => "", :src => "/assets/images/portfolio-items/portfolio-item-6-featured.jpg"}
+                        %h3.portfolio-title
+                          Badass project
+                          %br
+                            %small WEBDEVELOPMENT
+                        .overlay-inset
+                          .overlay
+                            .portfolio-description
+                              %a.btn.ghost-btn.-transparent.-lg{:href => "#/"} View project
+
+            -#  Portfolio 7
+            %section.portfolio.portfolio-7
+              .container
+                .row
+                  .col-xs-12.text-center
+                    %h1.heading
+                      4 column grid
+                      %br
+                        %small Crowdbound is trusted by industry giants.
+                  .col-xs-12
+                    %ul.nav.nav-pills.primary-pills.-blue.text-center
+                      %li.active{"data-group" => "all"}
+                        %a{:href => "#"} All
+                      %li{"data-group" => "branding"}
+                        %a{:href => "#"} Branding
+                      %li{"data-group" => "web"}
+                        %a{:href => "#"} Web Design
+                      %li{"data-group" => "logo-white"}
+                        %a{:href => "#"} logo-white Design
+                      %li{"data-group" => "photography"}
+                        %a{:href => "#"} Photography
+                  .col-xs-12.portfolio-grid-shuffle-1
+                    .portfolio-item.portfolio-item-shuffle.col-xs-12.col-sm-6.col-md-3{"data-groups" => "[\"all\", \"photography\"]"}
+                      .contents
+                        %img.img-responsive{:alt => "", :src => "/assets/images/portfolio-items/portfolio-item-1-featured.jpg"}
+                          .overlay-inset
+                            .overlay
+                              .portfolio-description
+                                %h3.portfolio-title
+                                  Best employee
+                                  %br
+                                    %small Superhero Developer
+                                %a.btn.ghost-btn.-transparent.-sm{:href => "#/"} View project
+                    .portfolio-item.portfolio-item-shuffle.col-xs-12.col-sm-6.col-md-3{"data-groups" => "[\"all\", \"branding\"]"}
+                      %img.img-responsive{:alt => "", :src => "/assets/images/portfolio-items/portfolio-item-2-featured.jpg"}
+                        .overlay-inset
+                          .overlay
+                            .portfolio-description
+                              %h3.portfolio-title
+                                Best employee
+                                %br
+                                  %small Superhero Developer
+                              %a.btn.ghost-btn.-transparent.-sm{:href => "#/"} View project
+                    .portfolio-item.portfolio-item-shuffle.col-xs-12.col-sm-6.col-md-3{"data-groups" => "[\"all\", \"branding\"]"}
+                      %img.img-responsive{:alt => "", :src => "/assets/images/portfolio-items/portfolio-item-3-featured.jpg"}
+                        .overlay-inset
+                          .overlay
+                            .portfolio-description
+                              %h3.portfolio-title
+                                Best employee
+                                %br
+                                  %small Superhero Developer
+                              %a.btn.ghost-btn.-transparent.-sm{:href => "#/"} View project
+                    .portfolio-item.portfolio-item-shuffle.col-xs-12.col-sm-6.col-md-3{"data-groups" => "[\"all\", \"web\"]"}
+                      %img.img-responsive{:alt => "", :src => "/assets/images/portfolio-items/portfolio-item-4-featured.jpg"}
+                        .overlay-inset
+                          .overlay
+                            .portfolio-description
+                              %h3.portfolio-title
+                                Best employee
+                                %br
+                                  %small Superhero Developer
+                              %a.btn.ghost-btn.-transparent.-sm{:href => "#/"} View project
+                    .portfolio-item.portfolio-item-shuffle.col-xs-12.col-sm-6.col-md-3{"data-groups" => "[\"all\", \"logo-white\"]"}
+                      %img.img-responsive{:alt => "", :src => "/assets/images/portfolio-items/portfolio-item-5-featured.jpg"}
+                        .overlay-inset
+                          .overlay
+                            .portfolio-description
+                              %h3.portfolio-title
+                                Best employee
+                                %br
+                                  %small Superhero Developer
+                              %a.btn.ghost-btn.-transparent.-sm{:href => "#/"} View project
+                    .portfolio-item.portfolio-item-shuffle.col-xs-12.col-sm-6.col-md-3{"data-groups" => "[\"all\", \"photography\"]"}
+                      %img.img-responsive{:alt => "", :src => "/assets/images/portfolio-items/portfolio-item-6-featured.jpg"}
+                        .overlay-inset
+                          .overlay
+                            .portfolio-description
+                              %h3.portfolio-title
+                                Best employee
+                                %br
+                                  %small Superhero Developer
+                              %a.btn.ghost-btn.-transparent.-sm{:href => "#/"} View project
+                    .portfolio-item.portfolio-item-shuffle.col-xs-12.col-sm-6.col-md-3{"data-groups" => "[\"all\", \"logo-white\"]"}
+                      %img.img-responsive{:alt => "", :src => "/assets/images/portfolio-items/portfolio-item-7-featured.jpg"}
+                        .overlay-inset
+                          .overlay
+                            .portfolio-description
+                              %h3.portfolio-title
+                                Best employee
+                                %br
+                                  %small Superhero Developer
+                              %a.btn.ghost-btn.-transparent.-sm{:href => "#/"} View project
+                    .portfolio-item.portfolio-item-shuffle.col-xs-12.col-sm-6.col-md-3{"data-groups" => "[\"all\", \"photography\"]"}
+                      %img.img-responsive{:alt => "", :src => "/assets/images/portfolio-items/portfolio-item-8-featured.jpg"}
+                        .overlay-inset
+                          .overlay
+                            .portfolio-description
+                              %h3.portfolio-title
+                                Best employee
+                                %br
+                                  %small Superhero Developer
+                              %a.btn.ghost-btn.-transparent.-sm{:href => "#/"} View project
+
+      .row
+        .col-lg-12
+          %section#crowdbound-docs-footers.crowdbound-docs-section.crowdbound-docs-footers
+            %h2.title Footers
+
+            -#  Footer 1
+            %section.footer.footer-1.-inverse
+              .container
+                .logo-white.col-xs-12.col-sm-3.col-md-3.col-lg-2
+                  %img.img-responsive{:alt => "crowdbound logo-white", :src => "/assets/images/crowdbound-logo-white.png"}
+                .footer-menu.col-xs-12.col-sm-9.col-md-8.col-lg-10
+                  %ul
+                    %li
+                      %a{:href => "#/"} Menu
+                    %li
+                      %a{:href => "#/"} Menu
+                    %li
+                      %a{:href => "#/"} Menu
+                    %li
+                      %a{:href => "#/"} Menu
+                    %li
+                      %a{:href => "#/"} Menu
+
+            -#  Footer 2
+            %section.footer.footer-2.-inverse
+              .container
+                .logo-white.col-xs-12.col-sm-3.col-md-3.col-lg-2
+                  %img.img-responsive{:alt => "crowdbound logo-white", :src => "/assets/images/crowdbound-logo-white.png"}
+                .footer-menu.col-xs-12.col-sm-9.col-md-7.col-lg-7
+                  %ul
+                    %li &copy; 2015
+                    %li
+                      %a{:href => "#/"} Menu
+                    %li
+                      %a{:href => "#/"} Menu
+                    %li
+                      %a{:href => "#/"} Menu
+                    %li
+                      %a{:href => "#/"} Menu
+                    %li
+                      %a{:href => "#/"} Menu
+                .footer-social.col-sm-12.col-md-2.col-lg-3
+                  %ul
+                    %li
                       %a{:href => "#/"}
-                        Home
-                        %span.badge 4
-                    %li{:role => "presentation"}
-                      %a{:href => "#/"} Profile
-                    %li.dropdown{:role => "presentation"}
-                      %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#/", :role => "button"}
-                        Dropdown
-                        %span.caret
-                      %ul.dropdown-menu.dropdown-primary.-purple{:role => "menu"}
-                        %li
-                          %a{:href => "#/"} Dropdown Item
-                        %li
-                          %a{:href => "#/"} Dropdown Item
-                        %li
-                          %a{:href => "#/"} Dropdown Item
-                        %li
-                          %a{:href => "#/"} Dropdown Item
-                        %li
-                          %a{:href => "#/"} Dropdown Item
-
-
-      -# Breadcrumbs
-
-      .row
-        .col-lg-6
-          %section.crowdbound-docs-section.crowdbound-docs-breadcrumbs
-            %h2.title Breadcrumbs
-
-            -# Primary breadcrumbs
-            .breadcrumbs
-              .row
-                .col-lg-10
-                  %ol.breadcrumb
+                        %i.fa.fa-twitter
                     %li
-                      %a{:href => "#/"} Home
+                      %a{:href => "#/"}
+                        %i.fa.fa-facebook
                     %li
-                      %a{:href => "#/"} Library
-                    %li.active Data
+                      %a{:href => "#/"}
+                        %i.fa.fa-linkedin
 
+            -#  Footer 3
+            %section.footer.footer-3
+              .container
+                .row
+                  .footer-about.col-md-3.col-sm-3
+                    %h4 About Crowdbound
+                    %p Crowdbound is a clean and soft one-page multipurpose theme. It's uncluttered layout and fresh colour scheme will dazzle your visitors.
+                    %p It's responsive, it converts and it's perfect for displaying your service or work. Get your copy today!
 
-          -# Badges
-          %section.crowdbound-docs-section.crowdbound-docs-badges
-            %h2.title Badges
+                  .footer-social.col-md-3.col-sm-3
+                    %h4 We're really social
+                    %ul
+                      %li
+                        %a{:href => "#/"}
+                          %i.fa.fa-twitter
+                      %li
+                        %a{:href => "#/"}
+                          %i.fa.fa-facebook
+                      %li
+                        %a{:href => "#/"}
+                          %i.fa.fa-linkedin
+                      %li
+                        %a{:href => "#/"}
+                          %i.fa.fa-dribbble
+                      %li
+                        %a{:href => "#/"}
+                          %i.fa.fa-git
+                      %li
+                        %a{:href => "#/"}
+                          %i.fa.fa-whatsapp
+                      %li
+                        %a{:href => "#/"}
+                          %i.fa.fa-flickr
+                      %li
+                        %a{:href => "#/"}
+                          %i.fa.fa-instagram
+                      %li
+                        %a{:href => "#/"}
+                          %i.fa.fa-digg
+                      %li
+                        %a{:href => "#/"}
+                          %i.fa.fa-behance
 
-            -# Badges
-            .badges
-              %a{:href => "#/"}
-                Inbox
-                %span.badge 42
-              %br
-                %button.btn.primary-btn.-purple{:type => "button"}
-                  Messages
-                  %span.badge 4
+                  .footer-address.col-md-3.col-sm-3
+                    %h4 Contact details
+                    %address
+                      25, Lorem Lis Street, Orange
+                      %br
+                        California, US
+                        %br
+                          Phone: 800 123 3456
+                          %br
+                            Fax: 800 123 3456
+                            %br
+                              Email:
+                              %a{:href => "mailto:info@company.com"} info@company.com
 
+                  .footer-subscribe.col-md-3.col-sm-3
+                    %h4 Our monthly news
+                    %p Subscribe to our newsletter and stay up to date with the latest news and deals!
+                    %form.footer-subsribe
+                      .input-group
+                        %input.form-control{:placeholder => "Email Address", :type => "text"}
+                          %span.input-group-btn
+                            %button.btn.primary-btn.-blue.-sm{:type => "button"} Subscribe
 
-        -# Labels
-
-        .col-lg-6
-          %section.crowdbound-docs-section.crowdbound-docs-labels
-            %h2.title Labels
-
-            -# Default labels
-            .labels
-              %h3.subtitle Default
-              %h1
-                Example heading
-                %span.label.primary-label.-purple New
-              %h2
-                Example heading
-                %span.label.primary-label.-purple New
-              %h3
-                Example heading
-                %span.label.primary-label.-purple New
-              %h4
-                Example heading
-                %span.label.primary-label.-purple New
-
-            -# Primary variation
-            .primary-variations
-              %h3.subtitle Primary Variations
-              %span.label.primary-label.-purple Blue
-              %span.label.primary-label.-red Red
-              %span.label.primary-label.-purple Purple
-              %span.label.primary-label.-gray Gray
-              %span.label.primary-label.-white White
-              %span.label.primary-label.-success Success
-              %span.label.primary-label.-info Info
-              %span.label.primary-label.-warning Warning
-              %span.label.primary-label.-danger Danger
-
-            -# Flat variation
-            .flat-variations
-              %h3.subtitle Primary Variations
-              %span.label.flat-label.-purple Blue
-              %span.label.flat-label.-red Red
-              %span.label.flat-label.-purple Purple
-              %span.label.flat-label.-gray Gray
-              %span.label.flat-label.-white White
-              %span.label.flat-label.-success Success
-              %span.label.flat-label.-info Info
-              %span.label.flat-label.-warning Warning
-              %span.label.flat-label.-danger Danger
-
-
-      -# Alerts
-
-      .row
-        .col-lg-6
-          %section.crowdbound-docs-section.crowdbound-docs-alerts
-            %h2.title Alerts
-            .row
-              .col-lg-12
-
-                -# Alerts
-                .alerts
-                  %h3.subtitle Primary alerts
-                  .alert.alert-info.alert-dismissible{:role => "alert"}
-                    %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
-                      %span{"aria-hidden" => "true"} &times;
-                    %strong Heads up!
-                    This <a class="alert-link" href = "#">alert</a> alert needs your attention
-                    but it's not super important.
-                  .alert.alert-warning.alert-dismissible{:role => "alert"}
-                    %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
-                      %span{"aria-hidden" => "true"} &times;
-                    %strong Warning!
-                    Better check yourself, you're not looking too good.
-                  .alert.alert-success.alert-dismissible{:role => "alert"}
-                    %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
-                      %span{"aria-hidden" => "true"} &times;
-                    %strong Well done!
-                    You successfully read <a class="alert-link" href="#"> this important</a> alert message
-                  .alert.alert-danger.alert-dismissible{:role => "alert"}
-                    %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
-                      %span{"aria-hidden" => "true"} &times;
-                    %strong Oh snap!
-                    %a.alert-link{:href => "#/"} Change a few things up
-                    and try submitting again.
-
-
-        -# Progress bars
-
-        .col-lg-5.col-lg-offset-1
-          %section.crowdbound-docs-section.crowdbound-docs-progress
-            %h2.title Progress bars
-            .row
-              .col-lg-12
-
-                -# Alerts
-                .default-bars
-                  %h3.subtitle Default bars
-                  .progress
-                    .progress-bar.-purple{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "60", :role => "progressbar", :style => "width: 60%;"}
-                      60%
-                  .progress
-                    .progress-bar.-red{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "30", :role => "progressbar", :style => "width: 30%;"}
-                      30%
-                  .progress
-                    .progress-bar.-purple{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "55", :role => "progressbar", :style => "width: 55%;"}
-                      55%
-                  .progress
-                    .progress-bar.-gray{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "80", :role => "progressbar", :style => "width: 80%;"}
-                      80%
-
-      -# Panels
-
-      .row
-        .col-lg-12
-          %section.crowdbound-docs-section.crowdbound-docs-panels
-            %h2.title Panels
-            .row
-              .col-lg-3
-
-                -# Default panels
-                .default-panels
-                  %h3.subtitle Default panels
-
-                  -# Basic panel
-                  .panel.primary-panel
-                    .panel-body
-                      Basic panel example
-
-                  -# Panels with heading
-                  .panel.primary-panel
-                    .panel-heading Panel heading without title
-                    .panel-body
-                      Panel content
-                  .panel.primary-panel
-                    .panel-heading
-                      %h3.panel-title Panel title
-                    .panel-body
-                      Panel content
-
-                  -# Panel with footer
-                  .panel.primary-panel
-                    .panel-body
-                      Panel content
-                    .panel-footer Panel footer
-
-              -# Panel variations
-              .col-lg-3.col-lg-offset-1
-                .panel-variations
-                  %h3.subtitle Panel variations
-                  .panel.primary-panel.-purple
-                    .panel-heading
-                      %h3.panel-title Panel title
-                    .panel-body
-                      Panel content
-                  .panel.primary-panel.-red
-                    .panel-heading
-                      %h3.panel-title Panel title
-                    .panel-body
-                      Panel content
-                  .panel.primary-panel.-purple
-                    .panel-heading
-                      %h3.panel-title Panel title
-                    .panel-body
-                      Panel content
-                  .panel.primary-panel.-gray
-                    .panel-heading
-                      %h3.panel-title Panel title
-                    .panel-body
-                      Panel content
-
-              -# Panel variations
-              .col-lg-3.col-lg-offset-1
-                .panel-variations
-                  %h3.subtitle &nbsp;
-                  .panel.primary-panel.-success
-                    .panel-heading
-                      %h3.panel-title Panel title
-                    .panel-body
-                      Panel content
-                  .panel.primary-panel.-info
-                    .panel-heading
-                      %h3.panel-title Panel title
-                    .panel-body
-                      Panel content
-                  .panel.primary-panel.-warning
-                    .panel-heading
-                      %h3.panel-title Panel title
-                    .panel-body
-                      Panel content
-                  .panel.primary-panel.-danger
-                    .panel-heading
-                      %h3.panel-title Panel title
-                    .panel-body
-                      Panel content
+                  .col-md-12.col-sm-12
+                    %hr
+                      %p.text-center ©2015 crowdbound. All Rights Reserved

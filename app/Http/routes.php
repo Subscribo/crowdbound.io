@@ -23,6 +23,15 @@ Route::get('/', function () {
     return view('index');
 });
 
+/*
+|--------------------------------------------------------------------------
+| Internal Documentation Routes
+|--------------------------------------------------------------------------
+|
+| Internal style-guides an other documenation regardin this project itself.
+|
+*/
+
 Route::get('/docs/ui-kit', function () {
     return view('_documentation/ui-kit');
 });

@@ -5,19 +5,19 @@
 - set body_class = 'ui-kit'
 
 - block page_content
-  %section#tamashi-jumbotron.tamashi-jumbotron
+  %section#crowdbound-jumbotron.crowdbound-jumbotron
     .container
       .row
         .col-lg-12
-          .tamashi-branding
-            %img.tamashi-logo{:alt => "crowdbound Logo", :src => "#{asset('assets/images/crowdbound-logo-white.png')}"}
+          .crowdbound-branding
+            %img.crowdbound-logo{:alt => "crowdbound Logo", :src => "#{asset('assets/images/crowdbound-logo-white.png')}"}
 
           %h1.title.text-center
             Le Theme, Motherfuckers
             %br
               %small.subtitle crowdbound UI KIT
           .text-center
-            %a.btn.ghost-btn.-transparent{:href => "", :target => "_blank"} View Components
+            %a.btn.ghost-btn.-transparent{:href => "#{url('docs/components')}", :target => "_blank"} View Components
 
   -# Begin the docs
   %section.crowdbound-docs
@@ -234,50 +234,50 @@
                 .col-lg-6
 
                   -# Checked
-                  %label.control.checkbox.checkbox-primary.-purple
+                  %label.control.checkbox.checkbox-primary.-blue
                     %input{:checked => "", :type => "checkbox"}
                       %span.control-indicator
                       Check this custom checkbox
 
                   -# Unchecked
-                  %label.control.checkbox.checkbox-primary.-purple
+                  %label.control.checkbox.checkbox-primary.-blue
                     %input{:type => "checkbox"}
                       %span.control-indicator
                       Check this custom checkbox
 
                   -# Checked disabled
-                  %label.control.checkbox.checkbox-primary.-purple.-disabled
+                  %label.control.checkbox.checkbox-primary.-blue.-disabled
                     %input{:checked => "", :disabled => "", :type => "checkbox"}
                       %span.control-indicator
                       Check this custom checkbox
 
                   -# Unchecked Disabled
-                  %label.control.checkbox.checkbox-primary.-purple
+                  %label.control.checkbox.checkbox-primary.-blue
                     %input{:disabled => "", :type => "checkbox"}
                       %span.control-indicator
                       Check this custom checkbox
 
                 .col-lg-6
                   -# Checked
-                  %label.control.radio.-purple
+                  %label.control.radio.-blue
                     %input#radio1{:checked => "", :name => "radio", :type => "radio"}
                       %span.control-indicator
                       Toggle this custom radio
 
                   -# Unchecked
-                  %label.control.radio.-purple
+                  %label.control.radio.-blue
                     %input#radio2{:name => "radio", :type => "radio"}
                       %span.control-indicator
                       Toggle this custom radio
 
                   -# Checked Disabled
-                  %label.control.-purple.-disabled.radio
+                  %label.control.-blue.-disabled.radio
                     %input#radio3{:checked => "", :disabled => "", :name => "radio2", :type => "radio"}
                       %span.control-indicator
                       Toggle this custom radio
 
                   -# Unchecked Disabled
-                  %label.control.radio.-purple
+                  %label.control.radio.-blue
                     %input#radio4{:disabled => "", :name => "radio2", :type => "radio"}
                       %span.control-indicator
                       Toggle this custom radio
@@ -574,7 +574,7 @@
                       %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#/", :role => "button"}
                         Dropdown
                         %span.caret
-                      %ul.dropdown-menu.dropdown-primary.-purple{:role => "menu"}
+                      %ul.dropdown-menu.dropdown-primary.-blue{:role => "menu"}
                         %li
                           %a{:href => "#/"} Dropdown Item
                         %li
@@ -598,7 +598,7 @@
                       %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#/", :role => "button"}
                         Dropdown
                         %span.caret
-                      %ul.dropdown-menu.dropdown-primary.-purple{:role => "menu"}
+                      %ul.dropdown-menu.dropdown-primary.-blue{:role => "menu"}
                         %li
                           %a{:href => "#/"} Dropdown Item
                         %li
@@ -614,7 +614,7 @@
               .col-lg-6
                 .pills
                   %h3.subtitle Pills
-                  %ul.nav.nav-pills.primary-pills.-purple
+                  %ul.nav.nav-pills.primary-pills.-blue
                     %li.active{:role => "presentation"}
                       %a{:href => "#/"} Home
                     %li{:role => "presentation"}
@@ -623,7 +623,7 @@
                       %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#/", :role => "button"}
                         Dropdown
                         %span.caret
-                      %ul.dropdown-menu.dropdown-primary.-purple{:role => "menu"}
+                      %ul.dropdown-menu.dropdown-primary.-blue{:role => "menu"}
                         %li
                           %a{:href => "#/"} Dropdown Item
                         %li
@@ -638,7 +638,7 @@
                 -# Justified  Pills
                 .pills
                   %h3.subtitle Justified Pills
-                  %ul.nav.nav-pills.nav-justified.primary-pills.-purple
+                  %ul.nav.nav-pills.nav-justified.primary-pills.-blue
                     %li.active{:role => "presentation"}
                       %a{:href => "#/"}
                         Home
@@ -649,7 +649,7 @@
                       %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#/", :role => "button"}
                         Dropdown
                         %span.caret
-                      %ul.dropdown-menu.dropdown-primary.-purple{:role => "menu"}
+                      %ul.dropdown-menu.dropdown-primary.-blue{:role => "menu"}
                         %li
                           %a{:href => "#/"} Dropdown Item
                         %li
@@ -691,7 +691,7 @@
                 Inbox
                 %span.badge 42
               %br
-                %button.btn.primary-btn.-purple{:type => "button"}
+                %button.btn.primary-btn.-blue{:type => "button"}
                   Messages
                   %span.badge 4
 
@@ -707,23 +707,23 @@
               %h3.subtitle Default
               %h1
                 Example heading
-                %span.label.primary-label.-purple New
+                %span.label.primary-label.-blue New
               %h2
                 Example heading
-                %span.label.primary-label.-purple New
+                %span.label.primary-label.-blue New
               %h3
                 Example heading
-                %span.label.primary-label.-purple New
+                %span.label.primary-label.-blue New
               %h4
                 Example heading
-                %span.label.primary-label.-purple New
+                %span.label.primary-label.-blue New
 
             -# Primary variation
             .primary-variations
               %h3.subtitle Primary Variations
-              %span.label.primary-label.-purple Blue
+              %span.label.primary-label.-blue Blue
               %span.label.primary-label.-red Red
-              %span.label.primary-label.-purple Purple
+              %span.label.primary-label.-blue blue
               %span.label.primary-label.-gray Gray
               %span.label.primary-label.-white White
               %span.label.primary-label.-success Success
@@ -734,9 +734,9 @@
             -# Flat variation
             .flat-variations
               %h3.subtitle Primary Variations
-              %span.label.flat-label.-purple Blue
+              %span.label.flat-label.-blue Blue
               %span.label.flat-label.-red Red
-              %span.label.flat-label.-purple Purple
+              %span.label.flat-label.-blue blue
               %span.label.flat-label.-gray Gray
               %span.label.flat-label.-white White
               %span.label.flat-label.-success Success
@@ -793,13 +793,13 @@
                 .default-bars
                   %h3.subtitle Default bars
                   .progress
-                    .progress-bar.-purple{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "60", :role => "progressbar", :style => "width: 60%;"}
+                    .progress-bar.-blue{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "60", :role => "progressbar", :style => "width: 60%;"}
                       60%
                   .progress
                     .progress-bar.-red{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "30", :role => "progressbar", :style => "width: 30%;"}
                       30%
                   .progress
-                    .progress-bar.-purple{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "55", :role => "progressbar", :style => "width: 55%;"}
+                    .progress-bar.-blue{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "55", :role => "progressbar", :style => "width: 55%;"}
                       55%
                   .progress
                     .progress-bar.-gray{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "80", :role => "progressbar", :style => "width: 80%;"}
@@ -844,7 +844,7 @@
               .col-lg-3.col-lg-offset-1
                 .panel-variations
                   %h3.subtitle Panel variations
-                  .panel.primary-panel.-purple
+                  .panel.primary-panel.-blue
                     .panel-heading
                       %h3.panel-title Panel title
                     .panel-body
@@ -854,7 +854,7 @@
                       %h3.panel-title Panel title
                     .panel-body
                       Panel content
-                  .panel.primary-panel.-purple
+                  .panel.primary-panel.-blue
                     .panel-heading
                       %h3.panel-title Panel title
                     .panel-body
