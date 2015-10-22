@@ -12,7 +12,7 @@
 Route::group(
 [
     'prefix' => LaravelLocalization::setLocale(),
-    'middleware' => [ 'localeSessionRedirect', 'localizationRedirect' ]
+    'middleware' => [ 'localize', 'localeSessionRedirect', 'localizationRedirect' ]
 ],
 function()
 {
@@ -20,47 +20,50 @@ function()
         return view('index');
     });
 
-    Route::get('agents', function () {
+    /* All of the following routes are translateable
+       via resources/lang/[LANGUAGE]/routes.php */
+
+    Route::get(LaravelLocalization::transRoute('routes.agents'), function () {
         return view('agents');
     });
 
-    Route::get('api', function () {
+    Route::get(LaravelLocalization::transRoute('routes.api'), function () {
         return view('api');
     });
 
-    Route::get('success-stories', function () {
+    Route::get(LaravelLocalization::transRoute('routes.success-stories'), function () {
         return view('success-stories');
     });
 
-    Route::get('agent-app', function () {
+    Route::get(LaravelLocalization::transRoute('routes.agent-app'), function () {
         return view('agent-app');
     });
 
-    Route::get('campaign-planner-app', function () {
+    Route::get(LaravelLocalization::transRoute('routes.campaign-planner-app'), function () {
         return view('campain-planner-app');
     });
 
-    Route::get('campaign-templates', function () {
+    Route::get(LaravelLocalization::transRoute('routes.campaign-templates'), function () {
         return view('campaign-templates');
     });
 
-    Route::get('reporting', function () {
+    Route::get(LaravelLocalization::transRoute('routes.reporting'), function () {
         return view('reporting');
     });
 
-    Route::get('integrations', function () {
+    Route::get(LaravelLocalization::transRoute('routes.integrations'), function () {
         return view('integrations');
     });
 
-    Route::get('about-us', function () {
+    Route::get(LaravelLocalization::transRoute('routes.about-us'), function () {
         return view('about-us');
     });
 
-    Route::get('imprint', function () {
+    Route::get(LaravelLocalization::transRoute('routes.imprint'), function () {
         return view('imprint');
     });
 
-    Route::get('press', function () {
+    Route::get(LaravelLocalization::transRoute('routes.press'), function () {
         return view('press');
     });
 });
