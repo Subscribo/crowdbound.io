@@ -154,6 +154,9 @@ $(window).load(function() {
 
   /* initialize shuffle plugin */
   var $grid = $('.portfolio-grid-shuffle-1');
+
+  if ( $('.portfolio-grid-shuffle-1').length <= 0) { return; }
+
   $grid.shuffle({
     itemSelector: '.portfolio-item-shuffle', // the selector for the items in the grid
     speed: 500 // Transition/animation speed (milliseconds)
@@ -170,4 +173,5 @@ $(window).load(function() {
     $grid.shuffle('shuffle', groupName );
   });
 });
+
 //# sourceMappingURL=crowdbound.js.map
