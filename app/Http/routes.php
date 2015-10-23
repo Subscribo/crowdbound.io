@@ -70,6 +70,24 @@ function()
 
 /*
 |--------------------------------------------------------------------------
+| Social Login Related Routes
+|--------------------------------------------------------------------------
+|
+| Routes that facilitate social login via eloquent-oauth.
+|
+*/
+Route::get('{provider}/authorize', function ($provider) {
+    return SocialAuth::authorize($provider);
+});
+
+Route::get('{provider}/login', function ($provider) {
+    SocialAuth::login($provider, function ($user, $userDetails) {
+        dd($userDetails);
+    });
+});
+
+/*
+|--------------------------------------------------------------------------
 | Blog Related Routes
 |--------------------------------------------------------------------------
 |
