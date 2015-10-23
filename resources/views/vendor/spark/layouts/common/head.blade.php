@@ -12,7 +12,6 @@
 <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,700,300,600,400" rel="stylesheet" type="text/css">
 <link href="//cdnjs.cloudflare.com/ajax/libs/flickity/1.0.2/flickity.min.css" rel="stylesheet">
 
-
 <!-- Styles -->
 <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 <link href="{{ elixir('assets/css/crowdbound.css') }}" rel="stylesheet">
