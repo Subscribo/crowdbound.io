@@ -10,9 +10,22 @@
 -if auth_check()
   :javascript
     created_at_timestamp = Date.parse('#{auth_user().created_at}')/1000;
+    trial_ends_at_timestamp = Date.parse('#{auth_user().trial_ends_at}')/1000;
+    subscription_ends_at_timestamp = Date.parse('#{auth_user().subscription_ends_at}')/1000;
+    updated_at_timestamp = Date.parse('#{auth_user().updated_at}')/1000;
+
     analytics.identify('#{auth_user().id}', {
       app_id: "reiv8xcz",
       name: "#{auth_user().name}",
       email: "#{auth_user().email}",
-      created_at: created_at_timestamp
+      phone_country_code: "#{auth_user().phone_country_code}",
+      phone_number: "#{auth_user().phone_number}",
+      current_team_id: "#{auth_user().current_team_id}",
+      stripe_active: "#{auth_user().stripe_active}",
+      stripe_plan: "#{auth_user().stripe_plan}",
+      trial_ends_at: trial_ends_at_timestamp,
+      subscription_ends_at: subscription_ends_at_timestamp,
+      created_at: created_at_timestamp,
+      updated_at: updated_at_timestamp,
+      using_two_factor_auth: "#{auth_user().using_two_factor_auth}"
     });
