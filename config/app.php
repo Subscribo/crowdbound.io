@@ -148,10 +148,10 @@ return [
         /*
          * Third Party Service Providers
          */
-        Irazasyed\LaravelGAMP\LaravelGAMPServiceProvider::class,
         'TwigBridge\ServiceProvider',
         Barryvdh\Debugbar\ServiceProvider::class,
         Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
+        'AdamWathan\EloquentOAuthL5\EloquentOAuthServiceProvider',
 
         /**
          * Spark Service Providers...
@@ -209,10 +209,11 @@ return [
         /*
          * Third Party aliases
          */
-        'GAMP'  => Irazasyed\LaravelGAMP\Facades\GAMP::class,
         'Twig' => 'TwigBridge\Facade\Twig',
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
-        'LaravelLocalization'   => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class
+        'LaravelLocalization'   => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
+        'SocialAuth' => 'AdamWathan\EloquentOAuth\Facades\OAuth',
+
     ],
 
 ];

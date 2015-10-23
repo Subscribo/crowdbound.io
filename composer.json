@@ -7,12 +7,12 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
-        "irazasyed/laravel-gamp": "^1.0",
         "mstroeck/laravel-twigbridge-haml": "0.8.1.1",
         "laravel/spark": "^0.1.1",
         "barryvdh/laravel-debugbar": "^2.0",
         "darrylkuhn/dialect": "dev-master",
-        "mcamara/laravel-localization": "1.0.*"
+        "mcamara/laravel-localization": "1.0.*",
+        "adamwathan/eloquent-oauth-l5": "^0.3.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
