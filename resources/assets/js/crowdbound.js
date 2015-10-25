@@ -1,3 +1,5 @@
+var Switchery = require('switchery');
+
 //
 // Switches
 // --------------------------------------------------
@@ -6,21 +8,21 @@
 var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch-small'));
 
 elems.forEach(function(html) {
-  var switchery = new Switchery(html, { size: 'small', color: '#4E3C91' });
+  var switchery = new Switchery(html, { size: 'small', color: '#3897ff' });
 });
 
 // Normal
 var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
 
 elems.forEach(function(html) {
-  var switchery = new Switchery(html, { color: '#4E3C91' });
+  var switchery = new Switchery(html, { color: '#3897ff' });
 });
 
 // Large
 var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch-large'));
 
 elems.forEach(function(html) {
-  var switchery = new Switchery(html, { size: 'large', color: '#4E3C91' });
+  var switchery = new Switchery(html, { size: 'large', color: '#3897ff' });
 });
 
 //

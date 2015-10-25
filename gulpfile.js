@@ -34,8 +34,7 @@ elixir(function(mix) {
 });
 
 elixir(function(mix) {
-    mix.scripts(['libs/*.js'], 'public/assets/js/vendor.js')
-       .scripts(['flickity-settings.js', 'global.js', 'portfolio-shuffle.js'], 'public/assets/js/crowdbound.js');
+     mix.browserify(['flickity-settings.js', 'crowdbound.js', 'portfolio-shuffle.js'], 'public/assets/js/crowdbound.js');
 });
 
 elixir(function(mix) {
