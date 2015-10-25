@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => 'Die Angegenen Zugansdaten scheinen nicht zu stimmen.',
+    'failed' => 'Die angegebenen Zugansdaten scheinen nicht zu stimmen.',
     'throttle' => 'Zu viele Anmelde-Versuche. Bitte versuche es in :seconds Sekunden nochmals.',
 
 ];
