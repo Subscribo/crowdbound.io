@@ -12,7 +12,8 @@
         "barryvdh/laravel-debugbar": "^2.0",
         "darrylkuhn/dialect": "dev-master",
         "mcamara/laravel-localization": "1.0.*",
-        "adamwathan/eloquent-oauth-l5": "^0.3.1"
+        "adamwathan/eloquent-oauth-l5": "^0.3.1",
+        "appzcoder/crud-generator": "^1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

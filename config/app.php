@@ -152,6 +152,8 @@ return [
         Barryvdh\Debugbar\ServiceProvider::class,
         Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
         'AdamWathan\EloquentOAuthL5\EloquentOAuthServiceProvider',
+        Appzcoder\CrudGenerator\CrudGeneratorServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
 
         /**
          * Spark Service Providers...
@@ -213,6 +215,8 @@ return [
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
         'LaravelLocalization'   => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
         'SocialAuth' => 'AdamWathan\EloquentOAuth\Facades\OAuth',
+        'Form'      => Collective\Html\FormFacade::class,
+        'HTML'      => Collective\Html\HtmlFacade::class,
 
     ],
 
