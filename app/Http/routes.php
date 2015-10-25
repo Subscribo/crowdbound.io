@@ -86,7 +86,7 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
     Route::get('templates/campaigns', function () {
-        dd('TODO');
+        return view('app/templates/campaigns');
     });
 
     Route::get('templates/emails', function () {
@@ -126,7 +126,7 @@ Route::get('{provider}/login', function ($provider) {
 */
 
 Route::get('blog', function () {
-    return view('index');
+    dd('TODO');
 });
 
 
@@ -153,7 +153,8 @@ Route::get('home', ['middleware' => 'auth', function () {
 | Internal Documentation Routes
 |--------------------------------------------------------------------------
 |
-| Internal style-guides an other documenation regardin this project itself.
+| Internal style-guides and other documenation regardinig
+| this project itself.
 |
 */
 
