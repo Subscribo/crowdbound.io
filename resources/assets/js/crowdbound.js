@@ -1,4 +1,5 @@
 var Switchery = require('switchery');
+var Flickity = require('flickity');
 
 //
 // Switches
