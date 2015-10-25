@@ -68,6 +68,34 @@ function()
     });
 });
 
+
+/*
+|--------------------------------------------------------------------------
+| Password-Protected Customer Backend Routes
+|--------------------------------------------------------------------------
+|
+| We don't localize them because it's a pain in the ass and has no SEO
+| or other noticeable advantages whatsover.
+|
+*/
+
+Route::group(['middleware' => 'auth'], function () {
+
+    Route::get('my-campaigns', function () {
+        dd('TODO');
+    });
+
+    Route::get('templates/campaigns', function () {
+        dd('TODO');
+    });
+
+    Route::get('templates/emails', function () {
+        dd('TODO');
+    });
+
+});
+
+
 /*
 |--------------------------------------------------------------------------
 | Social Login Related Routes
@@ -76,6 +104,7 @@ function()
 | Routes that facilitate social login via eloquent-oauth.
 |
 */
+
 Route::get('{provider}/authorize', function ($provider) {
     return SocialAuth::authorize($provider);
 });
@@ -86,6 +115,7 @@ Route::get('{provider}/login', function ($provider) {
     });
 });
 
+
 /*
 |--------------------------------------------------------------------------
 | Blog Related Routes
@@ -94,6 +124,7 @@ Route::get('{provider}/login', function ($provider) {
 | @TODO: Standard and custom routes for our Blog.
 |
 */
+
 Route::get('blog', function () {
     return view('index');
 });
