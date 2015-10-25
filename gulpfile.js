@@ -37,13 +37,19 @@ elixir(function(mix) {
      mix.browserify(['flickity-settings.js', 'crowdbound.js', 'portfolio-shuffle.js'], 'public/assets/js/crowdbound.js');
 });
 
+
+/*
+ |--------------------------------------------------------------------------
+ | Versioning / Cache-Busting
+ |--------------------------------------------------------------------------
+ */
+
 elixir(function(mix) {
     mix.version([
         'public/assets/js/crowdbound.js',
-        'public/assets/js/vendor.js',
-        'public/assets/css/crowdbound.css',
         'public/assets/js/winterfell.js',
-        'public/assets/css/laravel-spark-app.css',
         'public/assets/js/laravel-spark-app.js',
+        'public/assets/css/crowdbound.css',
+        'public/assets/css/laravel-spark-app.css'
     ]);
 });
