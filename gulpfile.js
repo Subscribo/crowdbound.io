@@ -3,21 +3,28 @@ process.env.DISABLE_NOTIFIER = true;
 var elixir = require('laravel-elixir');
 var imagemin = require('laravel-elixir-imagemin');
 
+
 /*
  |--------------------------------------------------------------------------
- | Elixir Asset Management
+ | Backend/User-Area  Stuff
  |--------------------------------------------------------------------------
- |
- | Elixir provides a clean, fluent API for defining some basic Gulp tasks
- | for your Laravel application. By default, we are compiling the Less
- | file for our application, as well as publishing vendor resources.
- |
  */
 
 elixir(function(mix) {
-    mix.sass('app.scss')
-       .browserify('app.js');
+    mix.sass(['laravel-spark/app.scss'], 'public/assets/css/laravel-spark-app.css')
+       .browserify(['laravel-spark-app.js'], 'public/assets/js/laravel-spark-app.js');
 });
+
+elixir(function(mix) {
+    mix.browserify(['winterfell.js'], 'public/assets/js/winterfell.js');
+});
+
+
+/*
+ |--------------------------------------------------------------------------
+ | Frontend/CSS/Marketing-Website Stuff
+ |--------------------------------------------------------------------------
+ */
 
 elixir(function(mix) {
     mix.less([
@@ -32,5 +39,12 @@ elixir(function(mix) {
 });
 
 elixir(function(mix) {
-    mix.version(['public/assets/js/crowdbound.js', 'public/assets/js/vendor.js', 'public/assets/css/crowdbound.css']);
+    mix.version([
+        'public/assets/js/crowdbound.js',
+        'public/assets/js/vendor.js',
+        'public/assets/css/crowdbound.css',
+        'public/assets/js/winterfell.js',
+        'public/assets/css/laravel-spark-app.css',
+        'public/assets/js/laravel-spark-app.js',
+    ]);
 });

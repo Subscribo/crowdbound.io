@@ -18,6 +18,6 @@
     @include('spark::common.footer')
 
     <!-- JavaScript Application -->
-    <script src="/js/app.js"></script>
+    <script src="{{ elixir('assets/js/laravel-spark-app.js') }}"></script>
 </body>
 </html>

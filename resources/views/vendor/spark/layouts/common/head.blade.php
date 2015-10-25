@@ -13,8 +13,9 @@
 <link href="//cdnjs.cloudflare.com/ajax/libs/flickity/1.0.2/flickity.min.css" rel="stylesheet">
 
 <!-- Styles -->
-<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+<link href="{{ elixir('assets/css/laravel-spark-app.css') }}" rel="stylesheet">
 <link href="{{ elixir('assets/css/crowdbound.css') }}" rel="stylesheet">
+<link href="{{ elixir('assets/js/winterfell.js') }}" rel="script">
 
 <!-- Spark Globals -->
 @include('spark::scripts.globals')
