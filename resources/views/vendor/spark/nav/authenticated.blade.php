@@ -36,10 +36,10 @@
                 </a>
                 <ul class="dropdown-menu dropdown-flat -blue" role="menu">
                     <li>
-                    <a href="#">E-Mail Vorlagen</a>
+                    <a href="{{ url('templates/campaigns') }}">E-Mail Vorlagen</a>
                     </li>
                     <li>
-                    <a href="#">Kampagnen Vorlagen</a>
+                    <a href="{{ url('templates/campaigns') }}">Kampagnen Vorlagen</a>
                     </li>
                 </ul>
                 </li>
