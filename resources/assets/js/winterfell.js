@@ -10,7 +10,8 @@
  */
 
 var React      = window.React = require('react');
-var ReactDOM   = window.React = require('react-dom');
+var ReactDOM   = window.ReactDOM = require('react-dom');
+var JSONView   = require('jquery-jsonview');
 
 var Winterfell = require('winterfell');
 
@@ -46,4 +47,7 @@ window.onload = function() {
                 onSubmit={onSubmit} />,
     document.getElementById('form')
   );
-};
+
+  $('#json-view').JSONView($('#json-view').html());
+
+ };

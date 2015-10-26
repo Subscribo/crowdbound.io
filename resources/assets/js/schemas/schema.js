@@ -8,8 +8,8 @@ module.exports = {
     "checkboxInput" : "checkbox",
     "checkboxListItem" : "checkbox",
     "checkboxList" : "clean-list",
-    "controlButton" : "btn btn-primary pull-right",
-    "backButton" : "btn btn-default pull-left",
+    "controlButton" : "btn primary-btn -blue",
+    "backButton" : "btn primary-btn -gray pull-left",
     "errorMessage" : "alert alert-danger",
     "questionPostText" : "push-top",
     "buttonBar" : "button-bar"
