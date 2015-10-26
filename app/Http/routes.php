@@ -89,6 +89,10 @@ Route::group(['middleware' => 'auth'], function () {
         return view('app/templates/campaigns');
     });
 
+    Route::get('templates/wui', function () {
+        return view('app/callscripts/callscripts');
+    });
+
     Route::get('templates/emails', function () {
         dd('TODO');
     });

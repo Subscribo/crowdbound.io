@@ -18,6 +18,7 @@
     @include('spark::common.footer')
 
     <!-- JavaScript Application -->
+    <script src="{{ elixir('assets/js/winterfell.js') }}"></script>
     <script src="{{ elixir('assets/js/laravel-spark-app.js') }}"></script>
 </body>
 </html>

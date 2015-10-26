@@ -3,7 +3,6 @@ process.env.DISABLE_NOTIFIER = true;
 var elixir = require('laravel-elixir');
 var imagemin = require('laravel-elixir-imagemin');
 
-
 /*
  |--------------------------------------------------------------------------
  | Backend/User-Area  Stuff
@@ -15,8 +14,13 @@ elixir(function(mix) {
        .browserify(['laravel-spark-app.js'], 'public/assets/js/laravel-spark-app.js');
 });
 
+elixir.config.js.browserify.transformers.push({
+    name: 'babelify',
+    options: {}
+});
+
 elixir(function(mix) {
-    mix.browserify(['winterfell.js'], 'public/assets/js/winterfell.js');
+    mix.browserify(['winterfell.js'], 'public/assets/js/winterfell.js')
 });
 
 

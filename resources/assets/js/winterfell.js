@@ -10,10 +10,11 @@
  */
 
 var React      = window.React = require('react');
+var ReactDOM   = window.React = require('react-dom');
+
 var Winterfell = require('winterfell');
 
 var schema      = require('./schemas/schema');
-var loginSchema = require('./schemas/loginSchema');
 
 var onRender = () => {
   console.log('Great news! Winterfell rendered successfully');
@@ -35,15 +36,8 @@ var onSubmit = (questionAnswers, target) => {
 };
 
 window.onload = function() {
-  React.render(
-    <Winterfell schema={loginSchema}
-                onRender={onRender}
-                onUpdate={onUpdate}
-                renderRequiredAsterisk={() => <span>{'*'}</span>} />,
-    document.getElementById('login-form')
-  );
 
-  React.render(
+  ReactDOM.render(
     <Winterfell schema={schema}
                 disableSubmit={true}
                 onRender={onRender}
@@ -52,13 +46,4 @@ window.onload = function() {
                 onSubmit={onSubmit} />,
     document.getElementById('form')
   );
-
-  /*
-   * JSON View
-   */
-  $('#json-view')
-    .JSONView($('#json-view').html());
-
-  $('#login-json-view')
-    .JSONView($('#login-json-view').html());
 };
