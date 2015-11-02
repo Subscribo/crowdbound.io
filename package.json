@@ -8,12 +8,13 @@
   },
   "dependencies": {
     "bootstrap-sass": "^3.0.0",
+    "flickity": "^1.1.1",
+    "jquery": "^2.1.4",
     "laravel-elixir": "^3.0.0",
     "laravel-spark": "^1.0.0",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
-    "winterfell": "^1.0.5",
     "switchery": "^0.0.2",
-    "flickity": "^1.1.1"
+    "winterfell": "^1.0.5"
   }
 }
